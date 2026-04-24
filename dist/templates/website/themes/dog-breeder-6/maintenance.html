@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+  <head>
+    <!-- Resource Hints -->
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <title>Maintenance | Dog Breeder 6</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dedicated to raising happy, healthy puppies in loving homes." />
+    <meta name="author" content="Astero Digital" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Maintenance | Dog Breeder 6" />
+    <meta property="og:description" content="Dedicated to raising happy, healthy puppies in loving homes." />
+    <meta property="og:image" content="/src/assets/img/og-image.png" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Astero UI CSS -->
+    <link href="/styles/asteroui-lite.min.css" rel="stylesheet" />
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" />
+    <!-- AOS (Animate on Scroll) Styling -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Page CSS -->
+    <style>
+      :root,
+      [data-bs-theme='light'] {
+        --bs-primary: #ec436a;
+        --bs-primary-rgb: 236, 67, 106;
+      }
+      .dropdown-menu .dropdown-item {
+        font-size: 1rem !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <div class="sticky-top shadow z-4">
+        <!-- Topbar -->
+        <div class="text-bg-dark d-none d-md-block py-2">
+          <div class="container">
+            <div class="row align-items-center text-start gx-3 gy-2">
+              <!-- Left: Phone & Email -->
+              <div class="col-12 col-md-auto d-flex justify-content-center justify-content-start flex-wrap gap-3">
+                <div>
+                  <i class="ri-phone-fill text-primary me-1"></i>
+                  <a href="tel:+12345678901" class="text-light text-decoration-none">+1 (234) 567-8901</a>
+                </div>
+                <div>
+                  <i class="ri-mail-fill text-primary me-1"></i>
+                  <a href="mailto:hello@email.com" class="text-light text-decoration-none">hello@email.com</a>
+                </div>
+              </div>
+              <!-- Right: Hours & Location -->
+              <div class="col-12 col-md-auto d-flex justify-content-center justify-content-end flex-wrap gap-3 ms-auto">
+                <div>
+                  <i class="ri-time-fill text-primary me-1"></i>
+                  Mon–Fri: 9am–6pm
+                </div>
+                <div>
+                  <i class="ri-map-pin-fill text-primary me-1"></i>
+                  123 Main Street, Austin, TX
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-body border-top">
+          <div class="container">
+            <!-- Brand Logo or Text -->
+            <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/dog-breeder-6/home">
+              <img src="/assets/images/placeholder-logos/logoipsum-288.svg" alt="Logo" style="height: 32px" />
+            </a>
+            <!-- Offcanvas Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/dog-breeder-6/home">
+                  <img src="/assets/images/placeholder-logos/logoipsum-288.svg" alt="Logo" style="height: 32px" />
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+                <!-- For lg+ screens -->
+                <ul
+                  class="navbar-nav navbar-highlight flex-grow-1 pe-3 d-none d-lg-flex justify-content-center front-theme"
+                >
+                  <!-- Home -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/home">
+                      <i class="ri-home-2-fill"></i> <span>Home</span>
+                    </a>
+                  </li>
+                  <!-- About Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="aboutDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="ri-information-fill"></i> <span>About</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                      <li><a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/about">About</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/breeding-philosophy"
+                          >Breeding Philosophy</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/testimonials"
+                          >Testimonials</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Explore Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="exploreDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="ri-planet-fill"></i> <span>Explore</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/puppies">Puppies</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/gallery">Gallery</a>
+                      </li>
+                      <li><a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/shop">Shop</a></li>
+                    </ul>
+                  </li>
+                  <!-- Blog Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="blogDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="ri-news-fill"></i> <span>Blog</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/blog-1"
+                          >Blog – No Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/blog-2"
+                          >Blog – Left Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/blog-3"
+                          >Blog – Right Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/post-1"
+                          >Post – No Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/post-2"
+                          >Post – Left Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/dog-breeder-6/post-3"
+                          >Post – Right Sidebar</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- FAQs -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/faq">
+                      <i class="ri-question-answer-fill"></i> <span>FAQs</span>
+                    </a>
+                  </li>
+                  <!-- Contact -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/contact">
+                      <i class="ri-phone-fill"></i> <span>Contact</span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- For smaller screens -->
+                <ul class="navbar-nav flex-grow-1 d-flex d-lg-none justify-content-start">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/breeding-philosophy"
+                      >Breeding Philosophy</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/shop">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/puppies">Puppies</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/testimonials">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/faq">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/blog-1">Blog – 1</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/blog-2">Blog – 2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/blog-3">Blog – 3</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/post-1">Post – 1</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/post-2">Post – 2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/post-3">Post – 3</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/dog-breeder-6/contact">Contact</a>
+                  </li>
+                </ul>
+                <!-- Contact Details (Bottom) -->
+                <div class="d-block d-md-none bg-secondary rounded p-3 mt-2">
+                  <div class="mb-2">
+                    <i class="ri-phone-fill text-primary me-1"></i>
+                    <a href="tel:+12345678901" class="text-body text-decoration-none">+1 (234) 567-8901</a>
+                  </div>
+                  <div class="mb-2">
+                    <i class="ri-mail-fill text-primary me-1"></i>
+                    <a href="mailto:hello@email.com" class="text-body text-decoration-none">hello@email.com</a>
+                  </div>
+                  <div class="mb-2">
+                    <i class="ri-time-fill text-primary me-1"></i>
+                    Mon–Fri: 9am–6pm
+                  </div>
+                  <div>
+                    <i class="ri-map-pin-fill text-primary me-1"></i>
+                    123 Main Street, Austin, TX
+                  </div>
+                </div>
+                <!-- Get Started Button (Bottom) -->
+                <div class="d-block d-lg-none mt-3">
+                  <a class="btn btn-lg btn-primary w-100" href="#">Get Started</a>
+                </div>
+              </div>
+            </div>
+            <!-- Get Started Button (lg+ screens) -->
+            <div class="d-none d-lg-flex"><a class="btn btn-lg btn-primary" href="#">Get Started</a></div>
+          </div>
+        </nav>
+      </div>
+      <!-- Page Content -->
+      <div class="content-wrapper bg-body">
+        <section class="bg-body py-5">
+          <div class="container">
+            <div class="row justify-content-center text-md-center">
+              <div class="col-md-10 col-lg-8 col-xl-6">
+                <div class="row justify-content-center">
+                  <div class="col-10 col-sm-8 col-md-6">
+                    <figure class="p-3 mb-0">
+                      <img
+                        src="/assets/images/theme-images/dog-breeder/maintenance-img.png"
+                        class="img-fluid"
+                        alt="Maintenance Illustration"
+                        data-aos="fade-in"
+                        data-aos-duration="800"
+                      />
+                    </figure>
+                  </div>
+                </div>
+                <h1 class="fw-semibold" data-aos="fade-in" data-aos-duration="800">
+                  Pardon our paws—we’re <span class="underline primary">under maintenance</span>!
+                </h1>
+                <p class="lead mb-3" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
+                  We're making a few updates to keep things running smoothly. The site will be back shortly. Enter your
+                  email to get notified when we're back.
+                </p>
+                <form class="d-flex gap-2" data-aos="fade-up" data-aos-duration="800">
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    placeholder="Email address"
+                    aria-label="Email"
+                    required
+                  />
+                  <button class="btn btn-lg btn-primary text-nowrap" type="submit">Notify Me</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Round Fixed Button --><button
+          class="btn btn-icon-xl btn-primary rounded-circle shadow-xl"
+          style="position: fixed; right: 1rem; top: 90%; transform: translateY(-50%); z-index: 1000"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#quickLinksOffcanvas"
+          aria-controls="quickLinksOffcanvas"
+        >
+          <i class="ri-settings-3-line fs-3"></i>
+        </button>
+        <!-- Offcanvas -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="quickLinksOffcanvas"
+          aria-labelledby="quickLinksOffcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title fs-5 fw-semibold" id="quickLinksOffcanvasLabel">
+              <i class="ri-links-line text-muted me-1"></i>Quick Links
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2">
+            <div class="d-flex gap-2 mb-3">
+              <a href="/" class="btn btn-primary w-100"><i class="ri-home-4-line me-1"></i>Home</a>
+              <a href="/docs" class="btn btn-secondary w-100"><i class="ri-folder-line me-1"></i>Docs</a>
+            </div>
+            <div>
+              <h6 class="text-muted text-uppercase">Admin</h6>
+              <div>
+                <a class="text-decoration-none" href="/templates/admin/dashboard"
+                  ><i class="ri-dashboard-line me-2"></i>Admin Dashboard Example<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Themes</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/classic/home"
+                  ><i class="ri-layout-3-line me-2"></i>Website Example (Classic)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/modern/home"
+                  ><i class="ri-layout-4-line me-2"></i>Website Example (Modern)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-1/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 1 (Beagle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-2/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 2 (Golden Retriever)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-3/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 3 (French Bulldog)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-4/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 4 (Poodle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-5/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 5 (German Shepherd)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-6/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 6 (Yorkshire Terrier)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-1/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 1 (Persian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-2/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 2 (Siamese)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-3/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 3 (Bengal)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-4/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 4 (Abyssinian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-5/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 5 (Himalayan)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-1/home"
+                  ><i class="ri-community-line me-2"></i>HOA 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-2/home"
+                  ><i class="ri-community-line me-2"></i>HOA 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-3/home"
+                  ><i class="ri-community-line me-2"></i>HOA 3<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-1/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-2/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Other</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-builder/home"
+                  ><i class="ri-hammer-line me-2"></i>AsteroBuilder<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-digital/home"
+                  ><i class="ri-macbook-line me-2"></i>AsteroDigital<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/paanstation/home"
+                  ><i class="ri-store-line me-2"></i>Paanstation<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/jazzup-salon/home"
+                  ><i class="ri-scissors-line me-2"></i>Jazzup Salon<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/homestyle-furnitech/home"
+                  ><i class="ri-sofa-line me-2"></i>HomeStyle Furnitech<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/mak-holding-group/home"
+                  ><i class="ri-building-line me-2"></i>MAK Holding Group<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/takshila-institute/home"
+                  ><i class="ri-school-line me-2"></i>Takshila Institute<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/clinic-demo/home"
+                  ><i class="ri-stethoscope-line me-2"></i>Clinic Demo<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="bg-body border-top pt-5 pb-4">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Logo and Contact Info -->
+            <div class="col-lg-4 col-md-6">
+              <a
+                href="/templates/website/themes/dog-breeder-6/home"
+                class="d-inline-flex align-items-center text-decoration-none"
+              >
+                <img src="/assets/images/placeholder-logos/logoipsum-288.svg" alt="Logo" style="height: 32px" />
+              </a>
+              <p class="text-body mt-2 mb-3 pe-lg-4">
+                Dedicated to ethical breeding practices, and the well-being of every puppy we raise.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li class="mb-2">
+                  <a href="tel:+12345678901" class="text-body text-decoration-none">
+                    <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="mailto:hello@email.com" class="text-body text-decoration-none">
+                    <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
+                  </a>
+                </li>
+                <li class="text-body"><i class="ri-map-pin-fill text-primary me-2"></i>123 Main Street, Austin, TX</li>
+              </ul>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-lg-4 col-md-6">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="mb-3">Quick Links</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/dog-breeder-6/home" class="text-body text-decoration-none"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/dog-breeder-6/about" class="text-body text-decoration-none"
+                        >About</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/dog-breeder-6/faq" class="text-body text-decoration-none"
+                        >FAQs</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a
+                        href="/templates/website/themes/dog-breeder-6/testimonials"
+                        class="text-body text-decoration-none"
+                        >Testimonials</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/templates/website/themes/dog-breeder-6/contact" class="text-body text-decoration-none"
+                        >Contact</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <h5 class="mb-3">Explore</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/dog-breeder-6/blog-1" class="text-body text-decoration-none"
+                        >Blog</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a
+                        href="/templates/website/themes/dog-breeder-6/breeding-philosophy"
+                        class="text-body text-decoration-none"
+                        >Breeding Philosophy</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/dog-breeder-6/gallery" class="text-body text-decoration-none"
+                        >Gallery</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/dog-breeder-6/puppies" class="text-body text-decoration-none"
+                        >Puppies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/templates/website/themes/dog-breeder-6/shop" class="text-body text-decoration-none"
+                        >Shop<span class="badge bg-primary ms-2">new</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Newsletter -->
+            <div class="col-lg-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h5 class="mb-0">Gallery</h5>
+                <a
+                  href="/templates/website/themes/dog-breeder-6/gallery"
+                  class="link-primary text-decoration-none small"
+                  >View Full<i class="ri-arrow-right-line ms-2"></i
+                ></a>
+              </div>
+              <p class="text-body mb-3">Explore heartwarming snapshots of our pups.</p>
+              <div class="row g-3">
+                <div class="col-4">
+                  <figure class="img-scale rounded-4">
+                    <img
+                      src="/assets/images/theme-images/dog-breeder/yorkshire-terrier-1.jpg"
+                      class="img-fluid object-fit-cover"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </div>
+                <div class="col-4">
+                  <figure class="img-scale rounded-4">
+                    <img
+                      src="/assets/images/theme-images/dog-breeder/yorkshire-terrier-2.jpg"
+                      class="img-fluid object-fit-cover"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </div>
+                <div class="col-4">
+                  <figure class="img-scale rounded-4">
+                    <img
+                      src="/assets/images/theme-images/dog-breeder/yorkshire-terrier-4.jpg"
+                      class="img-fluid object-fit-cover"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="text-center border-top pt-4 mt-4">
+            <p class="mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- All Scripts -->
+    <!-- Astero UI JS / Bootstrap Js included in Astero UI -->
+    <script src="/scripts/asteroui-lite.min.js"></script>
+    <!-- AOS (Animate on Scroll) Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <!-- Page Script --><!-- Enable hover-based dropdowns and disable click toggle behavior in the navbar (only for lg+ screens) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const dropdowns = document.querySelectorAll('.front-theme .nav-item.dropdown');
+
+        function enableHoverDropdowns() {
+          dropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
+
+            // Prevent Bootstrap click toggle
+            toggle.addEventListener('click', function (e) {
+              // Only prevent default if screen is lg or larger
+              if (window.innerWidth >= 992) {
+                e.preventDefault();
+              }
+            });
+
+            // Show dropdown on hover (only lg and up)
+            dropdown.addEventListener('mouseenter', function () {
+              if (window.innerWidth >= 992) {
+                toggle.classList.add('show');
+                menu.classList.add('show');
+                toggle.setAttribute('aria-expanded', 'true');
+              }
+            });
+
+            // Hide dropdown on mouse leave (only lg and up)
+            dropdown.addEventListener('mouseleave', function () {
+              if (window.innerWidth >= 992) {
+                toggle.classList.remove('show');
+                menu.classList.remove('show');
+                toggle.setAttribute('aria-expanded', 'false');
+              }
+            });
+          });
+        }
+
+        enableHoverDropdowns();
+
+        // Recheck if the user resizes the window
+        window.addEventListener('resize', function () {
+          // Close all dropdowns if resizing below or at lg
+          if (window.innerWidth <= 992) {
+            dropdowns.forEach((dropdown) => {
+              const toggle = dropdown.querySelector('.dropdown-toggle');
+              const menu = dropdown.querySelector('.dropdown-menu');
+              toggle.classList.remove('show');
+              menu.classList.remove('show');
+              toggle.setAttribute('aria-expanded', 'false');
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+  <head>
+    <!-- Resource Hints -->
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <title>About | AsteroBuilder</title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Lorem ipsum dolor sit amet, consectetur adipisicing elit architecto illum consequuntur quo praesentium autem cumque."
+    />
+    <meta name="author" content="Astero Digital" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About | AsteroBuilder" />
+    <meta
+      property="og:description"
+      content="Lorem ipsum dolor sit amet, consectetur adipisicing elit architecto illum consequuntur quo praesentium autem cumque."
+    />
+    <meta property="og:image" content="/src/assets/img/og-image.png" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Astero UI CSS -->
+    <link href="/styles/asteroui-lite.min.css" rel="stylesheet" />
+    <!-- Geist font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" />
+    <!-- Page CSS -->
+    <style>
+      body {
+        font-family:
+          'Geist',
+          'Inter',
+          'Segoe UI',
+          'Helvetica Neue',
+          system-ui,
+          -apple-system,
+          'Noto Sans',
+          sans-serif;
+        font-optical-sizing: auto;
+      }
+      .navbar-nav .nav-link {
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-body sticky-top z-4">
+        <div class="container">
+          <!-- Brand Logo or Text -->
+          <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/astero-builder/home">
+            <img src="/assets/images/astero-builder/logo.svg" alt="AsteroBuilder" class="me-2" style="height: 32px" />
+          </a>
+          <!-- Offcanvas Toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Offcanvas Menu -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/astero-builder/home">
+                <img
+                  src="/assets/images/astero-builder/logo.svg"
+                  alt="AsteroBuilder"
+                  class="me-2"
+                  style="height: 32px"
+                />
+              </a>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+              <!-- Nav Links -->
+              <ul class="navbar-nav justify-content-center pe-3 front-theme">
+                <!-- About -->
+                <li class="nav-item">
+                  <a class="nav-link active" href="/templates/website/themes/astero-builder/about">About</a>
+                </li>
+                <!-- Blog -->
+                <li class="nav-item">
+                  <a class="nav-link" href="/templates/website/themes/astero-builder/blog-2">Blog</a>
+                </li>
+                <!-- Features -->
+                <li class="nav-item">
+                  <a class="nav-link" href="/templates/website/themes/astero-builder/features">Features</a>
+                </li>
+                <!-- Pricing -->
+                <li class="nav-item">
+                  <a class="nav-link" href="/templates/website/themes/astero-builder/pricing">Pricing</a>
+                </li>
+                <!-- Contact -->
+                <li class="nav-item">
+                  <a class="nav-link" href="/templates/website/themes/astero-builder/contact">Contact</a>
+                </li>
+              </ul>
+              <!-- Bottom Section (for Mobile) -->
+              <div class="d-block d-lg-none mt-4">
+                <a
+                  href="/templates/website/themes/astero-builder/login"
+                  class="btn btn-outline-secondary rounded-pill w-100 mb-2"
+                >
+                  Sign In
+                </a>
+                <a href="/templates/website/themes/astero-builder/register" class="btn btn-primary rounded-pill w-100">
+                  Sign Up
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Navbar Links (for Desktop) -->
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <a href="/templates/website/themes/astero-builder/login" class="btn btn-outline-secondary rounded-pill"
+              >Sign In</a
+            >
+            <a href="/templates/website/themes/astero-builder/register" class="btn btn-primary rounded-pill">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Page Content -->
+      <div class="content-wrapper bg-body">
+        <section class="bg-body py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-xl-6">
+                <h1 class="h6 text-muted text-uppercase mb-2">About Us</h1>
+                <h2 class="h3 fw-medium mb-2">Learn more about AsteroBuilder.</h2>
+                <p class="text-muted mb-5">
+                  The revolutionary do-it-yourself website builder that makes creating a professional online presence
+                  easy and intuitive.
+                </p>
+              </div>
+            </div>
+            <figure class="img-scale rounded shadow-lg w-100 mb-0">
+              <img
+                src="/assets/images/theme-images/4.jpg"
+                class="object-fit-cover"
+                style="height: 320px"
+                alt="Hero Image"
+              />
+            </figure>
+          </div>
+        </section>
+        <section class="bg-body pb-3">
+          <div class="container">
+            <div class="row gx-5 mb-5">
+              <div class="col-lg-6 col-xl-4"><h3 class="fw-medium">Our Story</h3></div>
+              <div class="col-lg-6 col-xl-8">
+                <p class="mb-3">
+                  Founded in 2022 by a team of web design experts and SEO professionals, AsteroBuilder was created with
+                  one goal in mind: to empower people to build stunning websites without any coding knowledge. We
+                  provide cutting-edge features and elegant templates so you can create a website that represents your
+                  brand beautifully.
+                </p>
+                <p class="mb-0">
+                  The idea for AsteroBuilder was born out of our team's frustration with the website builders on the
+                  market. We found them overly complex and limiting, requiring users to have coding skills to customize
+                  their site. We knew there had to be a better way.
+                </p>
+              </div>
+            </div>
+            <div class="row gx-5">
+              <div class="col-lg-6 col-xl-4"><h4 class="h3 fw-medium">Innovation Meets Simplicity</h4></div>
+              <div class="col-lg-6 col-xl-8">
+                <p class="mb-3">
+                  After months of research and development, we created AsteroBuilder on the principle that web design
+                  should be accessible to everyone. Our drag-and-drop editor allows you to effortlessly arrange content
+                  blocks however you like. With just a few clicks, you can have a polished, professional website that
+                  reflects your unique brand identity.
+                </p>
+                <p class="mb-0">
+                  Our advanced features like integrated SEO and analytics tools help you optimize your site to drive
+                  traffic and conversions. We handle the technical details so you can focus on creating web magic.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-body py-5">
+          <div class="container">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="card card-hover bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <h6 class="display-3 fw-medium">250+</h6>
+                    <p class="mt-lg-4 mb-0">UI elements</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-hover bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <h6 class="display-3 fw-medium">130+</h6>
+                    <p class="mt-lg-4 mb-0">Pre-made blocks</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-hover bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <h6 class="display-3 fw-medium">100+</h6>
+                    <p class="mt-lg-4 mb-0">Neatly coded pages</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-body py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-xl-6 mb-4 mb-lg-0">
+                <div class="sticky-top z-1" style="top: 80px">
+                  <h3 class="h6 text-muted text-uppercase mb-2">Our Philosophy</h3>
+                  <h4 class="h3 fw-medium mb-2">The Principles That Guide Our Vision</h4>
+                  <p class="text-muted mb-0">
+                    We believe that establishing an online presence should be simple, creative, and fun. These
+                    principles drive our team as we refine AsteroBuilder and add new innovations.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-8 col-xl-6">
+                <!-- Feature 1 -->
+                <div class="card bg-secondary rounded shadow border-0 mb-4">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center gap-4">
+                      <div class="bg-muted bg-opacity-10 rounded p-2">
+                        <div class="d-inline-flex bg-muted bg-opacity-10 rounded p-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            class="bi bi-sliders"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>
+                        <h5 class="fw-medium mb-2">Simple</h5>
+                        <p class="text-muted mb-0">
+                          Our intuitive drag-and-drop interface and pre-designed templates make it easy for anyone to
+                          build a website in minutes. No coding skills required.
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="card bg-secondary rounded shadow border-0 mb-4">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center gap-4">
+                      <div class="bg-muted bg-opacity-10 rounded p-2">
+                        <div class="d-inline-flex bg-muted bg-opacity-10 rounded p-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            class="bi bi-puzzle"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.112 3.645A1.5 1.5 0 0 1 4.605 2H7a.5.5 0 0 1 .5.5v.382c0 .696-.497 1.182-.872 1.469a.5.5 0 0 0-.115.118l-.012.025L6.5 4.5v.003l.003.01q.005.015.036.053a.9.9 0 0 0 .27.194C7.09 4.9 7.51 5 8 5c.492 0 .912-.1 1.19-.24a.9.9 0 0 0 .271-.194.2.2 0 0 0 .039-.063v-.009l-.012-.025a.5.5 0 0 0-.115-.118c-.375-.287-.872-.773-.872-1.469V2.5A.5.5 0 0 1 9 2h2.395a1.5 1.5 0 0 1 1.493 1.645L12.645 6.5h.237c.195 0 .42-.147.675-.48.21-.274.528-.52.943-.52.568 0 .947.447 1.154.862C15.877 6.807 16 7.387 16 8s-.123 1.193-.346 1.638c-.207.415-.586.862-1.154.862-.415 0-.733-.246-.943-.52-.255-.333-.48-.48-.675-.48h-.237l.243 2.855A1.5 1.5 0 0 1 11.395 14H9a.5.5 0 0 1-.5-.5v-.382c0-.696.497-1.182.872-1.469a.5.5 0 0 0 .115-.118l.012-.025.001-.006v-.003a.2.2 0 0 0-.039-.064.9.9 0 0 0-.27-.193C8.91 11.1 8.49 11 8 11s-.912.1-1.19.24a.9.9 0 0 0-.271.194.2.2 0 0 0-.039.063v.003l.001.006.012.025c.016.027.05.068.115.118.375.287.872.773.872 1.469v.382a.5.5 0 0 1-.5.5H4.605a1.5 1.5 0 0 1-1.493-1.645L3.356 9.5h-.238c-.195 0-.42.147-.675.48-.21.274-.528.52-.943.52-.568 0-.947-.447-1.154-.862C.123 9.193 0 8.613 0 8s.123-1.193.346-1.638C.553 5.947.932 5.5 1.5 5.5c.415 0 .733.246.943.52.255.333.48.48.675.48h.238zM4.605 3a.5.5 0 0 0-.498.55l.001.007.29 3.4A.5.5 0 0 1 3.9 7.5h-.782c-.696 0-1.182-.497-1.469-.872a.5.5 0 0 0-.118-.115l-.025-.012L1.5 6.5h-.003a.2.2 0 0 0-.064.039.9.9 0 0 0-.193.27C1.1 7.09 1 7.51 1 8s.1.912.24 1.19c.07.14.14.225.194.271a.2.2 0 0 0 .063.039H1.5l.006-.001.025-.012a.5.5 0 0 0 .118-.115c.287-.375.773-.872 1.469-.872H3.9a.5.5 0 0 1 .498.542l-.29 3.408a.5.5 0 0 0 .497.55h1.878c-.048-.166-.195-.352-.463-.557-.274-.21-.52-.528-.52-.943 0-.568.447-.947.862-1.154C6.807 10.123 7.387 10 8 10s1.193.123 1.638.346c.415.207.862.586.862 1.154 0 .415-.246.733-.52.943-.268.205-.415.39-.463.557h1.878a.5.5 0 0 0 .498-.55l-.001-.007-.29-3.4A.5.5 0 0 1 12.1 8.5h.782c.696 0 1.182.497 1.469.872.05.065.091.099.118.115l.025.012.006.001h.003a.2.2 0 0 0 .064-.039.9.9 0 0 0 .193-.27c.14-.28.24-.7.24-1.191s-.1-.912-.24-1.19a.9.9 0 0 0-.194-.271.2.2 0 0 0-.063-.039H14.5l-.006.001-.025.012a.5.5 0 0 0-.118.115c-.287.375-.773.872-1.469.872H12.1a.5.5 0 0 1-.498-.543l.29-3.407a.5.5 0 0 0-.497-.55H9.517c.048.166.195.352.463.557.274.21.52.528.52.943 0 .568-.447.947-.862 1.154C9.193 5.877 8.613 6 8 6s-1.193-.123-1.638-.346C5.947 5.447 5.5 5.068 5.5 4.5c0-.415.246-.733.52-.943.268-.205.415-.39.463-.557z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>
+                        <h5 class="fw-medium mb-2">Creative</h5>
+                        <p class="text-muted mb-0">
+                          Make your site distinctly yours with customizable design options. Add your brand colors,
+                          fonts, images, and more to showcase your style.
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="card bg-secondary rounded shadow border-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center gap-4">
+                      <div class="bg-muted bg-opacity-10 rounded p-2">
+                        <div class="d-inline-flex bg-muted bg-opacity-10 rounded p-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            class="bi bi-rocket"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M8 8c.828 0 1.5-.895 1.5-2S8.828 4 8 4s-1.5.895-1.5 2S7.172 8 8 8"></path>
+                            <path
+                              d="M11.953 8.81c-.195-3.388-.968-5.507-1.777-6.819C9.707 1.233 9.23.751 8.857.454a3.5 3.5 0 0 0-.463-.315A2 2 0 0 0 8.25.064.55.55 0 0 0 8 0a.55.55 0 0 0-.266.073 2 2 0 0 0-.142.08 4 4 0 0 0-.459.33c-.37.308-.844.803-1.31 1.57-.805 1.322-1.577 3.433-1.774 6.756l-1.497 1.826-.004.005A2.5 2.5 0 0 0 2 12.202V15.5a.5.5 0 0 0 .9.3l1.125-1.5c.166-.222.42-.4.752-.57.214-.108.414-.192.625-.281l.198-.084c.7.428 1.55.635 2.4.635s1.7-.207 2.4-.635q.1.044.196.083c.213.09.413.174.627.282.332.17.586.348.752.57l1.125 1.5a.5.5 0 0 0 .9-.3v-3.298a2.5 2.5 0 0 0-.548-1.562zM12 10.445v.055c0 .866-.284 1.585-.75 2.14.146.064.292.13.425.199.39.197.8.46 1.1.86L13 14v-1.798a1.5 1.5 0 0 0-.327-.935zM4.75 12.64C4.284 12.085 4 11.366 4 10.5v-.054l-.673.82a1.5 1.5 0 0 0-.327.936V14l.225-.3c.3-.4.71-.664 1.1-.861.133-.068.279-.135.425-.199M8.009 1.073q.096.06.226.163c.284.226.683.621 1.09 1.28C10.137 3.836 11 6.237 11 10.5c0 .858-.374 1.48-.943 1.893C9.517 12.786 8.781 13 8 13s-1.517-.214-2.057-.607C5.373 11.979 5 11.358 5 10.5c0-4.182.86-6.586 1.677-7.928.409-.67.81-1.082 1.096-1.32q.136-.113.236-.18Z"
+                            ></path>
+                            <path
+                              d="M9.479 14.361c-.48.093-.98.139-1.479.139s-.999-.046-1.479-.139L7.6 15.8a.5.5 0 0 0 .8 0z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>
+                        <h5 class="fw-medium mb-2">Fun</h5>
+                        <p class="text-muted mb-0">
+                          Building your website on AsteroBuilder feels more like play than work. Bring your vision to
+                          life in a fluid, flexible platform.
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-body py-5">
+          <div class="container">
+            <h5 class="h3 fw-medium text-lg-center mb-2">The AsteroBuilder Difference</h5>
+            <p class="text-muted text-lg-center mb-4 mx-auto" style="max-width: 800px">
+              While other website builders lock you into rigid templates and restrictive features, AsteroBuilder sets
+              you free to create a site on your own terms.
+            </p>
+            <div class="row g-3">
+              <div class="col-sm-6 col-lg-4">
+                <div class="card bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <video autoplay loop muted playsinline class="rounded w-100 mb-3">
+                      <source src="/assets/images/astero-builder/clip-1.mp4" type="video/mp4" />
+                    </video>
+                    <h5 class="fw-medium mb-2">Drag-and-drop flexibility</h5>
+                    <p class="text-muted mb-0">
+                      Reorder content blocks however you want to showcase your brand your way.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="card bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <video autoplay loop muted playsinline class="rounded w-100 mb-3">
+                      <source src="/assets/images/astero-builder/clip-4.mp4" type="video/mp4" />
+                    </video>
+                    <h5 class="fw-medium mb-2">Customizability</h5>
+                    <p class="text-muted mb-0">
+                      Make the site distinctly yours by applying your own color schemes, fonts, animations, and more.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="card bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <video autoplay loop muted playsinline class="rounded w-100 mb-3">
+                      <source src="/assets/images/astero-builder/clip-2.mp4" type="video/mp4" />
+                    </video>
+                    <h5 class="fw-medium mb-2">SEO built-in</h5>
+                    <p class="text-muted mb-0">
+                      Our SEO features help your site get found by the right customers organically.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="card bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <video autoplay loop muted playsinline class="rounded w-100 mb-3">
+                      <source src="/assets/images/astero-builder/clip-2.mp4" type="video/mp4" />
+                    </video>
+                    <h5 class="fw-medium mb-2">Mobile responsive</h5>
+                    <p class="text-muted mb-0">
+                      Sites automatically adapt across all devices — desktop, tablets, and mobile.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="card bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <video autoplay loop muted playsinline class="rounded w-100 mb-3">
+                      <source src="/assets/images/astero-builder/clip-5.mp4" type="video/mp4" />
+                    </video>
+                    <h5 class="fw-medium mb-2">Top-tier security</h5>
+                    <p class="text-muted mb-0">Bank-level SSL encryption and data protection provide peace of mind.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="card bg-secondary rounded shadow border-0 h-100">
+                  <div class="card-body">
+                    <video autoplay loop muted playsinline class="rounded w-100 mb-3">
+                      <source src="/assets/images/astero-builder/clip-3.mp4" type="video/mp4" />
+                    </video>
+                    <h5 class="fw-medium mb-2">Stellar support</h5>
+                    <p class="text-muted mb-0">
+                      Our customer success team is available 24/7 to help you via chat, email, or phone.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-body py-5">
+          <div class="container text-lg-center pb-5">
+            <h6 class="h2 fw-medium mb-3">Build Your Stunning Website Now</h6>
+            <p class="text-muted mb-4">
+              It's time to stop compromising and start creating the website you always imagined. AsteroBuilder makes it
+              possible.
+            </p>
+            <div class="d-flex justify-content-lg-center gap-2">
+              <a href="/templates/website/themes/astero-builder/pricing" class="btn btn-lg btn-primary"
+                >Start Now<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="ms-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                  ></path></svg
+              ></a>
+              <a href="/templates/website/themes/astero-builder/contact" class="btn btn-lg btn-outline-secondary"
+                >Get in Touch</a
+              >
+            </div>
+          </div>
+        </section>
+        <!-- Round Fixed Button --><button
+          class="btn btn-icon-xl btn-primary rounded-circle shadow-xl"
+          style="position: fixed; right: 1rem; top: 90%; transform: translateY(-50%); z-index: 1000"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#quickLinksOffcanvas"
+          aria-controls="quickLinksOffcanvas"
+        >
+          <i class="ri-settings-3-line fs-3"></i>
+        </button>
+        <!-- Offcanvas -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="quickLinksOffcanvas"
+          aria-labelledby="quickLinksOffcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title fs-5 fw-semibold" id="quickLinksOffcanvasLabel">
+              <i class="ri-links-line text-muted me-1"></i>Quick Links
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2">
+            <div class="d-flex gap-2 mb-3">
+              <a href="/" class="btn btn-primary w-100"><i class="ri-home-4-line me-1"></i>Home</a>
+              <a href="/docs" class="btn btn-secondary w-100"><i class="ri-folder-line me-1"></i>Docs</a>
+            </div>
+            <div>
+              <h6 class="text-muted text-uppercase">Admin</h6>
+              <div>
+                <a class="text-decoration-none" href="/templates/admin/dashboard"
+                  ><i class="ri-dashboard-line me-2"></i>Admin Dashboard Example<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Themes</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/classic/home"
+                  ><i class="ri-layout-3-line me-2"></i>Website Example (Classic)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/modern/home"
+                  ><i class="ri-layout-4-line me-2"></i>Website Example (Modern)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-1/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 1 (Beagle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-2/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 2 (Golden Retriever)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-3/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 3 (French Bulldog)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-4/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 4 (Poodle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-5/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 5 (German Shepherd)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-6/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 6 (Yorkshire Terrier)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-1/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 1 (Persian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-2/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 2 (Siamese)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-3/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 3 (Bengal)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-4/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 4 (Abyssinian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-5/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 5 (Himalayan)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-1/home"
+                  ><i class="ri-community-line me-2"></i>HOA 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-2/home"
+                  ><i class="ri-community-line me-2"></i>HOA 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-3/home"
+                  ><i class="ri-community-line me-2"></i>HOA 3<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-1/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-2/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Other</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-builder/home"
+                  ><i class="ri-hammer-line me-2"></i>AsteroBuilder<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-digital/home"
+                  ><i class="ri-macbook-line me-2"></i>AsteroDigital<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/paanstation/home"
+                  ><i class="ri-store-line me-2"></i>Paanstation<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/jazzup-salon/home"
+                  ><i class="ri-scissors-line me-2"></i>Jazzup Salon<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/homestyle-furnitech/home"
+                  ><i class="ri-sofa-line me-2"></i>HomeStyle Furnitech<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/mak-holding-group/home"
+                  ><i class="ri-building-line me-2"></i>MAK Holding Group<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/takshila-institute/home"
+                  ><i class="ri-school-line me-2"></i>Takshila Institute<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/clinic-demo/home"
+                  ><i class="ri-stethoscope-line me-2"></i>Clinic Demo<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="bg-body border-top">
+        <div class="container">
+          <div class="row pt-5 pb-4">
+            <div class="col-md-4 col-lg-6 mb-5 mb-md-0">
+              <a
+                href="/"
+                class="d-inline-flex align-items-center text-decoration-none mb-3"
+                aria-label="Your Company Logo"
+              >
+                <img
+                  src="/assets/images/astero-builder/logo.svg"
+                  alt="AsteroBuilder"
+                  class="me-2"
+                  style="height: 32px"
+                />
+              </a>
+              <p class="text-body-secondary mb-3">Easy Website Builder with Powerful SEO</p>
+              <a href="/templates/website/themes/astero-builder/contact" class="btn btn-primary rounded-pill"
+                >Contact Us</a
+              >
+            </div>
+            <!-- Learn More -->
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4 mb-sm-0">
+              <nav aria-label="Learn More">
+                <h5 class="mb-3">Learn More</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-builder/about" class="nav-link p-0 text-body-secondary"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-builder/blog-2" class="nav-link p-0 text-body-secondary"
+                      >Blog</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-builder/features" class="nav-link p-0 text-body-secondary"
+                      >Features</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-builder/login" class="nav-link p-0 text-body-secondary"
+                      >Login</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-builder/pricing" class="nav-link p-0 text-body-secondary"
+                      >Pricing</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Quick Links -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <nav aria-label="Quick Links">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-builder/help" class="nav-link p-0 text-body-secondary"
+                      >Help</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a
+                      href="/templates/website/themes/astero-builder/terms-and-conditions"
+                      class="nav-link p-0 text-body-secondary"
+                      >Terms & Conditions</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a
+                      href="/templates/website/themes/astero-builder/privacy-policy"
+                      class="nav-link p-0 text-body-secondary"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-builder/contact" class="nav-link p-0 text-body-secondary"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-between text-body-secondary pt-3 pb-4"
+          >
+            <p class="mb-3 mb-md-0">© 2025 AsteroBuilder LLC. All rights reserved.</p>
+            <div class="d-flex flex-row align-items-center gap-2">
+              <!-- Theme Toggle Tabs -->
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link dropdown-item d-flex align-items-center active"
+                    data-bs-theme-value="light"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                      ></path>
+                    </svg>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="dark"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"
+                      ></path>
+                    </svg>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="nav-link dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="auto"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"
+                      ></path>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <!-- Language Dropup -->
+              <div class="btn-group dropup">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary rounded-pill dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"
+                    ></path></svg
+                  >English
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item active" href="#">English</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- All Scripts -->
+    <!-- Astero UI JS / Bootstrap Js included in Astero UI -->
+    <script src="/scripts/asteroui-lite.min.js"></script>
+    <!-- Page Script --><!-- Enable hover-based dropdowns and disable click toggle behavior in the navbar (only for lg+ screens) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const dropdowns = document.querySelectorAll('.front-theme .nav-item.dropdown');
+
+        function enableHoverDropdowns() {
+          dropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
+
+            // Prevent Bootstrap click toggle
+            toggle.addEventListener('click', function (e) {
+              // Only prevent default if screen is lg or larger
+              if (window.innerWidth >= 992) {
+                e.preventDefault();
+              }
+            });
+
+            // Show dropdown on hover (only lg and up)
+            dropdown.addEventListener('mouseenter', function () {
+              if (window.innerWidth >= 992) {
+                toggle.classList.add('show');
+                menu.classList.add('show');
+                toggle.setAttribute('aria-expanded', 'true');
+              }
+            });
+
+            // Hide dropdown on mouse leave (only lg and up)
+            dropdown.addEventListener('mouseleave', function () {
+              if (window.innerWidth >= 992) {
+                toggle.classList.remove('show');
+                menu.classList.remove('show');
+                toggle.setAttribute('aria-expanded', 'false');
+              }
+            });
+          });
+        }
+
+        enableHoverDropdowns();
+
+        // Recheck if the user resizes the window
+        window.addEventListener('resize', function () {
+          // Close all dropdowns if resizing below or at lg
+          if (window.innerWidth <= 992) {
+            dropdowns.forEach((dropdown) => {
+              const toggle = dropdown.querySelector('.dropdown-toggle');
+              const menu = dropdown.querySelector('.dropdown-menu');
+              toggle.classList.remove('show');
+              menu.classList.remove('show');
+              toggle.setAttribute('aria-expanded', 'false');
+            });
+          }
+        });
+      });
+    </script>
+    <!-- Typer Script -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      // Wait for the DOM to be ready before running the script
+      document.addEventListener('DOMContentLoaded', function () {
+        // Select all elements with the class 'typer'
+        const typers = document.querySelectorAll('.typer');
+
+        typers.forEach(function (typer) {
+          // Get the configuration values from data attributes
+          const typeSpeed = typer.getAttribute('data-type-speed') || 50;
+          const backSpeed = typer.getAttribute('data-back-speed') || 50;
+          const strings = typer.getAttribute('data-strings') ? typer.getAttribute('data-strings').split(',') : [];
+          const loop = typer.getAttribute('data-loop') === 'true';
+
+          // Initialize the Typed.js instance with the custom options
+          // @ts-ignore
+          // eslint-disable-next-line
+          new Typed(typer.querySelector('.text-primary'), {
+            strings: strings,
+            typeSpeed: parseInt(typeSpeed, 10),
+            backSpeed: parseInt(backSpeed, 10),
+            loop: loop,
+            backDelay: 1000, // Add a slight delay before the text starts backspacing
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

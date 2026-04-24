@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+  <head>
+    <!-- Resource Hints -->
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <title>Doctors | Clinic Demo</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn more about our experienced doctors and medical specialists." />
+    <meta name="author" content="Astero Digital" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Doctors | Clinic Demo" />
+    <meta property="og:description" content="Learn more about our experienced doctors and medical specialists." />
+    <meta property="og:image" content="/src/assets/img/og-image.png" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Astero UI CSS -->
+    <link href="/styles/asteroui-lite.min.css" rel="stylesheet" />
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" />
+    <!-- AOS (Animate on Scroll) Styling -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Swiper Styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Open Sans from Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    />
+    <!-- Page CSS -->
+    <style>
+      :root,
+      [data-bs-theme='light'] {
+        --bs-primary: #3084ff;
+        --bs-primary-rgb: 48, 132, 255;
+      }
+
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-optical-sizing: auto;
+      }
+
+      .text-tertiary {
+        color: #88e1f8;
+      }
+
+      .swiper-pagination-bullet {
+        background-color: var(--bs-light);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light shadow bg-body sticky-top py-xl-3 z-4">
+        <div class="container">
+          <!-- Brand Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/clinic-demo/home">
+            <img src="/assets/images/placeholder-logos/logoipsum-287.svg" alt="Logo" style="height: 32px" />
+          </a>
+          <!-- Offcanvas Toggler -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Offcanvas Content -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/clinic-demo/home">
+                <img src="/assets/images/placeholder-logos/logoipsum-287.svg" alt="Logo" style="height: 32px" />
+              </a>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+              <div class="d-flex w-100 align-items-center">
+                <!-- Desktop Nav Links -->
+                <ul class="navbar-nav navbar-highlight d-none d-lg-flex ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/clinic-demo/home"> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/clinic-demo/about"> About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/templates/website/themes/clinic-demo/doctors"> Doctors</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/clinic-demo/departments"> Departments</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/clinic-demo/faq"> FAQ</a>
+                  </li>
+                  <!-- Book Appointment Button -->
+                  <li>
+                    <a
+                      class="nav-link text-bg-primary fw-medium rounded-pill px-4 ms-2"
+                      href="/templates/website/themes/clinic-demo/contact"
+                    >
+                      Book Appointment <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!-- Mobile Nav Links -->
+                <ul class="navbar-nav d-lg-none w-100">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/clinic-demo/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/clinic-demo/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/templates/website/themes/clinic-demo/doctors">Doctors</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/clinic-demo/departments">Departments</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="/templates/website/themes/clinic-demo/faq">FAQ</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/clinic-demo/contact">Book Appointment</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Page Content -->
+      <div class="content-wrapper bg-body">
+        <section class="py-5">
+          <div class="container">
+            <div class="text-center mb-4">
+              <span
+                class="badge text-body fw-medium border rounded-pill fs-6"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                ><i class="ri-sparkling-2-fill text-primary"></i> Doctors</span
+              >
+              <h1
+                class="display-5 fw-semibold text-center mt-2"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="800"
+              >
+                Meet Our Doctors
+              </h1>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6 col-xl-3">
+                <div class="card border-0 p-0" data-aos="zoom-out" data-aos-duration="800">
+                  <figure class="img-scale rounded-4 w-100">
+                    <img
+                      src="/assets/images/theme-images/clinic-demo/doctor-1.webp"
+                      class="img-fluid object-fit-cover"
+                      alt="Doctor"
+                    />
+                  </figure>
+                  <div class="card-body py-2">
+                    <h5 class="fs-4 mb-1">Dr. Amanda Lee</h5>
+                    <p class="text-muted mb-0" style="font-size: 15px">Head of Cardiology</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <div class="card border-0 p-0" data-aos="zoom-out" data-aos-delay="50" data-aos-duration="800">
+                  <figure class="img-scale rounded-4 w-100">
+                    <img
+                      src="/assets/images/theme-images/clinic-demo/doctor-2.webp"
+                      class="img-fluid object-fit-cover"
+                      alt="Doctor"
+                    />
+                  </figure>
+                  <div class="card-body py-2">
+                    <h5 class="fs-4 mb-1">Dr. Robert Chase</h5>
+                    <p class="text-muted mb-0" style="font-size: 15px">Head of Pediatrics</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <div class="card border-0 p-0" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="800">
+                  <figure class="img-scale rounded-4 w-100">
+                    <img
+                      src="/assets/images/theme-images/clinic-demo/doctor-3.webp"
+                      class="img-fluid object-fit-cover"
+                      alt="Doctor"
+                    />
+                  </figure>
+                  <div class="card-body py-2">
+                    <h5 class="fs-4 mb-1">Dr. Sarah Hayes</h5>
+                    <p class="text-muted mb-0" style="font-size: 15px">Head of Dental</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <div class="card border-0 p-0" data-aos="zoom-out" data-aos-delay="150" data-aos-duration="800">
+                  <figure class="img-scale rounded-4 w-100">
+                    <img
+                      src="/assets/images/theme-images/clinic-demo/doctor-4.webp"
+                      class="img-fluid object-fit-cover"
+                      alt="Doctor"
+                    />
+                  </figure>
+                  <div class="card-body py-2">
+                    <h5 class="fs-4 mb-1">Dr. Damon McKinney</h5>
+                    <p class="text-muted mb-0" style="font-size: 15px">Medical Director</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="pt-3 pb-5">
+          <div class="container">
+            <div class="text-center mb-4">
+              <span
+                class="badge text-body fw-medium border rounded-pill fs-6"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                ><i class="ri-stethoscope-fill text-primary"></i> Specialties</span
+              >
+              <h2 class="fs-1 mt-2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                Browse by Specialty
+              </h2>
+              <p class="text-muted fs-5" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
+                Find specialists across our clinic — click a specialty to view available doctors and services.
+              </p>
+            </div>
+            <div class="row g-3 g-md-4">
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <i class="ri-heart-pulse-fill text-primary display-5"></i>
+                    <h5 class="card-title fs-4 mt-2">Cardiology</h5>
+                    <p class="card-text text-muted" style="font-size: 15px">
+                      Advanced diagnostics and treatment plans.
+                    </p>
+                    <a href="#" class="btn btn btn-outline-secondary w-100 mt-3">View Doctors</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <i class="ri-stethoscope-fill text-primary display-5"></i>
+                    <h5 class="card-title fs-4 mt-2">Pediatrics</h5>
+                    <p class="card-text text-muted" style="font-size: 15px">Caring for infants, children, and teens.</p>
+                    <a href="#" class="btn btn btn-outline-secondary w-100 mt-3">View Doctors</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <i class="ri-tooth-fill text-primary display-5"></i>
+                    <h5 class="card-title fs-4 mt-2">Dental</h5>
+                    <p class="card-text text-muted" style="font-size: 15px">Oral health and dental surgery services.</p>
+                    <a href="#" class="btn btn btn-outline-secondary w-100 mt-3">View Doctors</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250" data-aos-duration="800">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <i class="ri-flask-fill text-primary display-5"></i>
+                    <h5 class="card-title fs-4 mt-2">Laboratory</h5>
+                    <p class="card-text text-muted" style="font-size: 15px">On-site testing with quick turnaround.</p>
+                    <a href="#" class="btn btn btn-outline-secondary w-100 mt-3">View Services</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-bg-primary py-5">
+          <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+              <div class="d-flex align-items-center gap-3" data-aos="zoom-out" data-aos-duration="800">
+                <i class="ri-shield-check-fill text-tertiary display-6"></i>
+                <div>
+                  <h5 class="fs-4">Certified Facility</h5>
+                  <p class="mb-0">State & national accreditations</p>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center gap-3"
+                data-aos="zoom-out"
+                data-aos-delay="100"
+                data-aos-duration="800"
+              >
+                <i class="ri-award-fill text-tertiary display-6"></i>
+                <div>
+                  <h5 class="fs-4">Top Rated Care</h5>
+                  <p class="mb-0">Patient satisfaction awards</p>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center gap-3"
+                data-aos="zoom-out"
+                data-aos-delay="200"
+                data-aos-duration="800"
+              >
+                <i class="ri-booklet-fill text-tertiary display-6"></i>
+                <div>
+                  <h5 class="fs-4">Research & Training</h5>
+                  <p class="mb-0">Ongoing clinical education</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="pt-5">
+          <div class="container">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                <span
+                  class="badge text-body fw-medium border rounded-pill fs-6"
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  ><i class="ri-calendar-check-fill text-primary"></i> Quick Book</span
+                >
+                <h2 class="fs-1 mt-2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  Find Availability
+                </h2>
+                <p class="fs-5 text-muted mb-0" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
+                  Search by specialty and preferred date to see available appointments.
+                </p>
+              </div>
+              <div class="col-lg-4 offset-lg-1">
+                <div class="card border" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label class="form-label">Specialty</label>
+                        <select class="form-select form-select-lg">
+                          <option>Cardiology</option>
+                          <option>Pediatrics</option>
+                          <option>Dental</option>
+                          <option>Laboratory</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Preferred Date</label>
+                        <input type="date" class="form-control form-control-lg" />
+                      </div>
+                      <button type="button" class="btn btn-lg btn-primary w-100">Check Availability</button>
+                      <p class="text-muted mt-2 mb-0">No personal data is submitted.</p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="pt-5 pb-2">
+          <div class="text-bg-primary rounded-4 px-3 py-5 mx-2">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                  <h4 class="display-6 text-light fw-semibold mb-lg-3" data-aos="fade-up" data-aos-duration="800">
+                    Ready to schedule your visit?
+                  </h4>
+                  <p class="fs-5 text-light mb-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                    Our team is here to help—book online or call us today.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-lg btn-light rounded-pill px-4 py-3"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    data-aos-duration="800"
+                  >
+                    Find a Doctor<i class="ri-arrow-right-line ms-2"></i>
+                  </a>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                  <!-- Slider main container -->
+                  <div class="swiper mySwiper" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
+                    <div class="swiper-wrapper mb-5">
+                      <div class="swiper-slide" style="height: auto">
+                        <div class="card bg-light bg-opacity-10 border-0 h-100">
+                          <div class="card-body">
+                            <div class="mb-1"><i class="ri-double-quotes-l text-tertiary display-6"></i></div>
+                            <p class="fs-5 fst-italic text-light mb-2">
+                              "Professional staff and excellent care. The whole process was seamless."
+                            </p>
+                            <span class="text-tertiary">
+                              <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i>
+                              <i class="ri-star-fill"></i> <i class="ri-star-half-fill"></i>
+                            </span>
+                            <hr class="border my-3" />
+                            <h6 class="fs-5 text-light mb-1">Emily R.</h6>
+                            <p class="text-light mb-0">
+                              <i class="ri-map-pin-fill text-tertiary me-1"></i>San Jose, CA
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide" style="height: auto">
+                        <div class="card bg-light bg-opacity-10 border-0 h-100">
+                          <div class="card-body">
+                            <div class="mb-1"><i class="ri-double-quotes-l text-tertiary display-6"></i></div>
+                            <p class="fs-5 fst-italic text-light mb-2">
+                              "Quick appointments and attentive doctors. I highly recommend this clinic."
+                            </p>
+                            <span class="text-tertiary">
+                              <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i>
+                              <i class="ri-star-fill"></i> <i class="ri-star-half-fill"></i>
+                            </span>
+                            <hr class="border my-3" />
+                            <h6 class="fs-5 text-light mb-1">Mark D.</h6>
+                            <p class="text-light mb-0"><i class="ri-map-pin-fill text-tertiary me-1"></i>Phoenix, AZ</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide" style="height: auto">
+                        <div class="card bg-light bg-opacity-10 border-0 h-100">
+                          <div class="card-body">
+                            <div class="mb-1"><i class="ri-double-quotes-l text-tertiary display-6"></i></div>
+                            <p class="fs-5 fst-italic text-light mb-2">
+                              "State-of-the-art facilities and caring nurses. I felt very well taken care of."
+                            </p>
+                            <span class="text-tertiary">
+                              <i class="ri-star-fill"></i> <i class="ri-star-fill"></i> <i class="ri-star-fill"></i>
+                              <i class="ri-star-fill"></i> <i class="ri-star-half-fill"></i>
+                            </span>
+                            <hr class="border my-3" />
+                            <h6 class="fs-5 text-light mb-1">Sara K.</h6>
+                            <p class="text-light mb-0"><i class="ri-map-pin-fill text-tertiary me-1"></i>Miami, FL</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Round Fixed Button --><button
+          class="btn btn-icon-xl btn-primary rounded-circle shadow-xl"
+          style="position: fixed; right: 1rem; top: 90%; transform: translateY(-50%); z-index: 1000"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#quickLinksOffcanvas"
+          aria-controls="quickLinksOffcanvas"
+        >
+          <i class="ri-settings-3-line fs-3"></i>
+        </button>
+        <!-- Offcanvas -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="quickLinksOffcanvas"
+          aria-labelledby="quickLinksOffcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title fs-5 fw-semibold" id="quickLinksOffcanvasLabel">
+              <i class="ri-links-line text-muted me-1"></i>Quick Links
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2">
+            <div class="d-flex gap-2 mb-3">
+              <a href="/" class="btn btn-primary w-100"><i class="ri-home-4-line me-1"></i>Home</a>
+              <a href="/docs" class="btn btn-secondary w-100"><i class="ri-folder-line me-1"></i>Docs</a>
+            </div>
+            <div>
+              <h6 class="text-muted text-uppercase">Admin</h6>
+              <div>
+                <a class="text-decoration-none" href="/templates/admin/dashboard"
+                  ><i class="ri-dashboard-line me-2"></i>Admin Dashboard Example<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Themes</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/classic/home"
+                  ><i class="ri-layout-3-line me-2"></i>Website Example (Classic)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/modern/home"
+                  ><i class="ri-layout-4-line me-2"></i>Website Example (Modern)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-1/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 1 (Beagle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-2/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 2 (Golden Retriever)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-3/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 3 (French Bulldog)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-4/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 4 (Poodle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-5/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 5 (German Shepherd)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-6/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 6 (Yorkshire Terrier)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-1/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 1 (Persian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-2/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 2 (Siamese)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-3/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 3 (Bengal)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-4/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 4 (Abyssinian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-5/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 5 (Himalayan)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-1/home"
+                  ><i class="ri-community-line me-2"></i>HOA 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-2/home"
+                  ><i class="ri-community-line me-2"></i>HOA 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-3/home"
+                  ><i class="ri-community-line me-2"></i>HOA 3<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-1/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-2/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Other</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-builder/home"
+                  ><i class="ri-hammer-line me-2"></i>AsteroBuilder<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-digital/home"
+                  ><i class="ri-macbook-line me-2"></i>AsteroDigital<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/paanstation/home"
+                  ><i class="ri-store-line me-2"></i>Paanstation<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/jazzup-salon/home"
+                  ><i class="ri-scissors-line me-2"></i>Jazzup Salon<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/homestyle-furnitech/home"
+                  ><i class="ri-sofa-line me-2"></i>HomeStyle Furnitech<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/mak-holding-group/home"
+                  ><i class="ri-building-line me-2"></i>MAK Holding Group<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/takshila-institute/home"
+                  ><i class="ri-school-line me-2"></i>Takshila Institute<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/clinic-demo/home"
+                  ><i class="ri-stethoscope-line me-2"></i>Clinic Demo<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="bg-body pt-5 pb-4">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Logo and Contact Info -->
+            <div class="col-md-6 col-lg-3">
+              <img src="/assets/images/placeholder-logos/logoipsum-287.svg" alt="Logo" style="height: 32px" />
+              <ul class="list-unstyled mt-3">
+                <li class="mb-2">
+                  <a href="tel:+12345678901" class="text-body text-decoration-none">
+                    <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="mailto:hello@email.com" class="text-body text-decoration-none">
+                    <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
+                  </a>
+                </li>
+                <li><i class="ri-map-pin-fill text-primary me-2"></i>123, Austin, TX</li>
+              </ul>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-md-6 col-lg-4">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="mb-3">Quick Links</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/clinic-demo/home" class="text-body text-decoration-none"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/clinic-demo/about" class="text-body text-decoration-none"
+                        >About</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/clinic-demo/doctors" class="text-body text-decoration-none"
+                        >Doctors</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/clinic-demo/departments" class="text-body text-decoration-none"
+                        >Departments</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/templates/website/themes/clinic-demo/faq" class="text-body text-decoration-none">FAQ</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <h5 class="mb-3">Legal</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/clinic-demo/terms" class="text-body text-decoration-none"
+                        >Terms &amp; Conditions</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/clinic-demo/privacy" class="text-body text-decoration-none"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/templates/website/themes/clinic-demo/legal" class="text-body text-decoration-none"
+                        >Legal Notice</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Newsletter -->
+            <div class="col-lg-4 offset-lg-1">
+              <h5 class="mb-3">Subscribe to our Newsletter</h5>
+              <p class="text-muted">
+                Stay informed with the latest health tips, clinic updates, and announcements—delivered straight to your
+                inbox.
+              </p>
+              <form>
+                <div class="mb-3">
+                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email" required />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  <i class="ri-send-plane-fill me-2"></i>Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="text-center border-top pt-4 mt-4">
+            <p class="text-muted mb-0">&copy; 2026 Company, Inc. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- All Scripts -->
+    <!-- Astero UI JS / Bootstrap Js included in Astero UI -->
+    <script src="/scripts/asteroui-lite.min.js"></script>
+    <!-- Page Script --><!-- AOS (Animate on Scroll) Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <!-- Swiper Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

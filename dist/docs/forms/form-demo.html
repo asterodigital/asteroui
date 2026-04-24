@@ -1,0 +1,3225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scrollbar-primary">
+  <head>
+    <!-- Resource Hints -->
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <title>Form Demo | Astero UI Documentation | Astero UI</title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="This page showcases a comprehensive form with various input types, demonstrating form validation and user interaction patterns."
+    />
+    <meta name="author" content="Astero Digital" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Form Demo | Astero UI Documentation | Astero UI" />
+    <meta
+      property="og:description"
+      content="This page showcases a comprehensive form with various input types, demonstrating form validation and user interaction patterns."
+    />
+    <meta property="og:image" content="/src/assets/img/og-image.png" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Astero UI CSS -->
+    <link href="/styles/asteroui.min.css" rel="stylesheet" />
+    <!-- <link href={getSkinCSS()} rel="stylesheet" /> -->
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <script>
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } else if (theme === 'auto' || !theme) {
+        document.documentElement.setAttribute(
+          'data-bs-theme',
+          window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+        );
+      }
+    </script>
+    <!-- Geist font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- Animate on Scroll (AOS) Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Bigger Picture (Lightbox) Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.19/dist/bigger-picture.min.css" rel="stylesheet" />
+    <!-- GLightbox Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+    <!-- Swiper Js Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- Docs Layout CSS-->
+    <link rel="stylesheet" href="/assets/docs/docs.css" />
+    <!-- Page CSS -->
+    <style>
+      /* You can also set custom colors inline in head */
+      /* :root,
+  [data-bs-theme='light'] {
+    --bs-primary: #7533f9;
+    --bs-primary-rgb: 117, 51, 249;
+    --bs-secondary: #efb907;
+    --bs-secondary-rgb: 239, 185, 7;
+  } */
+    </style>
+  </head>
+  <body>
+    <div class="docs-layout container px-0">
+      <!-- Bootstrap Docs Style Sidebar -->
+      <aside class="docs-sidebar scrollbar-primary" id="docs-sidebar">
+        <!-- Header with Brand -->
+        <div class="docs-sidebar-header">
+          <a href="/" class="docs-sidebar-brand">
+            <img src="/assets/images/logo.svg" class="rounded" alt="Astero UI" />
+            Astero UI
+          </a>
+          <!-- Mobile Toggle Button -->
+          <button
+            type="button"
+            class="docs-sidebar-toggle"
+            id="docs-sidebar-toggle"
+            aria-label="Toggle sidebar"
+            aria-expanded="false"
+            aria-controls="docs-sidebar"
+          >
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+        <!-- Navigation Content -->
+        <div class="docs-sidebar-content">
+          <nav class="docs-nav">
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-rocket-line" style="margin-right: 0.5rem"></i> Getting Started
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs" class="docs-nav-link"> <span class="docs-nav-text">Introduction</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/installation" class="docs-nav-link">
+                    <span class="docs-nav-text">Installation</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/getting-started/download" class="docs-nav-link">
+                    <span class="docs-nav-text">Download</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/getting-started/contents" class="docs-nav-link">
+                    <span class="docs-nav-text">Contents</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/getting-started/browsers-devices" class="docs-nav-link">
+                    <span class="docs-nav-text">Browsers &amp; devices</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/getting-started/javascript" class="docs-nav-link">
+                    <span class="docs-nav-text">JavaScript</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/getting-started/accessibility" class="docs-nav-link">
+                    <span class="docs-nav-text">Accessibility</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/getting-started/best-practices" class="docs-nav-link">
+                    <span class="docs-nav-text">Best practices</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/getting-started/contribute" class="docs-nav-link">
+                    <span class="docs-nav-text">Contribute</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-palette-line" style="margin-right: 0.5rem"></i> Customize
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/customize/overview" class="docs-nav-link">
+                    <span class="docs-nav-text">Overview</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/customize/sass" class="docs-nav-link"> <span class="docs-nav-text">Sass</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/customize/options" class="docs-nav-link">
+                    <span class="docs-nav-text">Options</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/customize/color" class="docs-nav-link"> <span class="docs-nav-text">Color</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/customize/color-modes" class="docs-nav-link">
+                    <span class="docs-nav-text">Color modes</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/customize/components" class="docs-nav-link">
+                    <span class="docs-nav-text">Components</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/customize/css-variables" class="docs-nav-link">
+                    <span class="docs-nav-text">CSS variables</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/customize/optimize" class="docs-nav-link">
+                    <span class="docs-nav-text">Optimize</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-layout-left-2-line" style="margin-right: 0.5rem"></i> Layout
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/layout/breakpoints" class="docs-nav-link">
+                    <span class="docs-nav-text">Breakpoints</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/layout/containers" class="docs-nav-link">
+                    <span class="docs-nav-text">Containers</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/layout/grid" class="docs-nav-link"> <span class="docs-nav-text">Grid system</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/layout/columns" class="docs-nav-link"> <span class="docs-nav-text">Columns</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/layout/gutters" class="docs-nav-link"> <span class="docs-nav-text">Gutters</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/layout/utilities" class="docs-nav-link">
+                    <span class="docs-nav-text">Utilities</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/layout/z-index" class="docs-nav-link"> <span class="docs-nav-text">Z-index</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/layout/css-grid" class="docs-nav-link">
+                    <span class="docs-nav-text">CSS Grid</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-file-text-line" style="margin-right: 0.5rem"></i> Content
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/content/reboot" class="docs-nav-link"> <span class="docs-nav-text">Reboot</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/content/typography" class="docs-nav-link">
+                    <span class="docs-nav-text">Typography</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/content/images" class="docs-nav-link"> <span class="docs-nav-text">Images</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/content/tables" class="docs-nav-link"> <span class="docs-nav-text">Tables</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/content/figures" class="docs-nav-link"> <span class="docs-nav-text">Figures</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/content/sidebar" class="docs-nav-link"> <span class="docs-nav-text">Sidebar</span> </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-layout-grid-line" style="margin-right: 0.5rem"></i> Forms
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/form-demo" class="docs-nav-link active">
+                    <span class="docs-nav-text">Form Demo</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/overview" class="docs-nav-link"> <span class="docs-nav-text">Overview</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/form-control" class="docs-nav-link">
+                    <span class="docs-nav-text">Form control</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/select" class="docs-nav-link"> <span class="docs-nav-text">Select</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/choices-js-select" class="docs-nav-link">
+                    <span class="docs-nav-text">Choices Js Select</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/checks-radios" class="docs-nav-link">
+                    <span class="docs-nav-text">Checks &amp; radios</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/range" class="docs-nav-link"> <span class="docs-nav-text">Range</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/input-group" class="docs-nav-link">
+                    <span class="docs-nav-text">Input group</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/input-otp" class="docs-nav-link">
+                    <span class="docs-nav-text">Input OTP</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/input-password" class="docs-nav-link">
+                    <span class="docs-nav-text">Input password</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/input-search" class="docs-nav-link">
+                    <span class="docs-nav-text">Input search</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/floating-labels" class="docs-nav-link">
+                    <span class="docs-nav-text">Floating labels</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/layout" class="docs-nav-link"> <span class="docs-nav-text">Layout</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/forms/validation" class="docs-nav-link">
+                    <span class="docs-nav-text">Validation</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-stack-line" style="margin-right: 0.5rem"></i> Components
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/components/general" class="docs-nav-link">
+                    <span class="docs-nav-text">General</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/accordion" class="docs-nav-link">
+                    <span class="docs-nav-text">Accordion</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/alerts" class="docs-nav-link">
+                    <span class="docs-nav-text">Alerts</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/animations" class="docs-nav-link">
+                    <span class="docs-nav-text">Animations</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/avatars" class="docs-nav-link">
+                    <span class="docs-nav-text">Avatars</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/badge" class="docs-nav-link"> <span class="docs-nav-text">Badge</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/breadcrumb" class="docs-nav-link">
+                    <span class="docs-nav-text">Breadcrumb</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/buttons" class="docs-nav-link">
+                    <span class="docs-nav-text">Buttons</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/button-group" class="docs-nav-link">
+                    <span class="docs-nav-text">Button group</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/card" class="docs-nav-link"> <span class="docs-nav-text">Card</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/carousel" class="docs-nav-link">
+                    <span class="docs-nav-text">Carousel</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/charts" class="docs-nav-link">
+                    <span class="docs-nav-text">Charts</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/close-button" class="docs-nav-link">
+                    <span class="docs-nav-text">Close button</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/collapse" class="docs-nav-link">
+                    <span class="docs-nav-text">Collapse</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/confetti" class="docs-nav-link">
+                    <span class="docs-nav-text">Confetti</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/dividers" class="docs-nav-link">
+                    <span class="docs-nav-text">Dividers</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/dropdowns" class="docs-nav-link">
+                    <span class="docs-nav-text">Dropdowns</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/glightbox" class="docs-nav-link">
+                    <span class="docs-nav-text">GLightbox</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/image-hover" class="docs-nav-link">
+                    <span class="docs-nav-text">Image Hover</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/info-box" class="docs-nav-link">
+                    <span class="docs-nav-text">Info Box</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/kbd" class="docs-nav-link">
+                    <span class="docs-nav-text">Keyboard Input</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/lightbox" class="docs-nav-link">
+                    <span class="docs-nav-text">Lightbox</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/list-group" class="docs-nav-link">
+                    <span class="docs-nav-text">List group</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/modal" class="docs-nav-link"> <span class="docs-nav-text">Modal</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/navbar" class="docs-nav-link">
+                    <span class="docs-nav-text">Navbar</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/navs-tabs" class="docs-nav-link">
+                    <span class="docs-nav-text">Navs &amp; tabs</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/offcanvas" class="docs-nav-link">
+                    <span class="docs-nav-text">Offcanvas</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/pagination" class="docs-nav-link">
+                    <span class="docs-nav-text">Pagination</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/placeholders" class="docs-nav-link">
+                    <span class="docs-nav-text">Placeholders</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/popovers" class="docs-nav-link">
+                    <span class="docs-nav-text">Popovers</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/progress" class="docs-nav-link">
+                    <span class="docs-nav-text">Progress</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/scrollspy" class="docs-nav-link">
+                    <span class="docs-nav-text">Scrollspy</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/small-box" class="docs-nav-link">
+                    <span class="docs-nav-text">Small Box</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/spinners" class="docs-nav-link">
+                    <span class="docs-nav-text">Spinners</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/text-animations" class="docs-nav-link">
+                    <span class="docs-nav-text">Text Animations</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/text-highlights" class="docs-nav-link">
+                    <span class="docs-nav-text">Text Highlights</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/toasts" class="docs-nav-link">
+                    <span class="docs-nav-text">Toasts</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/tooltips" class="docs-nav-link">
+                    <span class="docs-nav-text">Tooltips</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/components/treeview" class="docs-nav-link">
+                    <span class="docs-nav-text">Treeview</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-layout-masonry-line" style="margin-right: 0.5rem"></i> Sections
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/about-us" class="docs-nav-link">
+                    <span class="docs-nav-text">About Us</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/blog" class="docs-nav-link"> <span class="docs-nav-text">Blog</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/call-to-action" class="docs-nav-link">
+                    <span class="docs-nav-text">CTA</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/clients" class="docs-nav-link">
+                    <span class="docs-nav-text">Clients</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/contact" class="docs-nav-link">
+                    <span class="docs-nav-text">Contact</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/facts" class="docs-nav-link"> <span class="docs-nav-text">Facts</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/faq" class="docs-nav-link"> <span class="docs-nav-text">FAQ</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/features" class="docs-nav-link">
+                    <span class="docs-nav-text">Features</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/footer" class="docs-nav-link"> <span class="docs-nav-text">Footer</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/hero" class="docs-nav-link"> <span class="docs-nav-text">Hero</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/navbar" class="docs-nav-link"> <span class="docs-nav-text">Navbar</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/portfolio" class="docs-nav-link">
+                    <span class="docs-nav-text">Portfolio</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/pricing" class="docs-nav-link">
+                    <span class="docs-nav-text">Pricing</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/process" class="docs-nav-link">
+                    <span class="docs-nav-text">Process</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/team" class="docs-nav-link"> <span class="docs-nav-text">Team</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/sections/testimonials" class="docs-nav-link">
+                    <span class="docs-nav-text">Testimonials</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-tools-line" style="margin-right: 0.5rem"></i> Helpers
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/clearfix" class="docs-nav-link">
+                    <span class="docs-nav-text">Clearfix</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/color-background" class="docs-nav-link">
+                    <span class="docs-nav-text">Color &amp; background</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/colored-links" class="docs-nav-link">
+                    <span class="docs-nav-text">Colored links</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/focus-ring" class="docs-nav-link">
+                    <span class="docs-nav-text">Focus ring</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/icon-link" class="docs-nav-link">
+                    <span class="docs-nav-text">Icon link</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/position" class="docs-nav-link">
+                    <span class="docs-nav-text">Position</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/ratio" class="docs-nav-link"> <span class="docs-nav-text">Ratio</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/stacks" class="docs-nav-link"> <span class="docs-nav-text">Stacks</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/stretched-link" class="docs-nav-link">
+                    <span class="docs-nav-text">Stretched link</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/text-truncation" class="docs-nav-link">
+                    <span class="docs-nav-text">Text truncation</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/vertical-rule" class="docs-nav-link">
+                    <span class="docs-nav-text">Vertical rule</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/helpers/visually-hidden" class="docs-nav-link">
+                    <span class="docs-nav-text">Visually hidden</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-equalizer-line" style="margin-right: 0.5rem"></i> Utilities
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/api" class="docs-nav-link"> <span class="docs-nav-text">API</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/background" class="docs-nav-link">
+                    <span class="docs-nav-text">Background</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/borders" class="docs-nav-link">
+                    <span class="docs-nav-text">Borders</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/colors" class="docs-nav-link"> <span class="docs-nav-text">Colors</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/display" class="docs-nav-link">
+                    <span class="docs-nav-text">Display</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/flex" class="docs-nav-link"> <span class="docs-nav-text">Flex</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/float" class="docs-nav-link"> <span class="docs-nav-text">Float</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/interactions" class="docs-nav-link">
+                    <span class="docs-nav-text">Interactions</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/link" class="docs-nav-link"> <span class="docs-nav-text">Link</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/object-fit" class="docs-nav-link">
+                    <span class="docs-nav-text">Object fit</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/opacity" class="docs-nav-link">
+                    <span class="docs-nav-text">Opacity</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/overflow" class="docs-nav-link">
+                    <span class="docs-nav-text">Overflow</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/position" class="docs-nav-link">
+                    <span class="docs-nav-text">Position</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/shadows" class="docs-nav-link">
+                    <span class="docs-nav-text">Shadows</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/sizing" class="docs-nav-link"> <span class="docs-nav-text">Sizing</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/spacing" class="docs-nav-link">
+                    <span class="docs-nav-text">Spacing</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/text" class="docs-nav-link"> <span class="docs-nav-text">Text</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/vertical-align" class="docs-nav-link">
+                    <span class="docs-nav-text">Vertical align</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/visibility" class="docs-nav-link">
+                    <span class="docs-nav-text">Visibility</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/utilities/z-index" class="docs-nav-link">
+                    <span class="docs-nav-text">Z-index</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-loop-right-line" style="margin-right: 0.5rem"></i> Extend
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/extend/approach" class="docs-nav-link">
+                    <span class="docs-nav-text">Approach</span>
+                  </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/extend/icons" class="docs-nav-link"> <span class="docs-nav-text">Icons</span> </a>
+                </li>
+              </ul>
+            </div>
+            <div class="docs-nav-section">
+              <span class="docs-nav-section-title">
+                <i class="docs-nav-icon ri-information-line" style="margin-right: 0.5rem"></i> About
+              </span>
+              <ul class="docs-nav-group">
+                <li class="docs-nav-item">
+                  <a href="/docs/about/overview" class="docs-nav-link"> <span class="docs-nav-text">Overview</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/about/team" class="docs-nav-link"> <span class="docs-nav-text">Team</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/about/brand" class="docs-nav-link"> <span class="docs-nav-text">Brand</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/about/license" class="docs-nav-link"> <span class="docs-nav-text">License</span> </a>
+                </li>
+                <li class="docs-nav-item">
+                  <a href="/docs/about/translations" class="docs-nav-link">
+                    <span class="docs-nav-text">Translations</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <!-- Mobile Overlay -->
+      <div class="docs-sidebar-overlay" id="docs-sidebar-overlay"></div>
+      <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+          const t = document.getElementById('docs-sidebar'),
+            n = document.getElementById('docs-sidebar-overlay'),
+            s = document.getElementById('docs-sidebar-toggle'),
+            i = document.querySelector('[data-bs-toggle="sidebar"]');
+          function a() {
+            (t?.classList.add('show'),
+              n?.classList.add('show'),
+              s?.setAttribute('aria-expanded', 'true'),
+              (document.body.style.overflow = 'hidden'));
+          }
+          function o() {
+            (t?.classList.remove('show'),
+              n?.classList.remove('show'),
+              s?.setAttribute('aria-expanded', 'false'),
+              (document.body.style.overflow = ''));
+          }
+          (s?.addEventListener('click', o),
+            i?.addEventListener('click', (e) => {
+              (e.preventDefault(), t?.classList.contains('show') ? o() : a());
+            }),
+            n?.addEventListener('click', o),
+            document.addEventListener('keydown', (e) => {
+              e.key === 'Escape' && t?.classList.contains('show') && o();
+            }),
+            window.addEventListener('resize', () => {
+              window.innerWidth >= 1200 && o();
+            }));
+          try {
+            const e = t?.querySelector('.docs-sidebar') || t,
+              d = t?.querySelector('.docs-nav-link.active');
+            if (e && d) {
+              const l = e.getBoundingClientRect(),
+                c = d.getBoundingClientRect(),
+                r = c.top - l.top + c.height / 2,
+                u = e.scrollTop + r - e.clientHeight / 2;
+              e.scrollTo({ top: u, behavior: 'auto' });
+            }
+          } catch {}
+        });
+      </script>
+      <main class="docs-main">
+        <!-- Bootstrap Docs Style Topbar -->
+        <div class="docs-topbar sticky-top">
+          <div class="container-fluid">
+            <nav class="d-flex align-items-center justify-content-between">
+              <!-- Left section -->
+              <div class="d-flex align-items-center">
+                <button
+                  class="btn btn-outline-secondary d-xl-none me-3"
+                  data-bs-toggle="sidebar"
+                  aria-label="Toggle sidebar"
+                >
+                  <i class="ri-list-unordered"></i>
+                </button>
+                <div class="docs-brand-section d-none d-sm-flex align-items-center">
+                  <span class="docs-brand fw-semibold fs-5">Documentation</span>
+                  <span class="badge text-bg-primary ms-2">v1.0.0</span>
+                </div>
+              </div>
+              <!-- Right section -->
+              <div class="d-flex align-items-center gap-2">
+                <!-- Search Button -->
+                <div class="search-container">
+                  <button
+                    class="btn btn-outline-secondary d-flex align-items-center gap-2"
+                    id="search-toggle"
+                    data-bs-toggle="modal"
+                    data-bs-target="#searchModal"
+                    type="button"
+                  >
+                    <i class="ri-search-line"></i> <span class="d-none d-md-inline small">Search</span>
+                    <span class="d-flex align-items-center small gap-1"> <kbd>Ctrl</kbd> + <kbd>K</kbd> </span>
+                  </button>
+                </div>
+                <!-- External Links -->
+                <div class="d-flex align-items-center gap-2">
+                  <!-- GitHub Repository Link -->
+                  <a
+                    href="https://github.com/asterodigital/asteroui"
+                    class="btn btn-outline-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub Repository"
+                  >
+                    <i class="ri-github-line"></i>
+                  </a>
+                  <!-- Theme Toggle -->
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-outline-secondary"
+                      id="theme-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-label="Toggle theme"
+                    >
+                      <i class="ri-contrast-line"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="theme-toggle">
+                      <li>
+                        <button
+                          type="button"
+                          class="dropdown-item d-flex align-items-center"
+                          data-bs-theme-value="light"
+                        >
+                          <i class="ri-sun-line me-2"></i>
+                          Light
+                          <i class="ri-check-line ms-auto d-none"></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          class="dropdown-item d-flex align-items-center"
+                          data-bs-theme-value="dark"
+                        >
+                          <i class="ri-moon-clear-fill me-2"></i>
+                          Dark
+                          <i class="ri-check-line ms-auto d-none"></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          class="dropdown-item d-flex align-items-center"
+                          data-bs-theme-value="auto"
+                        >
+                          <i class="ri-contrast-line me-2"></i>
+                          Auto
+                          <i class="ri-check-line ms-auto d-none"></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="docs-content">
+          <div class="container-fluid px-4">
+            <div class="row">
+              <div class="col-12 col-lg-12 order-1 order-lg-0 toc-content">
+                <header class="docs-header mb-3">
+                  <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                    <h1 class="mb-0">Form Demo</h1>
+                    <button
+                      id="copy-mdx-btn"
+                      class="btn btn-sm btn-outline-secondary"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="left"
+                      title="Copy as markdown"
+                    >
+                      <i class="ri-file-copy-line me-1"></i>
+                      Copy as markdown
+                    </button>
+                    <textarea id="mdx-source" style="position: absolute; left: -9999px; top: -9999px">
+                            ---
+title: Form Demo
+description: This page showcases a comprehensive form with various input types, demonstrating form validation and user interaction patterns.
+toc: false
+---
+
+## Form Validation Features
+
+This demo illustrates Bootstrap&#39;s custom form validation with the following enhancements:
+
+### **Clean Validation Approach**
+
+- **All form fields**: Maintain their default appearance regardless of validation state
+- **Smart feedback**: Only show error messages for invalid fields, no success messages for valid fields
+- **Clean design**: Form controls stay neutral, labels turn red only when there are errors
+
+### **Input Types Demonstrated**
+
+- Text inputs (first name, last name, username)
+- Email validation
+- Password field
+- Number input with min/max validation
+- Date picker
+- Select dropdown
+- Radio buttons (gender selection)
+- Range slider with real-time feedback
+- Color picker
+- Switch toggle (email notifications)
+- File upload
+- Textarea
+- Checkbox agreement
+
+### **Validation Behavior**
+
+- **Client-side validation**: Immediate feedback using HTML5 and Bootstrap
+- **Clean form controls**: All form fields maintain their default appearance
+- **Error-focused feedback**: Only invalid fields show red labels and error messages
+- **Best practice**: No success messages or green styling - clean and minimal approach
+
+## Implementation Guide
+
+### **HTML Structure**
+
+```html
+&lt;form class=&quot;needs-validation&quot; novalidate&gt;
+  &lt;!-- Required field --&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; required /&gt;
+
+  &lt;!-- Optional field --&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; /&gt;
+&lt;/form&gt;
+```
+
+### **JavaScript Validation**
+
+```javascript
+const forms = document.querySelectorAll(&#39;.needs-validation&#39;);
+Array.from(forms).forEach((form) =&gt; {
+  form.addEventListener(
+    &#39;submit&#39;,
+    (event) =&gt; {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add(&#39;was-validated&#39;);
+    },
+    false
+  );
+});
+```
+
+## Best Practices
+
+✅ **Recommended approach**: This form demonstrates clean validation patterns:
+
+- **No success feedback**: Avoid green checkmarks and &quot;Looks good!&quot; messages
+- **Error-only feedback**: Only show red styling and messages for problems
+- **Clean interface**: Valid fields remain visually neutral and uncluttered
+- **User-friendly**: Reduces visual noise and focuses attention on actual issues
+
+⚠️ **Production Notes**: The modal showing JSON data is for demonstration purposes only. In production:
+
+- Replace modal display with actual form submission to your server
+- Add proper server-side validation and security measures
+
+## Complete Form Example
+
+&lt;Example
+  html={`&lt;form class=&quot;needs-validation&quot; novalidate&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;!-- Left Column - Main Form Content --&gt;
+      &lt;div class=&quot;col-lg-8&quot;&gt;
+        &lt;!-- Personal Information Card --&gt;
+        &lt;div class=&quot;card mb-4&quot;&gt;
+          &lt;div class=&quot;card-header&quot;&gt;
+            &lt;h6&gt;Personal Information&lt;/h6&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;card-body&quot;&gt;
+            &lt;div class=&quot;row g-3&quot;&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustom01&quot; class=&quot;form-label&quot;&gt;First name&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom01&quot; name=&quot;firstName&quot; value=&quot;John&quot; required&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please provide a valid first name.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustom02&quot; class=&quot;form-label&quot;&gt;Last name&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom02&quot; name=&quot;lastName&quot; value=&quot;Doe&quot; required&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please provide a valid last name.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-12&quot;&gt;
+                &lt;label for=&quot;validationCustomUsername&quot; class=&quot;form-label&quot;&gt;Username&lt;/label&gt;
+                &lt;div class=&quot;input-group has-validation&quot;&gt;
+                  &lt;span class=&quot;input-group-text&quot; id=&quot;inputGroupPrepend&quot;&gt;@&lt;/span&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustomUsername&quot; name=&quot;username&quot; aria-describedby=&quot;inputGroupPrepend&quot; required&gt;
+                  &lt;div class=&quot;invalid-feedback&quot;&gt;
+                    Please choose a username.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustomEmail&quot; class=&quot;form-label&quot;&gt;Email&lt;/label&gt;
+                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;validationCustomEmail&quot; name=&quot;email&quot; placeholder=&quot;name@example.com&quot; required&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please provide a valid email.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustomPassword&quot; class=&quot;form-label&quot;&gt;Password&lt;/label&gt;
+                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;validationCustomPassword&quot; name=&quot;password&quot; placeholder=&quot;Enter your password&quot; required&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please provide a valid password.
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Additional Information Card --&gt;
+        &lt;div class=&quot;card mb-4&quot;&gt;
+          &lt;div class=&quot;card-header&quot;&gt;
+            &lt;h6&gt;Additional Information&lt;/h6&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;card-body&quot;&gt;
+            &lt;div class=&quot;row g-3&quot;&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustomAge&quot; class=&quot;form-label&quot;&gt;Age&lt;/label&gt;
+                &lt;input type=&quot;number&quot; class=&quot;form-control&quot; id=&quot;validationCustomAge&quot; name=&quot;age&quot; min=&quot;18&quot; max=&quot;120&quot;&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please provide a valid age (18-120).
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustomDate&quot; class=&quot;form-label&quot;&gt;Birth Date&lt;/label&gt;
+                &lt;input type=&quot;date&quot; class=&quot;form-control&quot; id=&quot;validationCustomDate&quot; name=&quot;birthDate&quot;&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please select a valid date.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustom03&quot; class=&quot;form-label&quot;&gt;City&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom03&quot; name=&quot;city&quot;&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please provide a valid city.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustom04&quot; class=&quot;form-label&quot;&gt;State&lt;/label&gt;
+                &lt;select class=&quot;form-select&quot; id=&quot;validationCustom04&quot; name=&quot;state&quot; required&gt;
+                  &lt;option selected disabled value=&quot;&quot;&gt;Choose...&lt;/option&gt;
+                  &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+                  &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+                  &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+                  &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+                  &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+                  &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;
+                  &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+                  &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+                  &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+                  &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please select a valid state.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustom05&quot; class=&quot;form-label&quot;&gt;Zip&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom05&quot; name=&quot;zip&quot; required&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please provide a valid zip.
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Preferences Card --&gt;
+        &lt;div class=&quot;card mb-4&quot;&gt;
+          &lt;div class=&quot;card-header&quot;&gt;
+            &lt;h6&gt;Preferences&lt;/h6&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;card-body&quot;&gt;
+            &lt;div class=&quot;row g-3&quot;&gt;
+              &lt;div class=&quot;col-12&quot;&gt;
+                &lt;label class=&quot;form-label&quot;&gt;Gender&lt;/label&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                  &lt;div class=&quot;col-md-4&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                      &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;genderMale&quot; value=&quot;male&quot; required&gt;
+                      &lt;label class=&quot;form-check-label&quot; for=&quot;genderMale&quot;&gt;
+                        Male
+                      &lt;/label&gt;
+                      &lt;div class=&quot;invalid-feedback&quot;&gt;
+                        Please select a gender.
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-md-4&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                      &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;genderFemale&quot; value=&quot;female&quot;&gt;
+                      &lt;label class=&quot;form-check-label&quot; for=&quot;genderFemale&quot;&gt;
+                        Female
+                      &lt;/label&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-md-4&quot;&gt;
+                    &lt;div class=&quot;form-check&quot;&gt;
+                      &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;genderOther&quot; value=&quot;other&quot;&gt;
+                      &lt;label class=&quot;form-check-label&quot; for=&quot;genderOther&quot;&gt;
+                        Other
+                      &lt;/label&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-12&quot;&gt;
+                &lt;label for=&quot;validationCustomRange&quot; class=&quot;form-label&quot;&gt;Experience Level (0-10)&lt;/label&gt;
+                &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                  &lt;input type=&quot;range&quot; class=&quot;form-range flex-grow-1&quot; id=&quot;validationCustomRange&quot; name=&quot;experienceLevel&quot; min=&quot;0&quot; max=&quot;10&quot; value=&quot;5&quot;&gt;
+                  &lt;div class=&quot;badge text-bg-primary fs-6 px-3 py-2&quot; id=&quot;rangeValue&quot;&gt;5&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please select your experience level.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustomColor&quot; class=&quot;form-label&quot;&gt;Favorite Color&lt;/label&gt;
+                &lt;input type=&quot;color&quot; class=&quot;form-control form-control-color&quot; id=&quot;validationCustomColor&quot; name=&quot;favoriteColor&quot; value=&quot;#563d7c&quot;&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please select a color.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label class=&quot;form-label&quot;&gt;Email Notifications&lt;/label&gt;
+                &lt;div class=&quot;form-check form-switch&quot;&gt;
+                  &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot; id=&quot;validationCustomSwitch&quot; name=&quot;emailNotifications&quot; checked&gt;
+                  &lt;label class=&quot;form-check-label&quot; for=&quot;validationCustomSwitch&quot;&gt;
+                    Receive email notifications
+                  &lt;/label&gt;
+                  &lt;div class=&quot;invalid-feedback&quot;&gt;
+                    Please configure your notification preference.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Media and Bio Cards in a row --&gt;
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;!-- Media Card --&gt;
+            &lt;div class=&quot;card mb-4&quot;&gt;
+              &lt;div class=&quot;card-header&quot;&gt;
+                &lt;h6&gt;Media&lt;/h6&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;card-body&quot;&gt;
+                &lt;div class=&quot;row g-3&quot;&gt;
+                  &lt;div class=&quot;col-12&quot;&gt;
+                    &lt;label for=&quot;validationCustomFile&quot; class=&quot;form-label&quot;&gt;Profile Picture&lt;/label&gt;
+                    &lt;input type=&quot;file&quot; class=&quot;form-control&quot; id=&quot;validationCustomFile&quot; name=&quot;profilePicture&quot; accept=&quot;image/*&quot;&gt;
+                    &lt;div class=&quot;invalid-feedback&quot;&gt;
+                      Please select a valid image file.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;!-- Bio Card --&gt;
+            &lt;div class=&quot;card mb-4&quot;&gt;
+              &lt;div class=&quot;card-header&quot;&gt;
+                &lt;h6&gt;About You&lt;/h6&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;card-body&quot;&gt;
+                &lt;div class=&quot;row g-3&quot;&gt;
+                  &lt;div class=&quot;col-12&quot;&gt;
+                    &lt;label for=&quot;validationCustomBio&quot; class=&quot;form-label&quot;&gt;Bio&lt;/label&gt;
+                    &lt;textarea class=&quot;form-control&quot; id=&quot;validationCustomBio&quot; name=&quot;bio&quot; rows=&quot;3&quot; placeholder=&quot;Tell us about yourself...&quot;&gt;&lt;/textarea&gt;
+                    &lt;div class=&quot;invalid-feedback&quot;&gt;
+                      Please provide a brief bio.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Special Fields Card --&gt;
+        &lt;div class=&quot;card mb-4&quot;&gt;
+          &lt;div class=&quot;card-header&quot;&gt;
+            &lt;h6&gt;Special Fields&lt;/h6&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;card-body&quot;&gt;
+            &lt;div class=&quot;row g-3&quot;&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustomDisabled&quot; class=&quot;form-label&quot;&gt;Disabled Field&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustomDisabled&quot; value=&quot;This field is disabled&quot; disabled&gt;
+                &lt;div class=&quot;form-text&quot;&gt;
+                  This field is disabled and cannot be edited.
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;label for=&quot;validationCustomReadonly&quot; class=&quot;form-label&quot;&gt;Readonly Field&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustomReadonly&quot; value=&quot;This field is readonly&quot; readonly&gt;
+                &lt;div class=&quot;form-text&quot;&gt;
+                  This field is readonly and cannot be edited.
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Right Column - Agreement and Submit --&gt;
+      &lt;div class=&quot;col-lg-4&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+          &lt;div class=&quot;card-header&quot;&gt;
+            &lt;h6&gt;Review &amp; Submit&lt;/h6&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;card-body&quot;&gt;
+            &lt;div class=&quot;d-flex flex-column gap-3&quot;&gt;
+              &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;invalidCheck&quot; name=&quot;agreeToTerms&quot; required&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;invalidCheck&quot;&gt;
+                  I agree to the terms and conditions
+                &lt;/label&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  You must agree before submitting.
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;d-grid gap-2&quot;&gt;
+                &lt;button class=&quot;btn btn-primary btn-lg&quot; type=&quot;submit&quot;&gt;
+                  &lt;i class=&quot;ri-send-plane-line me-2&quot;&gt;&lt;/i&gt;Submit Form
+                &lt;/button&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;text-muted small&quot;&gt;
+                &lt;p&gt;By submitting this form, you agree to our privacy policy and terms of service.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/form&gt;
+
+  &lt;!-- Modal for displaying submitted data --&gt;
+
+  &lt;div class=&quot;modal fade&quot; id=&quot;submissionModal&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;submissionModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div class=&quot;modal-dialog modal-lg&quot;&gt;
+      &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+          &lt;h5 class=&quot;modal-title&quot; id=&quot;submissionModalLabel&quot;&gt;Form Submission Summary&lt;/h5&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;div id=&quot;submissionData&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-footer&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-dismiss=&quot;modal&quot;&gt;OK&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;`}
+  js={`(() =&gt; {
+    &#39;use strict&#39;;
+
+    // Add range slider feedback
+    const rangeInput = document.getElementById(&#39;validationCustomRange&#39;);
+    const rangeValue = document.getElementById(&#39;rangeValue&#39;);
+
+    if (rangeInput &amp;&amp; rangeValue) {
+      // Set initial value
+      rangeValue.textContent = rangeInput.value;
+
+      // Update value on input change
+      rangeInput.addEventListener(&#39;input&#39;, (e) =&gt; {
+        rangeValue.textContent = e.target.value;
+      });
+    }
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll(&#39;.needs-validation&#39;);
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach((form) =&gt; {
+      form.addEventListener(
+        &#39;submit&#39;,
+        (event) =&gt; {
+          event.preventDefault();
+          event.stopPropagation();
+
+          if (!form.checkValidity()) {
+            form.classList.add(&#39;was-validated&#39;);
+            return;
+          }
+
+          form.classList.add(&#39;was-validated&#39;);
+
+          // Collect form data
+          const formData = new FormData(form);
+
+          // Generate HTML for modal showing JSON representation
+          let modalContent = &#39;&lt;div style=&quot;background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 13px;&quot;&gt;&#39;;
+          modalContent += &#39;&lt;strong&gt;Form Data (JSON Representation):&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&#39;;
+
+          // Show as JSON object
+          const jsonData = {};
+          for (let [key, value] of formData.entries()) {
+            // Handle checkbox values
+            if (key === &#39;agreeToTerms&#39;) {
+              const checkbox = form.querySelector(&#39;#invalidCheck&#39;);
+              jsonData[key] = checkbox.checked ? &#39;checked&#39; : &#39;unchecked&#39;;
+            }
+            // Handle switch values
+            else if (key === &#39;emailNotifications&#39;) {
+              const switchInput = form.querySelector(&#39;#validationCustomSwitch&#39;);
+              jsonData[key] = switchInput.checked ? &#39;enabled&#39; : &#39;disabled&#39;;
+            }
+            // Handle file input
+            else if (key === &#39;profilePicture&#39;) {
+              const fileInput = form.querySelector(&#39;#validationCustomFile&#39;);
+              if (fileInput &amp;&amp; fileInput.files.length &gt; 0) {
+                jsonData[key] = fileInput.files[0].name;
+              } else {
+                jsonData[key] = &#39;&#39;;
+              }
+            }
+            else {
+              jsonData[key] = value;
+            }
+          }
+
+          // Ensure range input value is captured
+          const rangeInput = form.querySelector(&#39;#validationCustomRange&#39;);
+          if (rangeInput) {
+            jsonData[&#39;experienceLevel&#39;] = rangeInput.value;
+          }
+
+          modalContent += &#39;&lt;pre style=&quot;margin: 5px 0; white-space: pre-wrap; word-break: break-all; background: #ffffff; padding: 10px; border: 1px solid #dee2e6; border-radius: 3px;&quot;&gt;&#39; + JSON.stringify(jsonData, null, 2) + &#39;&lt;/pre&gt;&#39;;
+
+          modalContent += &#39;&lt;/div&gt;&#39;;
+
+          // Update modal content and show it
+          document.getElementById(&#39;submissionData&#39;).innerHTML = modalContent;
+
+          // Show the modal
+          const modal = new bootstrap.Modal(document.getElementById(&#39;submissionModal&#39;));
+          modal.show();
+        },
+        false
+      );
+    });
+
+})();`}
+/&gt;
+
+                          </textarea
+                    >
+                  </div>
+                  <p class="lead">
+                    This page showcases a comprehensive form with various input types, demonstrating form validation and
+                    user interaction patterns.
+                  </p>
+                </header>
+                <h2 id="form-validation-features">Form Validation Features</h2>
+                <p>This demo illustrates Bootstrap&#39;s custom form validation with the following enhancements:</p>
+                <h3 id="clean-validation-approach"><strong>Clean Validation Approach</strong></h3>
+                <ul>
+                  <li>
+                    <strong>All form fields</strong>: Maintain their default appearance regardless of validation state
+                  </li>
+                  <li>
+                    <strong>Smart feedback</strong>: Only show error messages for invalid fields, no success messages
+                    for valid fields
+                  </li>
+                  <li>
+                    <strong>Clean design</strong>: Form controls stay neutral, labels turn red only when there are
+                    errors
+                  </li>
+                </ul>
+                <h3 id="input-types-demonstrated"><strong>Input Types Demonstrated</strong></h3>
+                <ul>
+                  <li>Text inputs (first name, last name, username)</li>
+                  <li>Email validation</li>
+                  <li>Password field</li>
+                  <li>Number input with min/max validation</li>
+                  <li>Date picker</li>
+                  <li>Select dropdown</li>
+                  <li>Radio buttons (gender selection)</li>
+                  <li>Range slider with real-time feedback</li>
+                  <li>Color picker</li>
+                  <li>Switch toggle (email notifications)</li>
+                  <li>File upload</li>
+                  <li>Textarea</li>
+                  <li>Checkbox agreement</li>
+                </ul>
+                <h3 id="validation-behavior"><strong>Validation Behavior</strong></h3>
+                <ul>
+                  <li><strong>Client-side validation</strong>: Immediate feedback using HTML5 and Bootstrap</li>
+                  <li><strong>Clean form controls</strong>: All form fields maintain their default appearance</li>
+                  <li>
+                    <strong>Error-focused feedback</strong>: Only invalid fields show red labels and error messages
+                  </li>
+                  <li>
+                    <strong>Best practice</strong>: No success messages or green styling - clean and minimal approach
+                  </li>
+                </ul>
+                <h2 id="implementation-guide">Implementation Guide</h2>
+                <h3 id="html-structure"><strong>HTML Structure</strong></h3>
+                <div class="syntax-highlight">
+                  <pre
+                    class="language-html"
+                    data-language="html"
+                  ><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>needs-validation<span class="token punctuation">&quot;</span></span> <span class="token attr-name">novalidate</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- Required field --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token punctuation">/&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Optional field --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+                </div>
+                <h3 id="javascript-validation"><strong>JavaScript Validation</strong></h3>
+                <div class="syntax-highlight">
+                  <pre
+                    class="language-javascript"
+                    data-language="javascript"
+                  ><code class="language-javascript"><span class="token keyword">const</span> forms <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">&#39;.needs-validation&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>forms<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">form</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  form<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>
+    <span class="token string">&#39;submit&#39;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>form<span class="token punctuation">.</span><span class="token function">checkValidity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      form<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&#39;was-validated&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token boolean">false</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+                </div>
+                <h2 id="best-practices">Best Practices</h2>
+                <p>✅ <strong>Recommended approach</strong>: This form demonstrates clean validation patterns:</p>
+                <ul>
+                  <li>
+                    <strong>No success feedback</strong>: Avoid green checkmarks and &quot;Looks good!&quot; messages
+                  </li>
+                  <li><strong>Error-only feedback</strong>: Only show red styling and messages for problems</li>
+                  <li><strong>Clean interface</strong>: Valid fields remain visually neutral and uncluttered</li>
+                  <li><strong>User-friendly</strong>: Reduces visual noise and focuses attention on actual issues</li>
+                </ul>
+                <p>
+                  ⚠️ <strong>Production Notes</strong>: The modal showing JSON data is for demonstration purposes only.
+                  In production:
+                </p>
+                <ul>
+                  <li>Replace modal display with actual form submission to your server</li>
+                  <li>Add proper server-side validation and security measures</li>
+                </ul>
+                <h2 id="complete-form-example">Complete Form Example</h2>
+                <!-- Example wrapper with Bootstrap classes -->
+                <div class="bd-example-snippet bd-code-snippet rounded-4" data-toc-skip style="overflow: hidden">
+                  <!-- Optional title header -->
+                  <!-- Live preview container -->
+                  <div class="bd-example rounded-top-4 m-0 border-0" id="example-85hmqcqkj">
+                    <div>
+                      <style data-page-css></style>
+                      <form class="needs-validation" novalidate>
+                        <div class="row">
+                          <!-- Left Column - Main Form Content -->
+                          <div class="col-lg-8">
+                            <!-- Personal Information Card -->
+                            <div class="card mb-4">
+                              <div class="card-header">
+                                <h6>Personal Information</h6>
+                              </div>
+                              <div class="card-body">
+                                <div class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="validationCustom01" class="form-label">First name</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="validationCustom01"
+                                      name="firstName"
+                                      value="John"
+                                      required
+                                    />
+                                    <div class="invalid-feedback">Please provide a valid first name.</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustom02" class="form-label">Last name</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="validationCustom02"
+                                      name="lastName"
+                                      value="Doe"
+                                      required
+                                    />
+                                    <div class="invalid-feedback">Please provide a valid last name.</div>
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="validationCustomUsername" class="form-label">Username</label>
+                                    <div class="input-group has-validation">
+                                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="validationCustomUsername"
+                                        name="username"
+                                        aria-describedby="inputGroupPrepend"
+                                        required
+                                      />
+                                      <div class="invalid-feedback">Please choose a username.</div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustomEmail" class="form-label">Email</label>
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="validationCustomEmail"
+                                      name="email"
+                                      placeholder="name@example.com"
+                                      required
+                                    />
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustomPassword" class="form-label">Password</label>
+                                    <input
+                                      type="password"
+                                      class="form-control"
+                                      id="validationCustomPassword"
+                                      name="password"
+                                      placeholder="Enter your password"
+                                      required
+                                    />
+                                    <div class="invalid-feedback">Please provide a valid password.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Additional Information Card -->
+                            <div class="card mb-4">
+                              <div class="card-header">
+                                <h6>Additional Information</h6>
+                              </div>
+                              <div class="card-body">
+                                <div class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="validationCustomAge" class="form-label">Age</label>
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      id="validationCustomAge"
+                                      name="age"
+                                      min="18"
+                                      max="120"
+                                    />
+                                    <div class="invalid-feedback">Please provide a valid age (18-120).</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustomDate" class="form-label">Birth Date</label>
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="validationCustomDate"
+                                      name="birthDate"
+                                    />
+                                    <div class="invalid-feedback">Please select a valid date.</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustom03" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="validationCustom03" name="city" />
+                                    <div class="invalid-feedback">Please provide a valid city.</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustom04" class="form-label">State</label>
+                                    <select class="form-select" id="validationCustom04" name="state" required>
+                                      <option selected disabled value="">Choose...</option>
+                                      <option value="CA">California</option>
+                                      <option value="TX">Texas</option>
+                                      <option value="NY">New York</option>
+                                      <option value="FL">Florida</option>
+                                      <option value="IL">Illinois</option>
+                                      <option value="PA">Pennsylvania</option>
+                                      <option value="OH">Ohio</option>
+                                      <option value="GA">Georgia</option>
+                                      <option value="NC">North Carolina</option>
+                                      <option value="MI">Michigan</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a valid state.</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustom05" class="form-label">Zip</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="validationCustom05"
+                                      name="zip"
+                                      required
+                                    />
+                                    <div class="invalid-feedback">Please provide a valid zip.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Preferences Card -->
+                            <div class="card mb-4">
+                              <div class="card-header">
+                                <h6>Preferences</h6>
+                              </div>
+                              <div class="card-body">
+                                <div class="row g-3">
+                                  <div class="col-12">
+                                    <label class="form-label">Gender</label>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <div class="form-check">
+                                          <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="gender"
+                                            id="genderMale"
+                                            value="male"
+                                            required
+                                          />
+                                          <label class="form-check-label" for="genderMale"> Male </label>
+                                          <div class="invalid-feedback">Please select a gender.</div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <div class="form-check">
+                                          <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="gender"
+                                            id="genderFemale"
+                                            value="female"
+                                          />
+                                          <label class="form-check-label" for="genderFemale"> Female </label>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <div class="form-check">
+                                          <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="gender"
+                                            id="genderOther"
+                                            value="other"
+                                          />
+                                          <label class="form-check-label" for="genderOther"> Other </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="validationCustomRange" class="form-label"
+                                      >Experience Level (0-10)</label
+                                    >
+                                    <div class="d-flex align-items-center gap-3">
+                                      <input
+                                        type="range"
+                                        class="form-range flex-grow-1"
+                                        id="validationCustomRange"
+                                        name="experienceLevel"
+                                        min="0"
+                                        max="10"
+                                        value="5"
+                                      />
+                                      <div class="badge text-bg-primary fs-6 px-3 py-2" id="rangeValue">5</div>
+                                    </div>
+                                    <div class="invalid-feedback">Please select your experience level.</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustomColor" class="form-label">Favorite Color</label>
+                                    <input
+                                      type="color"
+                                      class="form-control form-control-color"
+                                      id="validationCustomColor"
+                                      name="favoriteColor"
+                                      value="#563d7c"
+                                    />
+                                    <div class="invalid-feedback">Please select a color.</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label class="form-label">Email Notifications</label>
+                                    <div class="form-check form-switch">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        role="switch"
+                                        id="validationCustomSwitch"
+                                        name="emailNotifications"
+                                        checked
+                                      />
+                                      <label class="form-check-label" for="validationCustomSwitch">
+                                        Receive email notifications
+                                      </label>
+                                      <div class="invalid-feedback">Please configure your notification preference.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Media and Bio Cards in a row -->
+                            <div class="row">
+                              <div class="col-md-6">
+                                <!-- Media Card -->
+                                <div class="card mb-4">
+                                  <div class="card-header">
+                                    <h6>Media</h6>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="row g-3">
+                                      <div class="col-12">
+                                        <label for="validationCustomFile" class="form-label">Profile Picture</label>
+                                        <input
+                                          type="file"
+                                          class="form-control"
+                                          id="validationCustomFile"
+                                          name="profilePicture"
+                                          accept="image/*"
+                                        />
+                                        <div class="invalid-feedback">Please select a valid image file.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <!-- Bio Card -->
+                                <div class="card mb-4">
+                                  <div class="card-header">
+                                    <h6>About You</h6>
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="row g-3">
+                                      <div class="col-12">
+                                        <label for="validationCustomBio" class="form-label">Bio</label>
+                                        <textarea
+                                          class="form-control"
+                                          id="validationCustomBio"
+                                          name="bio"
+                                          rows="3"
+                                          placeholder="Tell us about yourself..."
+                                        ></textarea>
+                                        <div class="invalid-feedback">Please provide a brief bio.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Special Fields Card -->
+                            <div class="card mb-4">
+                              <div class="card-header">
+                                <h6>Special Fields</h6>
+                              </div>
+                              <div class="card-body">
+                                <div class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="validationCustomDisabled" class="form-label">Disabled Field</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="validationCustomDisabled"
+                                      value="This field is disabled"
+                                      disabled
+                                    />
+                                    <div class="form-text">This field is disabled and cannot be edited.</div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="validationCustomReadonly" class="form-label">Readonly Field</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="validationCustomReadonly"
+                                      value="This field is readonly"
+                                      readonly
+                                    />
+                                    <div class="form-text">This field is readonly and cannot be edited.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Right Column - Agreement and Submit -->
+                          <div class="col-lg-4">
+                            <div class="card">
+                              <div class="card-header">
+                                <h6>Review & Submit</h6>
+                              </div>
+                              <div class="card-body">
+                                <div class="d-flex flex-column gap-3">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      value=""
+                                      id="invalidCheck"
+                                      name="agreeToTerms"
+                                      required
+                                    />
+                                    <label class="form-check-label" for="invalidCheck">
+                                      I agree to the terms and conditions
+                                    </label>
+                                    <div class="invalid-feedback">You must agree before submitting.</div>
+                                  </div>
+
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary btn-lg" type="submit">
+                                      <i class="ri-send-plane-line me-2"></i>Submit Form
+                                    </button>
+                                  </div>
+
+                                  <div class="text-muted small">
+                                    <p>
+                                      By submitting this form, you agree to our privacy policy and terms of service.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+
+                      <!-- Modal for displaying submitted data -->
+
+                      <div
+                        class="modal fade"
+                        id="submissionModal"
+                        tabindex="-1"
+                        aria-labelledby="submissionModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="submissionModalLabel">Form Submission Summary</h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <div id="submissionData"></div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <script>
+                        try {
+                          eval(
+                            "(() => {\n  'use strict';\n\n  // Add range slider feedback\n  const rangeInput = document.getElementById('validationCustomRange');\n  const rangeValue = document.getElementById('rangeValue');\n\n  if (rangeInput && rangeValue) {\n    // Set initial value\n    rangeValue.textContent = rangeInput.value;\n\n    // Update value on input change\n    rangeInput.addEventListener('input', (e) => {\n      rangeValue.textContent = e.target.value;\n    });\n  }\n\n  // Fetch all the forms we want to apply custom Bootstrap validation styles to\n  const forms = document.querySelectorAll('.needs-validation');\n\n  // Loop over them and prevent submission\n  Array.from(forms).forEach((form) => {\n    form.addEventListener(\n      'submit',\n      (event) => {\n        event.preventDefault();\n        event.stopPropagation();\n\n        if (!form.checkValidity()) {\n          form.classList.add('was-validated');\n          return;\n        }\n\n        form.classList.add('was-validated');\n\n        // Collect form data\n        const formData = new FormData(form);\n\n        // Generate HTML for modal showing JSON representation\n        let modalContent = '<div style=\"background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 13px;\">';\n        modalContent += '<strong>Form Data (JSON Representation):</strong><br><br>';\n\n        // Show as JSON object\n        const jsonData = {};\n        for (let [key, value] of formData.entries()) {\n          // Handle checkbox values\n          if (key === 'agreeToTerms') {\n            const checkbox = form.querySelector('#invalidCheck');\n            jsonData[key] = checkbox.checked ? 'checked' : 'unchecked';\n          }\n          // Handle switch values\n          else if (key === 'emailNotifications') {\n            const switchInput = form.querySelector('#validationCustomSwitch');\n            jsonData[key] = switchInput.checked ? 'enabled' : 'disabled';\n          }\n          // Handle file input\n          else if (key === 'profilePicture') {\n            const fileInput = form.querySelector('#validationCustomFile');\n            if (fileInput && fileInput.files.length > 0) {\n              jsonData[key] = fileInput.files[0].name;\n            } else {\n              jsonData[key] = '';\n            }\n          }\n          else {\n            jsonData[key] = value;\n          }\n        }\n\n        // Ensure range input value is captured\n        const rangeInput = form.querySelector('#validationCustomRange');\n        if (rangeInput) {\n          jsonData['experienceLevel'] = rangeInput.value;\n        }\n\n        modalContent += '<pre style=\"margin: 5px 0; white-space: pre-wrap; word-break: break-all; background: #ffffff; padding: 10px; border: 1px solid #dee2e6; border-radius: 3px;\">' + JSON.stringify(jsonData, null, 2) + '</pre>';\n\n        modalContent += '</div>';\n\n        // Update modal content and show it\n        document.getElementById('submissionData').innerHTML = modalContent;\n\n        // Show the modal\n        const modal = new bootstrap.Modal(document.getElementById('submissionModal'));\n        modal.show();\n      },\n      false\n    );\n  });\n\n})();",
+                          );
+                        } catch (e) {
+                          console.error('Example component script error:', e);
+                        }
+                      </script>
+                    </div>
+                  </div>
+                  <!-- Code display with tabs and copy functionality -->
+                  <div class="bd-code-snippet-wrapper" data-example-id="example-85hmqcqkj">
+                    <!-- Tab header with language buttons -->
+                    <div class="bd-code-snippet-header d-flex align-items-center justify-content-between">
+                      <div class="code-tabs btn-group" role="tablist" aria-label="Code tabs">
+                        <!-- HTML tab -->
+                        <button
+                          type="button"
+                          class="btn border-0 rounded-0 active"
+                          data-tab="html"
+                          aria-pressed="true"
+                          title="Show HTML"
+                          style="width: 48px"
+                        >
+                          HTML
+                        </button>
+                        <!-- CSS tab -->
+                        <!-- JavaScript tab -->
+                        <button
+                          type="button"
+                          class="btn border-0 rounded-0"
+                          data-tab="js"
+                          aria-pressed="false"
+                          title="Show JavaScript"
+                          style="width: 48px"
+                        >
+                          JS
+                        </button>
+                      </div>
+                      <!-- Copy to clipboard button -->
+                      <button
+                        class="copy-btn bg-body text-body m-1 rounded-pill"
+                        style="color: rgb(0, 0, 0); border: none; padding: 0.3rem 0.6rem; cursor: pointer"
+                        data-clipboard-target="#code-example-85hmqcqkj-html"
+                        title="Copy to clipboard"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                      >
+                        <i class="ri-clipboard-line fs-6"></i>
+                      </button>
+                    </div>
+                    <!-- HTML code block -->
+                    <div data-tab-content="html" style="display: block">
+                      <div class="syntax-highlight">
+                        <pre
+                          class="language-html"
+                        ><code class="language-html">&lt;form class=&quot;needs-validation&quot; novalidate&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;!-- Left Column - Main Form Content --&gt;
+    &lt;div class=&quot;col-lg-8&quot;&gt;
+      &lt;!-- Personal Information Card --&gt;
+      &lt;div class=&quot;card mb-4&quot;&gt;
+        &lt;div class=&quot;card-header&quot;&gt;
+          &lt;h6&gt;Personal Information&lt;/h6&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+          &lt;div class=&quot;row g-3&quot;&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustom01&quot; class=&quot;form-label&quot;&gt;First name&lt;/label&gt;
+              &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom01&quot; name=&quot;firstName&quot; value=&quot;John&quot; required&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please provide a valid first name.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustom02&quot; class=&quot;form-label&quot;&gt;Last name&lt;/label&gt;
+              &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom02&quot; name=&quot;lastName&quot; value=&quot;Doe&quot; required&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please provide a valid last name.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-12&quot;&gt;
+              &lt;label for=&quot;validationCustomUsername&quot; class=&quot;form-label&quot;&gt;Username&lt;/label&gt;
+              &lt;div class=&quot;input-group has-validation&quot;&gt;
+                &lt;span class=&quot;input-group-text&quot; id=&quot;inputGroupPrepend&quot;&gt;@&lt;/span&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustomUsername&quot; name=&quot;username&quot; aria-describedby=&quot;inputGroupPrepend&quot; required&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please choose a username.
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustomEmail&quot; class=&quot;form-label&quot;&gt;Email&lt;/label&gt;
+              &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;validationCustomEmail&quot; name=&quot;email&quot; placeholder=&quot;name@example.com&quot; required&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please provide a valid email.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustomPassword&quot; class=&quot;form-label&quot;&gt;Password&lt;/label&gt;
+              &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;validationCustomPassword&quot; name=&quot;password&quot; placeholder=&quot;Enter your password&quot; required&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please provide a valid password.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Additional Information Card --&gt;
+      &lt;div class=&quot;card mb-4&quot;&gt;
+        &lt;div class=&quot;card-header&quot;&gt;
+          &lt;h6&gt;Additional Information&lt;/h6&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+          &lt;div class=&quot;row g-3&quot;&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustomAge&quot; class=&quot;form-label&quot;&gt;Age&lt;/label&gt;
+              &lt;input type=&quot;number&quot; class=&quot;form-control&quot; id=&quot;validationCustomAge&quot; name=&quot;age&quot; min=&quot;18&quot; max=&quot;120&quot;&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please provide a valid age (18-120).
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustomDate&quot; class=&quot;form-label&quot;&gt;Birth Date&lt;/label&gt;
+              &lt;input type=&quot;date&quot; class=&quot;form-control&quot; id=&quot;validationCustomDate&quot; name=&quot;birthDate&quot;&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please select a valid date.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustom03&quot; class=&quot;form-label&quot;&gt;City&lt;/label&gt;
+              &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom03&quot; name=&quot;city&quot;&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please provide a valid city.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustom04&quot; class=&quot;form-label&quot;&gt;State&lt;/label&gt;
+              &lt;select class=&quot;form-select&quot; id=&quot;validationCustom04&quot; name=&quot;state&quot; required&gt;
+                &lt;option selected disabled value=&quot;&quot;&gt;Choose...&lt;/option&gt;
+                &lt;option value=&quot;CA&quot;&gt;California&lt;/option&gt;
+                &lt;option value=&quot;TX&quot;&gt;Texas&lt;/option&gt;
+                &lt;option value=&quot;NY&quot;&gt;New York&lt;/option&gt;
+                &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt;
+                &lt;option value=&quot;IL&quot;&gt;Illinois&lt;/option&gt;
+                &lt;option value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt;
+                &lt;option value=&quot;OH&quot;&gt;Ohio&lt;/option&gt;
+                &lt;option value=&quot;GA&quot;&gt;Georgia&lt;/option&gt;
+                &lt;option value=&quot;NC&quot;&gt;North Carolina&lt;/option&gt;
+                &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+              &lt;/select&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please select a valid state.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustom05&quot; class=&quot;form-label&quot;&gt;Zip&lt;/label&gt;
+              &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom05&quot; name=&quot;zip&quot; required&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please provide a valid zip.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Preferences Card --&gt;
+      &lt;div class=&quot;card mb-4&quot;&gt;
+        &lt;div class=&quot;card-header&quot;&gt;
+          &lt;h6&gt;Preferences&lt;/h6&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+          &lt;div class=&quot;row g-3&quot;&gt;
+            &lt;div class=&quot;col-12&quot;&gt;
+              &lt;label class=&quot;form-label&quot;&gt;Gender&lt;/label&gt;
+              &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-4&quot;&gt;
+                  &lt;div class=&quot;form-check&quot;&gt;
+                    &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;genderMale&quot; value=&quot;male&quot; required&gt;
+                    &lt;label class=&quot;form-check-label&quot; for=&quot;genderMale&quot;&gt;
+                      Male
+                    &lt;/label&gt;
+                    &lt;div class=&quot;invalid-feedback&quot;&gt;
+                      Please select a gender.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-4&quot;&gt;
+                  &lt;div class=&quot;form-check&quot;&gt;
+                    &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;genderFemale&quot; value=&quot;female&quot;&gt;
+                    &lt;label class=&quot;form-check-label&quot; for=&quot;genderFemale&quot;&gt;
+                      Female
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-4&quot;&gt;
+                  &lt;div class=&quot;form-check&quot;&gt;
+                    &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;genderOther&quot; value=&quot;other&quot;&gt;
+                    &lt;label class=&quot;form-check-label&quot; for=&quot;genderOther&quot;&gt;
+                      Other
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-12&quot;&gt;
+              &lt;label for=&quot;validationCustomRange&quot; class=&quot;form-label&quot;&gt;Experience Level (0-10)&lt;/label&gt;
+              &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                &lt;input type=&quot;range&quot; class=&quot;form-range flex-grow-1&quot; id=&quot;validationCustomRange&quot; name=&quot;experienceLevel&quot; min=&quot;0&quot; max=&quot;10&quot; value=&quot;5&quot;&gt;
+                &lt;div class=&quot;badge text-bg-primary fs-6 px-3 py-2&quot; id=&quot;rangeValue&quot;&gt;5&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please select your experience level.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustomColor&quot; class=&quot;form-label&quot;&gt;Favorite Color&lt;/label&gt;
+              &lt;input type=&quot;color&quot; class=&quot;form-control form-control-color&quot; id=&quot;validationCustomColor&quot; name=&quot;favoriteColor&quot; value=&quot;#563d7c&quot;&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                Please select a color.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label class=&quot;form-label&quot;&gt;Email Notifications&lt;/label&gt;
+              &lt;div class=&quot;form-check form-switch&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot; id=&quot;validationCustomSwitch&quot; name=&quot;emailNotifications&quot; checked&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;validationCustomSwitch&quot;&gt;
+                  Receive email notifications
+                &lt;/label&gt;
+                &lt;div class=&quot;invalid-feedback&quot;&gt;
+                  Please configure your notification preference.
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Media and Bio Cards in a row --&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;!-- Media Card --&gt;
+          &lt;div class=&quot;card mb-4&quot;&gt;
+            &lt;div class=&quot;card-header&quot;&gt;
+              &lt;h6&gt;Media&lt;/h6&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+              &lt;div class=&quot;row g-3&quot;&gt;
+                &lt;div class=&quot;col-12&quot;&gt;
+                  &lt;label for=&quot;validationCustomFile&quot; class=&quot;form-label&quot;&gt;Profile Picture&lt;/label&gt;
+                  &lt;input type=&quot;file&quot; class=&quot;form-control&quot; id=&quot;validationCustomFile&quot; name=&quot;profilePicture&quot; accept=&quot;image/*&quot;&gt;
+                  &lt;div class=&quot;invalid-feedback&quot;&gt;
+                    Please select a valid image file.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+          &lt;!-- Bio Card --&gt;
+          &lt;div class=&quot;card mb-4&quot;&gt;
+            &lt;div class=&quot;card-header&quot;&gt;
+              &lt;h6&gt;About You&lt;/h6&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+              &lt;div class=&quot;row g-3&quot;&gt;
+                &lt;div class=&quot;col-12&quot;&gt;
+                  &lt;label for=&quot;validationCustomBio&quot; class=&quot;form-label&quot;&gt;Bio&lt;/label&gt;
+                  &lt;textarea class=&quot;form-control&quot; id=&quot;validationCustomBio&quot; name=&quot;bio&quot; rows=&quot;3&quot; placeholder=&quot;Tell us about yourself...&quot;&gt;&lt;/textarea&gt;
+                  &lt;div class=&quot;invalid-feedback&quot;&gt;
+                    Please provide a brief bio.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Special Fields Card --&gt;
+      &lt;div class=&quot;card mb-4&quot;&gt;
+        &lt;div class=&quot;card-header&quot;&gt;
+          &lt;h6&gt;Special Fields&lt;/h6&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+          &lt;div class=&quot;row g-3&quot;&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustomDisabled&quot; class=&quot;form-label&quot;&gt;Disabled Field&lt;/label&gt;
+              &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustomDisabled&quot; value=&quot;This field is disabled&quot; disabled&gt;
+              &lt;div class=&quot;form-text&quot;&gt;
+                This field is disabled and cannot be edited.
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+              &lt;label for=&quot;validationCustomReadonly&quot; class=&quot;form-label&quot;&gt;Readonly Field&lt;/label&gt;
+              &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustomReadonly&quot; value=&quot;This field is readonly&quot; readonly&gt;
+              &lt;div class=&quot;form-text&quot;&gt;
+                This field is readonly and cannot be edited.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Right Column - Agreement and Submit --&gt;
+    &lt;div class=&quot;col-lg-4&quot;&gt;
+      &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;card-header&quot;&gt;
+          &lt;h6&gt;Review &amp; Submit&lt;/h6&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-body&quot;&gt;
+          &lt;div class=&quot;d-flex flex-column gap-3&quot;&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+              &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;invalidCheck&quot; name=&quot;agreeToTerms&quot; required&gt;
+              &lt;label class=&quot;form-check-label&quot; for=&quot;invalidCheck&quot;&gt;
+                I agree to the terms and conditions
+              &lt;/label&gt;
+              &lt;div class=&quot;invalid-feedback&quot;&gt;
+                You must agree before submitting.
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;d-grid gap-2&quot;&gt;
+              &lt;button class=&quot;btn btn-primary btn-lg&quot; type=&quot;submit&quot;&gt;
+                &lt;i class=&quot;ri-send-plane-line me-2&quot;&gt;&lt;/i&gt;Submit Form
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;text-muted small&quot;&gt;
+              &lt;p&gt;By submitting this form, you agree to our privacy policy and terms of service.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/form&gt;
+
+&lt;!-- Modal for displaying submitted data --&gt;
+
+&lt;div class=&quot;modal fade&quot; id=&quot;submissionModal&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;submissionModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;div class=&quot;modal-dialog modal-lg&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;h5 class=&quot;modal-title&quot; id=&quot;submissionModalLabel&quot;&gt;Form Submission Summary&lt;/h5&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;div id=&quot;submissionData&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-dismiss=&quot;modal&quot;&gt;OK&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                      </div>
+                      <script type="module">
+                        typeof window < 'u' &&
+                          window.Prism &&
+                          (document.addEventListener('DOMContentLoaded', () => {
+                            window.Prism.highlightAll();
+                          }),
+                          document.readyState !== 'loading' && window.Prism.highlightAll());
+                      </script>
+                      <code id="code-example-85hmqcqkj-html" style="display: none">
+                        &lt;form class=&quot;needs-validation&quot; novalidate&gt; &lt;div class=&quot;row&quot;&gt;
+                        &lt;!-- Left Column - Main Form Content --&gt; &lt;div class=&quot;col-lg-8&quot;&gt; &lt;!--
+                        Personal Information Card --&gt; &lt;div class=&quot;card mb-4&quot;&gt; &lt;div
+                        class=&quot;card-header&quot;&gt; &lt;h6&gt;Personal Information&lt;/h6&gt; &lt;/div&gt; &lt;div
+                        class=&quot;card-body&quot;&gt; &lt;div class=&quot;row g-3&quot;&gt; &lt;div
+                        class=&quot;col-md-6&quot;&gt; &lt;label for=&quot;validationCustom01&quot;
+                        class=&quot;form-label&quot;&gt;First name&lt;/label&gt; &lt;input type=&quot;text&quot;
+                        class=&quot;form-control&quot; id=&quot;validationCustom01&quot; name=&quot;firstName&quot;
+                        value=&quot;John&quot; required&gt; &lt;div class=&quot;invalid-feedback&quot;&gt; Please
+                        provide a valid first name. &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-md-6&quot;&gt;
+                        &lt;label for=&quot;validationCustom02&quot; class=&quot;form-label&quot;&gt;Last
+                        name&lt;/label&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot;
+                        id=&quot;validationCustom02&quot; name=&quot;lastName&quot; value=&quot;Doe&quot; required&gt;
+                        &lt;div class=&quot;invalid-feedback&quot;&gt; Please provide a valid last name. &lt;/div&gt;
+                        &lt;/div&gt; &lt;div class=&quot;col-12&quot;&gt; &lt;label
+                        for=&quot;validationCustomUsername&quot; class=&quot;form-label&quot;&gt;Username&lt;/label&gt;
+                        &lt;div class=&quot;input-group has-validation&quot;&gt; &lt;span
+                        class=&quot;input-group-text&quot; id=&quot;inputGroupPrepend&quot;&gt;@&lt;/span&gt; &lt;input
+                        type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustomUsername&quot;
+                        name=&quot;username&quot; aria-describedby=&quot;inputGroupPrepend&quot; required&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please choose a username. &lt;/div&gt; &lt;/div&gt;
+                        &lt;/div&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label
+                        for=&quot;validationCustomEmail&quot; class=&quot;form-label&quot;&gt;Email&lt;/label&gt;
+                        &lt;input type=&quot;email&quot; class=&quot;form-control&quot;
+                        id=&quot;validationCustomEmail&quot; name=&quot;email&quot;
+                        placeholder=&quot;name@example.com&quot; required&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please provide a valid email. &lt;/div&gt; &lt;/div&gt;
+                        &lt;div class=&quot;col-md-6&quot;&gt; &lt;label for=&quot;validationCustomPassword&quot;
+                        class=&quot;form-label&quot;&gt;Password&lt;/label&gt; &lt;input type=&quot;password&quot;
+                        class=&quot;form-control&quot; id=&quot;validationCustomPassword&quot; name=&quot;password&quot;
+                        placeholder=&quot;Enter your password&quot; required&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please provide a valid password. &lt;/div&gt;
+                        &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;!-- Additional Information Card --&gt;
+                        &lt;div class=&quot;card mb-4&quot;&gt; &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;h6&gt;Additional Information&lt;/h6&gt; &lt;/div&gt; &lt;div class=&quot;card-body&quot;&gt;
+                        &lt;div class=&quot;row g-3&quot;&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label
+                        for=&quot;validationCustomAge&quot; class=&quot;form-label&quot;&gt;Age&lt;/label&gt; &lt;input
+                        type=&quot;number&quot; class=&quot;form-control&quot; id=&quot;validationCustomAge&quot;
+                        name=&quot;age&quot; min=&quot;18&quot; max=&quot;120&quot;&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please provide a valid age (18-120). &lt;/div&gt;
+                        &lt;/div&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label
+                        for=&quot;validationCustomDate&quot; class=&quot;form-label&quot;&gt;Birth Date&lt;/label&gt;
+                        &lt;input type=&quot;date&quot; class=&quot;form-control&quot;
+                        id=&quot;validationCustomDate&quot; name=&quot;birthDate&quot;&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please select a valid date. &lt;/div&gt; &lt;/div&gt;
+                        &lt;div class=&quot;col-md-6&quot;&gt; &lt;label for=&quot;validationCustom03&quot;
+                        class=&quot;form-label&quot;&gt;City&lt;/label&gt; &lt;input type=&quot;text&quot;
+                        class=&quot;form-control&quot; id=&quot;validationCustom03&quot; name=&quot;city&quot;&gt;
+                        &lt;div class=&quot;invalid-feedback&quot;&gt; Please provide a valid city. &lt;/div&gt;
+                        &lt;/div&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label for=&quot;validationCustom04&quot;
+                        class=&quot;form-label&quot;&gt;State&lt;/label&gt; &lt;select class=&quot;form-select&quot;
+                        id=&quot;validationCustom04&quot; name=&quot;state&quot; required&gt; &lt;option selected
+                        disabled value=&quot;&quot;&gt;Choose...&lt;/option&gt; &lt;option
+                        value=&quot;CA&quot;&gt;California&lt;/option&gt; &lt;option
+                        value=&quot;TX&quot;&gt;Texas&lt;/option&gt; &lt;option value=&quot;NY&quot;&gt;New
+                        York&lt;/option&gt; &lt;option value=&quot;FL&quot;&gt;Florida&lt;/option&gt; &lt;option
+                        value=&quot;IL&quot;&gt;Illinois&lt;/option&gt; &lt;option
+                        value=&quot;PA&quot;&gt;Pennsylvania&lt;/option&gt; &lt;option
+                        value=&quot;OH&quot;&gt;Ohio&lt;/option&gt; &lt;option
+                        value=&quot;GA&quot;&gt;Georgia&lt;/option&gt; &lt;option value=&quot;NC&quot;&gt;North
+                        Carolina&lt;/option&gt; &lt;option value=&quot;MI&quot;&gt;Michigan&lt;/option&gt;
+                        &lt;/select&gt; &lt;div class=&quot;invalid-feedback&quot;&gt; Please select a valid state.
+                        &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label
+                        for=&quot;validationCustom05&quot; class=&quot;form-label&quot;&gt;Zip&lt;/label&gt; &lt;input
+                        type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;validationCustom05&quot;
+                        name=&quot;zip&quot; required&gt; &lt;div class=&quot;invalid-feedback&quot;&gt; Please provide
+                        a valid zip. &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;!--
+                        Preferences Card --&gt; &lt;div class=&quot;card mb-4&quot;&gt; &lt;div
+                        class=&quot;card-header&quot;&gt; &lt;h6&gt;Preferences&lt;/h6&gt; &lt;/div&gt; &lt;div
+                        class=&quot;card-body&quot;&gt; &lt;div class=&quot;row g-3&quot;&gt; &lt;div
+                        class=&quot;col-12&quot;&gt; &lt;label class=&quot;form-label&quot;&gt;Gender&lt;/label&gt;
+                        &lt;div class=&quot;row&quot;&gt; &lt;div class=&quot;col-md-4&quot;&gt; &lt;div
+                        class=&quot;form-check&quot;&gt; &lt;input class=&quot;form-check-input&quot;
+                        type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;genderMale&quot; value=&quot;male&quot;
+                        required&gt; &lt;label class=&quot;form-check-label&quot; for=&quot;genderMale&quot;&gt; Male
+                        &lt;/label&gt; &lt;div class=&quot;invalid-feedback&quot;&gt; Please select a gender.
+                        &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-md-4&quot;&gt; &lt;div
+                        class=&quot;form-check&quot;&gt; &lt;input class=&quot;form-check-input&quot;
+                        type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;genderFemale&quot;
+                        value=&quot;female&quot;&gt; &lt;label class=&quot;form-check-label&quot;
+                        for=&quot;genderFemale&quot;&gt; Female &lt;/label&gt; &lt;/div&gt; &lt;/div&gt; &lt;div
+                        class=&quot;col-md-4&quot;&gt; &lt;div class=&quot;form-check&quot;&gt; &lt;input
+                        class=&quot;form-check-input&quot; type=&quot;radio&quot; name=&quot;gender&quot;
+                        id=&quot;genderOther&quot; value=&quot;other&quot;&gt; &lt;label
+                        class=&quot;form-check-label&quot; for=&quot;genderOther&quot;&gt; Other &lt;/label&gt;
+                        &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-12&quot;&gt;
+                        &lt;label for=&quot;validationCustomRange&quot; class=&quot;form-label&quot;&gt;Experience Level
+                        (0-10)&lt;/label&gt; &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt; &lt;input
+                        type=&quot;range&quot; class=&quot;form-range flex-grow-1&quot;
+                        id=&quot;validationCustomRange&quot; name=&quot;experienceLevel&quot; min=&quot;0&quot;
+                        max=&quot;10&quot; value=&quot;5&quot;&gt; &lt;div class=&quot;badge text-bg-primary fs-6 px-3
+                        py-2&quot; id=&quot;rangeValue&quot;&gt;5&lt;/div&gt; &lt;/div&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please select your experience level. &lt;/div&gt;
+                        &lt;/div&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label
+                        for=&quot;validationCustomColor&quot; class=&quot;form-label&quot;&gt;Favorite
+                        Color&lt;/label&gt; &lt;input type=&quot;color&quot; class=&quot;form-control
+                        form-control-color&quot; id=&quot;validationCustomColor&quot; name=&quot;favoriteColor&quot;
+                        value=&quot;#563d7c&quot;&gt; &lt;div class=&quot;invalid-feedback&quot;&gt; Please select a
+                        color. &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label
+                        class=&quot;form-label&quot;&gt;Email Notifications&lt;/label&gt; &lt;div class=&quot;form-check
+                        form-switch&quot;&gt; &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot;
+                        role=&quot;switch&quot; id=&quot;validationCustomSwitch&quot;
+                        name=&quot;emailNotifications&quot; checked&gt; &lt;label class=&quot;form-check-label&quot;
+                        for=&quot;validationCustomSwitch&quot;&gt; Receive email notifications &lt;/label&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please configure your notification preference.
+                        &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;!-- Media and
+                        Bio Cards in a row --&gt; &lt;div class=&quot;row&quot;&gt; &lt;div
+                        class=&quot;col-md-6&quot;&gt; &lt;!-- Media Card --&gt; &lt;div class=&quot;card mb-4&quot;&gt;
+                        &lt;div class=&quot;card-header&quot;&gt; &lt;h6&gt;Media&lt;/h6&gt; &lt;/div&gt; &lt;div
+                        class=&quot;card-body&quot;&gt; &lt;div class=&quot;row g-3&quot;&gt; &lt;div
+                        class=&quot;col-12&quot;&gt; &lt;label for=&quot;validationCustomFile&quot;
+                        class=&quot;form-label&quot;&gt;Profile Picture&lt;/label&gt; &lt;input type=&quot;file&quot;
+                        class=&quot;form-control&quot; id=&quot;validationCustomFile&quot;
+                        name=&quot;profilePicture&quot; accept=&quot;image/*&quot;&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please select a valid image file. &lt;/div&gt;
+                        &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div
+                        class=&quot;col-md-6&quot;&gt; &lt;!-- Bio Card --&gt; &lt;div class=&quot;card mb-4&quot;&gt;
+                        &lt;div class=&quot;card-header&quot;&gt; &lt;h6&gt;About You&lt;/h6&gt; &lt;/div&gt; &lt;div
+                        class=&quot;card-body&quot;&gt; &lt;div class=&quot;row g-3&quot;&gt; &lt;div
+                        class=&quot;col-12&quot;&gt; &lt;label for=&quot;validationCustomBio&quot;
+                        class=&quot;form-label&quot;&gt;Bio&lt;/label&gt; &lt;textarea class=&quot;form-control&quot;
+                        id=&quot;validationCustomBio&quot; name=&quot;bio&quot; rows=&quot;3&quot;
+                        placeholder=&quot;Tell us about yourself...&quot;&gt;&lt;/textarea&gt; &lt;div
+                        class=&quot;invalid-feedback&quot;&gt; Please provide a brief bio. &lt;/div&gt; &lt;/div&gt;
+                        &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;!-- Special Fields Card
+                        --&gt; &lt;div class=&quot;card mb-4&quot;&gt; &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;h6&gt;Special Fields&lt;/h6&gt; &lt;/div&gt; &lt;div class=&quot;card-body&quot;&gt; &lt;div
+                        class=&quot;row g-3&quot;&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label
+                        for=&quot;validationCustomDisabled&quot; class=&quot;form-label&quot;&gt;Disabled
+                        Field&lt;/label&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot;
+                        id=&quot;validationCustomDisabled&quot; value=&quot;This field is disabled&quot; disabled&gt;
+                        &lt;div class=&quot;form-text&quot;&gt; This field is disabled and cannot be edited.
+                        &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-md-6&quot;&gt; &lt;label
+                        for=&quot;validationCustomReadonly&quot; class=&quot;form-label&quot;&gt;Readonly
+                        Field&lt;/label&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot;
+                        id=&quot;validationCustomReadonly&quot; value=&quot;This field is readonly&quot; readonly&gt;
+                        &lt;div class=&quot;form-text&quot;&gt; This field is readonly and cannot be edited.
+                        &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;!-- Right
+                        Column - Agreement and Submit --&gt; &lt;div class=&quot;col-lg-4&quot;&gt; &lt;div
+                        class=&quot;card&quot;&gt; &lt;div class=&quot;card-header&quot;&gt; &lt;h6&gt;Review &amp;
+                        Submit&lt;/h6&gt; &lt;/div&gt; &lt;div class=&quot;card-body&quot;&gt; &lt;div
+                        class=&quot;d-flex flex-column gap-3&quot;&gt; &lt;div class=&quot;form-check&quot;&gt;
+                        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot;
+                        id=&quot;invalidCheck&quot; name=&quot;agreeToTerms&quot; required&gt; &lt;label
+                        class=&quot;form-check-label&quot; for=&quot;invalidCheck&quot;&gt; I agree to the terms and
+                        conditions &lt;/label&gt; &lt;div class=&quot;invalid-feedback&quot;&gt; You must agree before
+                        submitting. &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;d-grid gap-2&quot;&gt; &lt;button
+                        class=&quot;btn btn-primary btn-lg&quot; type=&quot;submit&quot;&gt; &lt;i
+                        class=&quot;ri-send-plane-line me-2&quot;&gt;&lt;/i&gt;Submit Form &lt;/button&gt; &lt;/div&gt;
+                        &lt;div class=&quot;text-muted small&quot;&gt; &lt;p&gt;By submitting this form, you agree to
+                        our privacy policy and terms of service.&lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;
+                        &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/form&gt; &lt;!-- Modal for displaying submitted data
+                        --&gt; &lt;div class=&quot;modal fade&quot; id=&quot;submissionModal&quot;
+                        tabindex=&quot;-1&quot; aria-labelledby=&quot;submissionModalLabel&quot;
+                        aria-hidden=&quot;true&quot;&gt; &lt;div class=&quot;modal-dialog modal-lg&quot;&gt; &lt;div
+                        class=&quot;modal-content&quot;&gt; &lt;div class=&quot;modal-header&quot;&gt; &lt;h5
+                        class=&quot;modal-title&quot; id=&quot;submissionModalLabel&quot;&gt;Form Submission
+                        Summary&lt;/h5&gt; &lt;button type=&quot;button&quot; class=&quot;btn-close&quot;
+                        data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt; &lt;/div&gt;
+                        &lt;div class=&quot;modal-body&quot;&gt; &lt;div id=&quot;submissionData&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt; &lt;div class=&quot;modal-footer&quot;&gt; &lt;button type=&quot;button&quot;
+                        class=&quot;btn btn-secondary&quot; data-bs-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;
+                        data-bs-dismiss=&quot;modal&quot;&gt;OK&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </div>
+                    <!-- CSS code block -->
+                    <!-- JavaScript code block -->
+                    <div data-tab-content="js" style="display: none">
+                      <div class="syntax-highlight">
+                        <pre class="language-js"><code class="language-js">(() =&gt; {
+  &#039;use strict&#039;;
+
+  // Add range slider feedback
+  const rangeInput = document.getElementById(&#039;validationCustomRange&#039;);
+  const rangeValue = document.getElementById(&#039;rangeValue&#039;);
+
+  if (rangeInput &amp;&amp; rangeValue) {
+    // Set initial value
+    rangeValue.textContent = rangeInput.value;
+
+    // Update value on input change
+    rangeInput.addEventListener(&#039;input&#039;, (e) =&gt; {
+      rangeValue.textContent = e.target.value;
+    });
+  }
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll(&#039;.needs-validation&#039;);
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach((form) =&gt; {
+    form.addEventListener(
+      &#039;submit&#039;,
+      (event) =&gt; {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (!form.checkValidity()) {
+          form.classList.add(&#039;was-validated&#039;);
+          return;
+        }
+
+        form.classList.add(&#039;was-validated&#039;);
+
+        // Collect form data
+        const formData = new FormData(form);
+
+        // Generate HTML for modal showing JSON representation
+        let modalContent = &#039;&lt;div style=&quot;background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 13px;&quot;&gt;&#039;;
+        modalContent += &#039;&lt;strong&gt;Form Data (JSON Representation):&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&#039;;
+
+        // Show as JSON object
+        const jsonData = {};
+        for (let [key, value] of formData.entries()) {
+          // Handle checkbox values
+          if (key === &#039;agreeToTerms&#039;) {
+            const checkbox = form.querySelector(&#039;#invalidCheck&#039;);
+            jsonData[key] = checkbox.checked ? &#039;checked&#039; : &#039;unchecked&#039;;
+          }
+          // Handle switch values
+          else if (key === &#039;emailNotifications&#039;) {
+            const switchInput = form.querySelector(&#039;#validationCustomSwitch&#039;);
+            jsonData[key] = switchInput.checked ? &#039;enabled&#039; : &#039;disabled&#039;;
+          }
+          // Handle file input
+          else if (key === &#039;profilePicture&#039;) {
+            const fileInput = form.querySelector(&#039;#validationCustomFile&#039;);
+            if (fileInput &amp;&amp; fileInput.files.length &gt; 0) {
+              jsonData[key] = fileInput.files[0].name;
+            } else {
+              jsonData[key] = &#039;&#039;;
+            }
+          }
+          else {
+            jsonData[key] = value;
+          }
+        }
+
+        // Ensure range input value is captured
+        const rangeInput = form.querySelector(&#039;#validationCustomRange&#039;);
+        if (rangeInput) {
+          jsonData[&#039;experienceLevel&#039;] = rangeInput.value;
+        }
+
+        modalContent += &#039;&lt;pre style=&quot;margin: 5px 0; white-space: pre-wrap; word-break: break-all; background: #ffffff; padding: 10px; border: 1px solid #dee2e6; border-radius: 3px;&quot;&gt;&#039; + JSON.stringify(jsonData, null, 2) + &#039;&lt;/pre&gt;&#039;;
+
+        modalContent += &#039;&lt;/div&gt;&#039;;
+
+        // Update modal content and show it
+        document.getElementById(&#039;submissionData&#039;).innerHTML = modalContent;
+
+        // Show the modal
+        const modal = new bootstrap.Modal(document.getElementById(&#039;submissionModal&#039;));
+        modal.show();
+      },
+      false
+    );
+  });
+
+})();</code></pre>
+                      </div>
+                      <code id="code-example-85hmqcqkj-js" style="display: none">
+                        (() =&gt; { &#39;use strict&#39;; // Add range slider feedback const rangeInput =
+                        document.getElementById(&#39;validationCustomRange&#39;); const rangeValue =
+                        document.getElementById(&#39;rangeValue&#39;); if (rangeInput &amp;&amp; rangeValue) { // Set
+                        initial value rangeValue.textContent = rangeInput.value; // Update value on input change
+                        rangeInput.addEventListener(&#39;input&#39;, (e) =&gt; { rangeValue.textContent =
+                        e.target.value; }); } // Fetch all the forms we want to apply custom Bootstrap validation styles
+                        to const forms = document.querySelectorAll(&#39;.needs-validation&#39;); // Loop over them and
+                        prevent submission Array.from(forms).forEach((form) =&gt; { form.addEventListener(
+                        &#39;submit&#39;, (event) =&gt; { event.preventDefault(); event.stopPropagation(); if
+                        (!form.checkValidity()) { form.classList.add(&#39;was-validated&#39;); return; }
+                        form.classList.add(&#39;was-validated&#39;); // Collect form data const formData = new
+                        FormData(form); // Generate HTML for modal showing JSON representation let modalContent =
+                        &#39;&lt;div style=&quot;background: #f8f9fa; padding: 15px; border-radius: 5px; font-family:
+                        monospace; font-size: 13px;&quot;&gt;&#39;; modalContent += &#39;&lt;strong&gt;Form Data (JSON
+                        Representation):&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&#39;; // Show as JSON object const jsonData
+                        = {}; for (let [key, value] of formData.entries()) { // Handle checkbox values if (key ===
+                        &#39;agreeToTerms&#39;) { const checkbox = form.querySelector(&#39;#invalidCheck&#39;);
+                        jsonData[key] = checkbox.checked ? &#39;checked&#39; : &#39;unchecked&#39;; } // Handle switch
+                        values else if (key === &#39;emailNotifications&#39;) { const switchInput =
+                        form.querySelector(&#39;#validationCustomSwitch&#39;); jsonData[key] = switchInput.checked ?
+                        &#39;enabled&#39; : &#39;disabled&#39;; } // Handle file input else if (key ===
+                        &#39;profilePicture&#39;) { const fileInput =
+                        form.querySelector(&#39;#validationCustomFile&#39;); if (fileInput &amp;&amp;
+                        fileInput.files.length &gt; 0) { jsonData[key] = fileInput.files[0].name; } else { jsonData[key]
+                        = &#39;&#39;; } } else { jsonData[key] = value; } } // Ensure range input value is captured
+                        const rangeInput = form.querySelector(&#39;#validationCustomRange&#39;); if (rangeInput) {
+                        jsonData[&#39;experienceLevel&#39;] = rangeInput.value; } modalContent += &#39;&lt;pre
+                        style=&quot;margin: 5px 0; white-space: pre-wrap; word-break: break-all; background: #ffffff;
+                        padding: 10px; border: 1px solid #dee2e6; border-radius: 3px;&quot;&gt;&#39; +
+                        JSON.stringify(jsonData, null, 2) + &#39;&lt;/pre&gt;&#39;; modalContent +=
+                        &#39;&lt;/div&gt;&#39;; // Update modal content and show it
+                        document.getElementById(&#39;submissionData&#39;).innerHTML = modalContent; // Show the modal
+                        const modal = new bootstrap.Modal(document.getElementById(&#39;submissionModal&#39;));
+                        modal.show(); }, false ); }); })();
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  /**
+                   * Example Component JavaScript
+                   * Handles tab switching, syntax highlighting, and copy-to-clipboard functionality
+                   * Uses Prism.js for syntax highlighting and Bootstrap tooltips for UI feedback
+                   */
+                  (function () {
+                    // Initialize when DOM is ready
+                    document.addEventListener('DOMContentLoaded', function () {
+                      // Find all example snippets on the page
+                      const snippetWrappers = document.querySelectorAll('.bd-code-snippet-wrapper');
+
+                      snippetWrappers.forEach((wrapper) => {
+                        const tabs = wrapper.querySelectorAll('[data-tab]');
+                        const codeBlocks = wrapper.querySelectorAll('[data-tab-content]');
+                        const copyBtn = wrapper.querySelector('.copy-btn');
+                        const exampleId = wrapper.getAttribute('data-example-id');
+
+                        /**
+                         * Sets the active tab and shows corresponding code block
+                         * @param {string} tabName - Name of tab to activate (html, css, js)
+                         */
+                        function setActiveTab(tabName) {
+                          // Update tab button states
+                          tabs.forEach((tab) => {
+                            const isActive = tab.getAttribute('data-tab') === tabName;
+                            tab.classList.toggle('active', isActive);
+                            tab.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                          });
+
+                          // Show/hide corresponding code blocks
+                          codeBlocks.forEach((codeBlock) => {
+                            const isVisible = codeBlock.getAttribute('data-tab-content') === tabName;
+                            codeBlock.style.display = isVisible ? 'block' : 'none';
+                          });
+
+                          // Update copy button target
+                          if (copyBtn) {
+                            const targetId = `#code-${exampleId}-${tabName}`;
+                            copyBtn.setAttribute('data-clipboard-target', targetId);
+                          }
+                        }
+
+                        /**
+                         * Sets up tab click handlers
+                         */
+                        function initializeTabs() {
+                          tabs.forEach((tab) => {
+                            tab.addEventListener('click', function () {
+                              const tabName = this.getAttribute('data-tab');
+                              setActiveTab(tabName);
+                            });
+                          });
+
+                          // Set initial active tab based on available content
+                          const hasHtmlTab = wrapper.querySelector('[data-tab-content="html"]') !== null;
+                          const hasCssTab = wrapper.querySelector('[data-tab-content="css"]') !== null;
+                          const hasJsTab = wrapper.querySelector('[data-tab-content="js"]') !== null;
+
+                          if (hasHtmlTab) setActiveTab('html');
+                          else if (hasCssTab) setActiveTab('css');
+                          else if (hasJsTab) setActiveTab('js');
+                        }
+
+                        /**
+                         * Sets up copy-to-clipboard functionality
+                         */
+                        function initializeCopyButton() {
+                          if (!copyBtn) return;
+
+                          // Add tooltip reset handler (only once per button)
+                          if (!copyBtn.dataset.copyListenerAdded) {
+                            const resetTooltip = (event) => {
+                              try {
+                                if (!copyBtn.contains(event.target)) {
+                                  const tooltipInstance = bootstrap.Tooltip.getInstance(copyBtn);
+                                  if (tooltipInstance) {
+                                    tooltipInstance.setContent({ '.tooltip-inner': 'Copy to clipboard' });
+                                  }
+                                }
+                              } catch (error) {
+                                // Ignore tooltip errors
+                              }
+                            };
+                            document.addEventListener('click', resetTooltip, true);
+                            copyBtn.dataset.copyListenerAdded = '1';
+                          }
+
+                          // Handle copy button clicks
+                          copyBtn.addEventListener('click', async function () {
+                            const targetId = this.getAttribute('data-clipboard-target');
+                            const codeElement = document.querySelector(targetId);
+
+                            if (codeElement) {
+                              try {
+                                // Copy the code element's text content
+                                await navigator.clipboard.writeText(codeElement.textContent);
+
+                                // Update tooltip to show success
+                                const tooltipInstance = bootstrap.Tooltip.getInstance(this);
+                                if (tooltipInstance) {
+                                  tooltipInstance.setContent({ '.tooltip-inner': 'Copied!' });
+                                  tooltipInstance.show();
+                                }
+
+                                // Visual feedback: change icon and color
+                                this.innerHTML = '<i class="ri-check-line fs-6"></i>';
+                                this.classList.add('bg-success', 'text-success', 'bg-opacity-25');
+                                this.classList.remove('bg-body', 'text-body');
+
+                                // Reset visual feedback after 1.5 seconds
+                                setTimeout(() => {
+                                  this.innerHTML = '<i class="ri-clipboard-line fs-6"></i>';
+                                  this.classList.remove('bg-success', 'text-success', 'bg-opacity-25');
+                                  this.classList.add('bg-body', 'text-body');
+                                }, 1500);
+                              } catch (error) {
+                                console.error('Failed to copy code to clipboard:', error);
+                              }
+                            }
+                          });
+                        }
+
+                        // Initialize all functionality for this example
+                        initializeTabs();
+                        initializeCopyButton();
+                      });
+                    });
+                  })();
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="docs-footer">
+          <div class="container-fluid px-4">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="mb-0">Copyright © 2025 <a href="#">Astero Digital</a>. All rights reserved.</p>
+              </div>
+              <div class="col-md-6 text-md-end"><!-- <p class="mb-0">Version {version}</p> --></div>
+            </div>
+          </div>
+        </footer>
+        <!-- src/components/search-modal.astro -->
+        <div
+          class="modal search-modal fade"
+          id="searchModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="searchModalLabel"
+          aria-hidden="true"
+          data-bs-backdrop="true"
+          data-bs-keyboard="true"
+        >
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0">
+              <div class="modal-header d-flex gap-3">
+                <div class="search-wrapper flex-grow-1">
+                  <i class="ri-search-line search-icon"></i>
+                  <input type="text" class="form-control" id="searchInput" placeholder="Type to search..." autofocus />
+                  <div class="search-shortcut-indicator d-none d-sm-flex align-items-center gap-2"><kbd>ESC</kbd></div>
+                </div>
+              </div>
+              <div class="modal-body p-3">
+                <div class="quick-links mb-4">
+                  <h6 class="fw-semibold mb-3">Quick Links</h6>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <a href="/dashboard" class="quick-link-card">
+                        <i class="ri-speed-up-line"></i>
+                        <div>
+                          <h6 class="mb-0">Dashboard</h6>
+                          <span class="text-muted fs-13">Analytics Overview</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-sm-6">
+                      <a href="/users/profile" class="quick-link-card">
+                        <i class="ri-user-line"></i>
+                        <div>
+                          <h6 class="mb-0">Profile</h6>
+                          <span class="text-muted fs-13">View your profile</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-sm-6">
+                      <a href="/settings" class="quick-link-card">
+                        <i class="ri-settings-3-line"></i>
+                        <div>
+                          <h6 class="mb-0">Settings</h6>
+                          <span class="text-muted fs-13">Manage preferences</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-sm-6">
+                      <a href="/help" class="quick-link-card">
+                        <i class="ri-question-line"></i>
+                        <div>
+                          <h6 class="mb-0">Help Center</h6>
+                          <span class="text-muted fs-13">Get support</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent-searches">
+                  <h6 class="fw-semibold mb-3">Recent Searches</h6>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action">
+                      <i class="ri-time-line me-2 text-muted"></i>
+                      Analytics Dashboard
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                      <i class="ri-time-line me-2 text-muted"></i>
+                      User Settings
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                      <i class="ri-time-line me-2 text-muted"></i>
+                      Email Templates
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          // Initialize search modal functionality after Bootstrap is loaded
+          window.addEventListener('load', () => {
+            // Initialize Bootstrap modal
+            const searchModalEl = document.getElementById('searchModal');
+            const searchModal = new bootstrap.Modal(searchModalEl);
+
+            // Handle keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+              // Check for Ctrl+K or Cmd+K
+              if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                searchModal.show();
+              }
+
+              // Close modal on ESC
+              if (e.key === 'Escape') {
+                if (searchModal) {
+                  searchModal.hide();
+                }
+              }
+            });
+
+            // Focus input when modal opens
+            searchModalEl.addEventListener('shown.bs.modal', () => {
+              document.getElementById('searchInput').focus();
+            });
+          });
+        </script>
+      </main>
+    </div>
+    <script type="module">
+      function t() {
+        const e = document.createElement('link');
+        ((e.rel = 'stylesheet'),
+          (e.href = 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..800&display=swap'),
+          document.head.appendChild(e));
+        const o = document.createElement('link');
+        ((o.rel = 'stylesheet'),
+          (o.href = 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap'),
+          document.head.appendChild(o));
+      }
+      window.addEventListener('load', t);
+    </script>
+    <!-- Clipboard Copy Button for Code Blocks -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Mark regular MDX fenced code blocks so they can be targeted/styled.
+        // Exclude Prism-generated example blocks inside .bd-code-snippet-wrapper.
+        const mdxCodeEls = Array.from(
+          document.querySelectorAll('pre > code[class*="language-"], pre > code[class*="language-"]'),
+        );
+        mdxCodeEls.forEach((codeEl, idx) => {
+          if (codeEl.closest('.bd-code-snippet-wrapper')) return;
+          const pre = codeEl.closest('pre');
+          if (!pre) return;
+          if (!pre.classList.contains('astro-code')) pre.classList.add('astro-code');
+        });
+
+        // Existing clipboard button logic for pre.astro-code
+        document.querySelectorAll('pre.astro-code').forEach((pre) => {
+          // Skip if already has a button
+          if (pre.querySelector('.copy-btn')) return;
+
+          const button = document.createElement('button');
+          button.innerHTML = `<i class="ri-clipboard-line fs-6"></i>`;
+          button.classList.add('copy-btn', 'text-body', 'bg-dark', 'bg-opacity-10', 'rounded-pill');
+          button.setAttribute('title', 'Copy to clipboard');
+          button.setAttribute('data-bs-toggle', 'tooltip');
+          button.setAttribute('data-bs-placement', 'top');
+
+          button.style.cssText = `
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+        color: #ffffff;
+        border: none;
+        padding: 0.3rem 0.6rem;
+        cursor: pointer;
+        border-radius: 4px;
+      `;
+
+          const wrapper = document.createElement('div');
+          wrapper.style.position = 'relative';
+          pre.parentNode.insertBefore(wrapper, pre);
+          wrapper.appendChild(pre);
+          wrapper.appendChild(button);
+
+          // Ensure a simple outside-click reset so tooltip text doesn't remain "Copied!"
+          if (!button.dataset.copyListenerAdded) {
+            const resetTooltipText = (e) => {
+              try {
+                if (!button.contains(e.target)) {
+                  const inst = bootstrap.Tooltip.getInstance(button);
+                  if (inst) inst.setContent({ '.tooltip-inner': 'Copy to clipboard' });
+                }
+              } catch (err) {
+                // ignore
+              }
+            };
+            // capture-phase to detect outside clicks reliably
+            document.addEventListener('click', resetTooltipText, true);
+            button.dataset.copyListenerAdded = '1';
+          }
+
+          button.addEventListener('click', () => {
+            const code = pre.querySelector('code')?.textContent;
+            if (code) {
+              navigator.clipboard.writeText(code).then(() => {
+                // Tooltip logic
+                const tooltip = bootstrap.Tooltip.getInstance(button);
+                if (tooltip) {
+                  tooltip.setContent({ '.tooltip-inner': 'Copied!' }); // Update tooltip text
+                  tooltip.show(); // Show updated tooltip
+                }
+
+                // Change icon and style
+                button.innerHTML = `<i class="ri-check-line fs-6"></i>`;
+                button.classList.remove('text-body', 'bg-dark', 'bg-opacity-10');
+                button.classList.add('text-success', 'bg-success', 'bg-opacity-25');
+
+                setTimeout(() => {
+                  button.innerHTML = `<i class="ri-clipboard-line fs-6"></i>`;
+                  button.classList.remove('text-success', 'bg-success', 'bg-opacity-25');
+                  button.classList.add('text-body', 'bg-dark', 'bg-opacity-10');
+                }, 1500);
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <!-- Copy as Markdown -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('copy-mdx-btn');
+        const textarea = document.getElementById('mdx-source');
+
+        btn?.addEventListener('click', async function () {
+          if (textarea && textarea instanceof HTMLTextAreaElement) {
+            try {
+              // Get the content and trim any leading/trailing whitespace
+              const content = textarea.value.trim();
+
+              // Use the modern Clipboard API if available
+              if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(content);
+              } else {
+                // Fallback for older browsers or non-secure contexts
+                textarea.value = content;
+                textarea.select();
+                document.execCommand('copy');
+              }
+
+              // Visual feedback
+              btn.innerHTML = '<i class="ri-check-line me-2"></i>Copied!';
+              setTimeout(() => {
+                btn.innerHTML = '<i class="ri-file-copy-line me-2"></i>Copy as markdown';
+              }, 1500);
+            } catch (err) {
+              console.error('Failed to copy text: ', err);
+              // Fallback: just copy the textarea content as-is
+              textarea.select();
+              document.execCommand('copy');
+            }
+          }
+        });
+      });
+    </script>
+    <!-- AOS - Animate on Scroll Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <!-- Choices JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <!-- Typed.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Google Charts Script -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Quercus.js (Treeview) Script -->
+    <script src="https://cdn.jsdelivr.net/npm/quercus.js@0.4.1/src/treeview.min.js"></script>
+    <!-- Canvas Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <!-- Bigger Picture (Lightbox) Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.19/dist/bigger-picture.min.js"></script>
+    <!-- GLightbox Script -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <!-- Swiper Js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Astero UI JS / Bootstrap Js included in Astero UI -->
+    <script src="/scripts/asteroui.min.js"></script>
+    <!-- Page Script -->
+    <!-- Round Fixed Button --><button
+      class="btn btn-icon-xl btn-primary rounded-circle shadow-xl"
+      style="position: fixed; right: 1rem; top: 90%; transform: translateY(-50%); z-index: 1000"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#quickLinksOffcanvas"
+      aria-controls="quickLinksOffcanvas"
+    >
+      <i class="ri-settings-3-line fs-3"></i>
+    </button>
+    <!-- Offcanvas -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="quickLinksOffcanvas"
+      aria-labelledby="quickLinksOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <div class="offcanvas-title fs-5 fw-semibold" id="quickLinksOffcanvasLabel">
+          <i class="ri-links-line text-muted me-1"></i>Quick Links
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body pt-2">
+        <div class="d-flex gap-2 mb-3">
+          <a href="/" class="btn btn-primary w-100"><i class="ri-home-4-line me-1"></i>Home</a>
+          <a href="/docs" class="btn btn-secondary w-100"><i class="ri-folder-line me-1"></i>Docs</a>
+        </div>
+        <div>
+          <h6 class="text-muted text-uppercase">Admin</h6>
+          <div>
+            <a class="text-decoration-none" href="/templates/admin/dashboard"
+              ><i class="ri-dashboard-line me-2"></i>Admin Dashboard Example<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <hr />
+          <h6 class="text-muted text-uppercase">Themes</h6>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/classic/home"
+              ><i class="ri-layout-3-line me-2"></i>Website Example (Classic)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/modern/home"
+              ><i class="ri-layout-4-line me-2"></i>Website Example (Modern)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-1/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 1 (Beagle)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-2/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 2 (Golden Retriever)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-3/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 3 (French Bulldog)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-4/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 4 (Poodle)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-5/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 5 (German Shepherd)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-6/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 6 (Yorkshire Terrier)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-1/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 1 (Persian)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-2/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 2 (Siamese)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-3/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 3 (Bengal)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-4/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 4 (Abyssinian)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-5/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 5 (Himalayan)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/hoa-1/home"
+              ><i class="ri-community-line me-2"></i>HOA 1<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/hoa-2/home"
+              ><i class="ri-community-line me-2"></i>HOA 2<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/hoa-3/home"
+              ><i class="ri-community-line me-2"></i>HOA 3<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/real-estate-1/home"
+              ><i class="ri-building-line me-2"></i>Real Estate 1<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/real-estate-2/home"
+              ><i class="ri-building-line me-2"></i>Real Estate 2<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <hr />
+          <h6 class="text-muted text-uppercase">Other</h6>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/astero-builder/home"
+              ><i class="ri-hammer-line me-2"></i>AsteroBuilder<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/astero-digital/home"
+              ><i class="ri-macbook-line me-2"></i>AsteroDigital<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/paanstation/home"
+              ><i class="ri-store-line me-2"></i>Paanstation<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/jazzup-salon/home"
+              ><i class="ri-scissors-line me-2"></i>Jazzup Salon<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/homestyle-furnitech/home"
+              ><i class="ri-sofa-line me-2"></i>HomeStyle Furnitech<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/mak-holding-group/home"
+              ><i class="ri-building-line me-2"></i>MAK Holding Group<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/takshila-institute/home"
+              ><i class="ri-school-line me-2"></i>Takshila Institute<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/clinic-demo/home"
+              ><i class="ri-stethoscope-line me-2"></i>Clinic Demo<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

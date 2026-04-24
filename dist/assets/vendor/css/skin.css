@@ -1,0 +1,31 @@
+/*
+ * This is the skin CSS file for the theme.
+ * It is used to override the default Bootstrap CSS.
+ * It is also used to add the skin specific CSS.
+ */
+:root,
+[data-bs-theme='light'] {
+  --bs-primary: #222222;
+  --bs-primary-rgb: 34, 34, 34;
+
+  --sidebar-color: #5a5a5a;
+  --sidebar-bg: #fafafa;
+  --nav-link-bg: #fafafa;
+  --nav-link-height: 32px;
+  --submenu-link-height: 32px;
+
+  /* Topbar Theme */
+  --topbar-color: #5a5a5a;
+  --topbar-bg: #ffffff;
+  /* Content Wrapper Theme */
+  --content-wrapper-color: #252525;
+  --content-wrapper-bg: #ffffff;
+  /* Footer Theme */
+  --footer-color: #5a5a5a;
+  --footer-bg: #ffffff;
+}
+
+[data-bs-theme='dark'] {
+  --bs-primary: #e5e5e5;
+  --bs-primary-rgb: 229, 229, 229;
+}

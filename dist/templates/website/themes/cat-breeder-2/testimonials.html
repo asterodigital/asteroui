@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+  <head>
+    <!-- Resource Hints -->
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <title>Testimonials | Cat Breeder 2</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dedicated to raising happy, healthy Siamese kittens in loving homes." />
+    <meta name="author" content="Astero Digital" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Testimonials | Cat Breeder 2" />
+    <meta property="og:description" content="Dedicated to raising happy, healthy Siamese kittens in loving homes." />
+    <meta property="og:image" content="/src/assets/img/og-image.png" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Astero UI CSS -->
+    <link href="/styles/asteroui-lite.min.css" rel="stylesheet" />
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" />
+    <!-- AOS (Animate on Scroll) Styling -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Page CSS -->
+    <style>
+      :root,
+      [data-bs-theme='light'] {
+        --bs-primary: #0278b8;
+        --bs-primary-rgb: 2, 120, 184;
+      }
+      .dropdown-menu .dropdown-item {
+        font-size: 1rem !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <div class="sticky-top z-4">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-body">
+          <div class="container">
+            <!-- Brand Logo or Text -->
+            <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/cat-breeder-2/home">
+              <img src="/assets/images/placeholder-logos/logoipsum-288.svg" alt="Logo" style="height: 32px" />
+            </a>
+            <!-- Offcanvas Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/cat-breeder-2/home">
+                  <img src="/assets/images/placeholder-logos/logoipsum-288.svg" alt="Logo" style="height: 32px" />
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+                <!-- Desktop Nav Links -->
+                <ul class="navbar-nav navbar-highlight justify-content-end d-none d-lg-flex front-theme">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/about">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="blogDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Blog
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/cat-breeder-2/blog-1"
+                          >Blog - No Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/cat-breeder-2/blog-2"
+                          >Blog - Left Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/cat-breeder-2/blog-3"
+                          >Blog - Right Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/cat-breeder-2/post-1"
+                          >Post - No Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/cat-breeder-2/post-2"
+                          >Post - Left Sidebar</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/templates/website/themes/cat-breeder-2/post-3"
+                          >Post - Right Sidebar</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/breeding-philosophy"
+                      >Philosophy</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/faq">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/kittens">Kittens</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/shop">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/templates/website/themes/cat-breeder-2/testimonials"
+                      >Testimonials</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/contact">Contact</a>
+                  </li>
+                </ul>
+                <!-- Mobile Nav Links -->
+                <ul class="navbar-nav d-lg-none">
+                  <!-- Search for Smaller Screens -->
+                  <li>
+                    <form class="d-flex d-lg-none mb-2" role="search">
+                      <input
+                        class="form-control form-control-lg me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                      />
+                      <button class="btn btn-lg btn-outline-primary" type="submit">
+                        <i class="ri-search-line"></i>
+                      </button>
+                    </form>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/breeding-philosophy"
+                      >Breeding Philosophy</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/shop">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/kittens">Kittens</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/templates/website/themes/cat-breeder-2/testimonials"
+                      >Testimonials</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/faq">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/blog-1">Blog – 1</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/blog-2">Blog – 2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/blog-3">Blog – 3</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/post-1">Post – 1</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/post-2">Post – 2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/post-3">Post – 3</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/templates/website/themes/cat-breeder-2/contact">Contact</a>
+                  </li>
+                  <!-- Contact Details for Smaller Screens -->
+                  <div class="d-flex d-lg-none align-items-start gap-3 mt-2">
+                    <i class="ri-phone-fill text-primary fs-3"></i>
+                    <div>
+                      <small class="text-uppercase text-muted">Call Us</small>
+                      <a href="tel:+12345678901" class="d-block text-body text-decoration-none">+1 (234) 567-8901</a>
+                    </div>
+                  </div>
+                  <div class="d-flex d-lg-none align-items-start gap-3 mt-2">
+                    <i class="ri-mail-fill text-primary fs-3"></i>
+                    <div>
+                      <small class="text-uppercase text-muted">Email</small>
+                      <a href="mailto:hello@email.com" class="d-block text-body text-decoration-none"
+                        >hello@email.com</a
+                      >
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Search Bar and Contact Info -->
+        <div class="text-bg-dark border-top d-none d-lg-block py-2">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Left: Search Bar -->
+              <div class="col-4">
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control form-control-lg me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-lg btn-outline-primary" type="submit"><i class="ri-search-line"></i></button>
+                </form>
+              </div>
+              <!-- Right: Contact Info -->
+              <div class="col-5 d-flex text-light justify-content-end pe-0 ms-auto">
+                <!-- Phone -->
+                <div class="d-flex align-items-center gap-3 me-4">
+                  <i class="ri-phone-fill text-primary fs-3"></i>
+                  <div>
+                    <small class="text-uppercase">Call Us</small>
+                    <a href="tel:+12345678901" class="d-block link-light text-decoration-none">+1 (234) 567-8901</a>
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="d-flex align-items-center gap-3">
+                  <i class="ri-mail-fill text-primary fs-3"></i>
+                  <div>
+                    <small class="text-uppercase">Email</small>
+                    <a href="mailto:hello@email.com" class="d-block link-light text-decoration-none">hello@email.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Page Content -->
+      <div class="content-wrapper bg-body">
+        <section class="bg-body py-5">
+          <div class="container">
+            <h1 class="display-5 fw-semibold text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
+              What Our Families Say
+            </h1>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="card bg-primary-subtle border h-100"
+                  data-aos="flip-up"
+                  data-aos-delay="100"
+                  data-aos-duration="1000"
+                >
+                  <div class="card-body d-flex flex-column">
+                    <i class="ri-double-quotes-l text-primary display-6"></i>
+                    <p class="mt-1 mb-3">
+                      "Our kitten is very sweet and also well-adjusted. The breeder's support made a lot of difference.
+                      Great experience!"
+                    </p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img
+                        src="/assets/images/avatars/avatar1.jpg"
+                        alt="Avatar"
+                        class="rounded-circle me-3"
+                        width="56"
+                        height="56"
+                      />
+                      <div>
+                        <h6 class="mb-1">Jane Smith</h6>
+                        <p class="mb-0">Austin, TX</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="card bg-primary-subtle border h-100"
+                  data-aos="flip-up"
+                  data-aos-delay="200"
+                  data-aos-duration="1000"
+                >
+                  <div class="card-body d-flex flex-column">
+                    <i class="ri-double-quotes-l text-primary display-6"></i>
+                    <p class="mt-1 mb-3">
+                      "We really loved the regular updates and photos. Our Siamese cat is the perfect addition to our
+                      happy family!"
+                    </p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img
+                        src="/assets/images/avatars/avatar7.jpg"
+                        alt="Avatar"
+                        class="rounded-circle me-3"
+                        width="56"
+                        height="56"
+                      />
+                      <div>
+                        <h6 class="mb-1">Nguyen Minh</h6>
+                        <p class="mb-0">San Diego, CA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="card bg-primary-subtle border h-100"
+                  data-aos="flip-up"
+                  data-aos-delay="300"
+                  data-aos-duration="1000"
+                >
+                  <div class="card-body d-flex flex-column">
+                    <i class="ri-double-quotes-l text-primary display-6"></i>
+                    <p class="mt-1 mb-3">
+                      "Our kitten arrived very healthy, playful, and clearly well-loved. We couldn't have asked for a
+                      better experience!"
+                    </p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img
+                        src="/assets/images/avatars/avatar9.jpg"
+                        alt="Avatar"
+                        class="rounded-circle me-3"
+                        width="56"
+                        height="56"
+                      />
+                      <div>
+                        <h6 class="mb-1">Jack Smith</h6>
+                        <p class="mb-0">Atlanta, GA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="card bg-primary-subtle border h-100"
+                  data-aos="flip-up"
+                  data-aos-delay="400"
+                  data-aos-duration="1000"
+                >
+                  <div class="card-body d-flex flex-column">
+                    <i class="ri-double-quotes-l text-primary display-6"></i>
+                    <p class="mt-1 mb-3">
+                      "The adoption process was smooth and professional. Our kitten, Mochi, is healthy and so
+                      affectionate. Highly recommended!"
+                    </p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img
+                        src="/assets/images/avatars/avatar2.jpg"
+                        alt="Avatar"
+                        class="rounded-circle me-3"
+                        width="56"
+                        height="56"
+                      />
+                      <div>
+                        <h6 class="mb-1">Elena Petrova</h6>
+                        <p class="mb-0">Seattle, WA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="card bg-primary-subtle border h-100"
+                  data-aos="flip-up"
+                  data-aos-delay="500"
+                  data-aos-duration="1000"
+                >
+                  <div class="card-body d-flex flex-column">
+                    <i class="ri-double-quotes-l text-primary display-6"></i>
+                    <p class="mt-1 mb-3">
+                      "We received detailed care instructions and ongoing support. Our Siamese, Oliver, is thriving and
+                      so playful!"
+                    </p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img
+                        src="/assets/images/avatars/avatar8.jpg"
+                        alt="Avatar"
+                        class="rounded-circle me-3"
+                        width="56"
+                        height="56"
+                      />
+                      <div>
+                        <h6 class="mb-1">John Doe</h6>
+                        <p class="mb-0">Chicago, IL</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div
+                  class="card bg-primary-subtle border h-100"
+                  data-aos="flip-up"
+                  data-aos-delay="600"
+                  data-aos-duration="1000"
+                >
+                  <div class="card-body d-flex flex-column">
+                    <i class="ri-double-quotes-l text-primary display-6"></i>
+                    <p class="mt-1 mb-3">
+                      "Our family is so grateful for the breeder's dedication. The kittens are well-socialized and
+                      adapted quickly to our home."
+                    </p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <img
+                        src="/assets/images/avatars/avatar1.jpg"
+                        alt="Avatar"
+                        class="rounded-circle me-3"
+                        width="56"
+                        height="56"
+                      />
+                      <div>
+                        <h6 class="mb-1">Sarah Meyer</h6>
+                        <p class="mb-0">Denver, CO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-primary-subtle py-5">
+          <div class="container text-center">
+            <h2 class="display-6 fw-semibold mb-3" data-aos="fade-up" data-aos-duration="1000">
+              Share Your Experience
+            </h2>
+            <p class="mb-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+              We love hearing from our kitten families! If you’d like to share your story or feedback, please get in
+              touch.
+            </p>
+            <a
+              href="/templates/website/themes/cat-breeder-2/contact"
+              class="btn btn-primary btn-lg"
+              data-aos="fade-in"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
+              Contact Us
+            </a>
+          </div>
+        </section>
+        <!-- Round Fixed Button --><button
+          class="btn btn-icon-xl btn-primary rounded-circle shadow-xl"
+          style="position: fixed; right: 1rem; top: 90%; transform: translateY(-50%); z-index: 1000"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#quickLinksOffcanvas"
+          aria-controls="quickLinksOffcanvas"
+        >
+          <i class="ri-settings-3-line fs-3"></i>
+        </button>
+        <!-- Offcanvas -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="quickLinksOffcanvas"
+          aria-labelledby="quickLinksOffcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title fs-5 fw-semibold" id="quickLinksOffcanvasLabel">
+              <i class="ri-links-line text-muted me-1"></i>Quick Links
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2">
+            <div class="d-flex gap-2 mb-3">
+              <a href="/" class="btn btn-primary w-100"><i class="ri-home-4-line me-1"></i>Home</a>
+              <a href="/docs" class="btn btn-secondary w-100"><i class="ri-folder-line me-1"></i>Docs</a>
+            </div>
+            <div>
+              <h6 class="text-muted text-uppercase">Admin</h6>
+              <div>
+                <a class="text-decoration-none" href="/templates/admin/dashboard"
+                  ><i class="ri-dashboard-line me-2"></i>Admin Dashboard Example<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Themes</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/classic/home"
+                  ><i class="ri-layout-3-line me-2"></i>Website Example (Classic)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/modern/home"
+                  ><i class="ri-layout-4-line me-2"></i>Website Example (Modern)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-1/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 1 (Beagle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-2/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 2 (Golden Retriever)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-3/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 3 (French Bulldog)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-4/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 4 (Poodle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-5/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 5 (German Shepherd)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-6/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 6 (Yorkshire Terrier)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-1/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 1 (Persian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-2/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 2 (Siamese)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-3/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 3 (Bengal)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-4/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 4 (Abyssinian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-5/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 5 (Himalayan)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-1/home"
+                  ><i class="ri-community-line me-2"></i>HOA 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-2/home"
+                  ><i class="ri-community-line me-2"></i>HOA 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-3/home"
+                  ><i class="ri-community-line me-2"></i>HOA 3<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-1/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-2/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Other</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-builder/home"
+                  ><i class="ri-hammer-line me-2"></i>AsteroBuilder<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-digital/home"
+                  ><i class="ri-macbook-line me-2"></i>AsteroDigital<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/paanstation/home"
+                  ><i class="ri-store-line me-2"></i>Paanstation<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/jazzup-salon/home"
+                  ><i class="ri-scissors-line me-2"></i>Jazzup Salon<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/homestyle-furnitech/home"
+                  ><i class="ri-sofa-line me-2"></i>HomeStyle Furnitech<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/mak-holding-group/home"
+                  ><i class="ri-building-line me-2"></i>MAK Holding Group<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/takshila-institute/home"
+                  ><i class="ri-school-line me-2"></i>Takshila Institute<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/clinic-demo/home"
+                  ><i class="ri-stethoscope-line me-2"></i>Clinic Demo<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CTA -->
+      <section class="text-bg-primary">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <h2 class="display-5 fw-semibold mb-3">Find Your Perfect Siamese Cat.</h2>
+              <p class="fs-5 mb-4">
+                Ready to welcome a Siamese kitten into your home? Share your preferences and let us help you find the
+                ideal feline companion.
+              </p>
+              <form class="row text-start g-3">
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    id="fullName"
+                    placeholder="Jane Doe"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+                <div class="col-md-12">
+                  <label for="message" class="form-label">Tell us what you're looking for</label>
+                  <textarea
+                    class="form-control form-control-lg"
+                    id="message"
+                    rows="2"
+                    placeholder="Personality, age, household needs, etc."
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-light btn-lg mt-3">
+                    <i class="ri-sparkling-2-fill me-2"></i>Find My Siamese
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="bg-body pt-5 pb-4 border-top">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Logo and Contact Info -->
+            <div class="col-lg-4 col-md-6">
+              <a
+                href="/templates/website/themes/cat-breeder-2/home"
+                class="d-inline-flex align-items-center text-decoration-none"
+              >
+                <img src="/assets/images/placeholder-logos/logoipsum-288.svg" alt="Logo" style="height: 32px" />
+              </a>
+              <ul class="list-unstyled mt-3">
+                <li class="mb-2">
+                  <a href="tel:+12345678901" class="text-body text-decoration-none">
+                    <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="mailto:hello@email.com" class="text-body text-decoration-none">
+                    <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
+                  </a>
+                </li>
+                <li><i class="ri-map-pin-fill text-primary me-2"></i>123 Main Street, Austin, TX</li>
+              </ul>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-lg-4 col-md-6">
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="fs-5 mb-3">Quick Links</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/cat-breeder-2/home" class="text-body text-decoration-none"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/cat-breeder-2/about" class="text-body text-decoration-none"
+                        >About</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/cat-breeder-2/faq" class="text-body text-decoration-none"
+                        >FAQs</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a
+                        href="/templates/website/themes/cat-breeder-2/testimonials"
+                        class="text-body text-decoration-none"
+                        >Testimonials</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/templates/website/themes/cat-breeder-2/contact" class="text-body text-decoration-none"
+                        >Contact</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <h5 class="fs-5 mb-3">Explore</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/cat-breeder-2/blog-1" class="text-body text-decoration-none"
+                        >Blog</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a
+                        href="/templates/website/themes/cat-breeder-2/breeding-philosophy"
+                        class="text-body text-decoration-none"
+                        >Breeding Philosophy</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/cat-breeder-2/gallery" class="text-body text-decoration-none"
+                        >Gallery</a
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <a href="/templates/website/themes/cat-breeder-2/kittens" class="text-body text-decoration-none"
+                        >Kittens</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/templates/website/themes/cat-breeder-2/shop" class="text-body text-decoration-none"
+                        >Shop<span class="badge bg-primary ms-2">new</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Newsletter -->
+            <div class="col-lg-4">
+              <h5 class="fs-5 mb-3">Subscribe to our Newsletter</h5>
+              <p class="text-muted mb-3">
+                Subscribe to our newsletter for updates on upcoming litters, training tips, and stories from our family
+                — straight to your inbox.
+              </p>
+              <form>
+                <div class="mb-3">
+                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email" required />
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary w-100">
+                  <i class="ri-send-plane-fill me-2"></i>Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- Footer Bottom -->
+          <div class="text-center pt-4 mt-4 border-top">
+            <p class="text-muted mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- All Scripts -->
+    <!-- Astero UI JS / Bootstrap Js included in Astero UI -->
+    <script src="/scripts/asteroui-lite.min.js"></script>
+    <!-- AOS (Animate on Scroll) Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <!-- Page Script --><!-- Enable hover-based dropdowns and disable click toggle behavior in the navbar (only for lg+ screens) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const dropdowns = document.querySelectorAll('.front-theme .nav-item.dropdown');
+
+        function enableHoverDropdowns() {
+          dropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
+
+            // Prevent Bootstrap click toggle
+            toggle.addEventListener('click', function (e) {
+              // Only prevent default if screen is lg or larger
+              if (window.innerWidth >= 992) {
+                e.preventDefault();
+              }
+            });
+
+            // Show dropdown on hover (only lg and up)
+            dropdown.addEventListener('mouseenter', function () {
+              if (window.innerWidth >= 992) {
+                toggle.classList.add('show');
+                menu.classList.add('show');
+                toggle.setAttribute('aria-expanded', 'true');
+              }
+            });
+
+            // Hide dropdown on mouse leave (only lg and up)
+            dropdown.addEventListener('mouseleave', function () {
+              if (window.innerWidth >= 992) {
+                toggle.classList.remove('show');
+                menu.classList.remove('show');
+                toggle.setAttribute('aria-expanded', 'false');
+              }
+            });
+          });
+        }
+
+        enableHoverDropdowns();
+
+        // Recheck if the user resizes the window
+        window.addEventListener('resize', function () {
+          // Close all dropdowns if resizing below or at lg
+          if (window.innerWidth <= 992) {
+            dropdowns.forEach((dropdown) => {
+              const toggle = dropdown.querySelector('.dropdown-toggle');
+              const menu = dropdown.querySelector('.dropdown-menu');
+              toggle.classList.remove('show');
+              menu.classList.remove('show');
+              toggle.setAttribute('aria-expanded', 'false');
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

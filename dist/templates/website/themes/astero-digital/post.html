@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+  <head>
+    <!-- Resource Hints -->
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <title>Blog Post | Astero Digital</title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Lorem ipsum dolor sit amet, consectetur adipisicing elit architecto illum consequuntur quo praesentium autem cumque."
+    />
+    <meta name="author" content="Astero Digital" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog Post | Astero Digital" />
+    <meta
+      property="og:description"
+      content="Lorem ipsum dolor sit amet, consectetur adipisicing elit architecto illum consequuntur quo praesentium autem cumque."
+    />
+    <meta property="og:image" content="/src/assets/img/og-image.png" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Astero UI CSS -->
+    <link href="/styles/asteroui-lite.min.css" rel="stylesheet" />
+    <!-- Poppins font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" />
+    <!-- Page CSS -->
+    <style>
+      :root,
+      [data-bs-theme='light'] {
+        --bs-primary: #6c3994;
+        --bs-primary-rgb: 108, 57, 148;
+      }
+      body {
+        font-family:
+          'Poppins',
+          'Inter',
+          'Segoe UI',
+          'Helvetica Neue',
+          system-ui,
+          -apple-system,
+          'Noto Sans',
+          sans-serif;
+        font-optical-sizing: auto;
+      }
+      .navbar-nav .nav-link {
+        font-size: 0.875rem;
+      }
+      .h-25-custom {
+        height: 100%;
+      }
+      .grid-pattern {
+        background-image: url(/assets/images/astero-digital/gradient.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .grid-pattern-white {
+        background-image: url(/assets/images/astero-digital/gradient-white.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .nav.nav-pills {
+        background-color: var(--bs-body-bg);
+      }
+      .nav-link.active {
+        color: var(--bs-body-color) !important;
+        background-color: rgb(var(--bs-primary-rgb), 0.1) !important;
+      }
+      @media (max-width: 768px) {
+        .border-below-md-bottom {
+          border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+        }
+      }
+      @media (min-width: 768px) {
+        .border-md-end {
+          border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+        }
+      }
+      @media (max-width: 992px) {
+        .h-25-custom {
+          height: 20rem;
+        }
+      }
+      @media (min-width: 992px) {
+        .case-study-card {
+          margin-left: -32px;
+        }
+      }
+      .swiper-pagination-bullet {
+        background-color: var(--bs-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-body sticky-top z-4">
+        <div class="container">
+          <!-- Brand Logo or Text -->
+          <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/astero-digital/home">
+            <img src="/assets/images/astero-digital/logo.svg" alt="Astero Digital" class="me-2" style="height: 32px" />
+          </a>
+          <!-- Offcanvas Toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Offcanvas Menu -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <a class="navbar-brand d-flex align-items-center" href="/templates/website/themes/astero-digital/home">
+                <img
+                  src="/assets/images/astero-digital/logo.svg"
+                  alt="Astero Digital"
+                  class="me-2"
+                  style="height: 32px"
+                />
+              </a>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+              <!-- Nav Links -->
+              <ul class="navbar-nav justify-content-center front-theme">
+                <!-- About -->
+                <li class="nav-item">
+                  <a class="nav-link rounded px-2" href="/templates/website/themes/astero-digital/about">About</a>
+                </li>
+                <!-- Services -->
+                <li class="nav-item">
+                  <a class="nav-link rounded px-2" href="/templates/website/themes/astero-digital/services">Services</a>
+                </li>
+                <!-- Products -->
+                <li class="nav-item dropdown js-mobile-flat">
+                  <a
+                    class="nav-link dropdown-toggle px-2"
+                    href="#"
+                    id="productsDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Products
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                    <li>
+                      <a class="dropdown-item" href="/templates/website/themes/astero-digital/astero-admin"
+                        >Astero Admin</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- Blog -->
+                <li class="nav-item">
+                  <a class="nav-link rounded px-2" href="/templates/website/themes/astero-digital/blog">Blog</a>
+                </li>
+                <!-- Contact -->
+                <li class="nav-item">
+                  <a class="nav-link rounded px-2" href="/templates/website/themes/astero-digital/contact"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+              <!-- Hire Us Link (for Mobile) -->
+              <a
+                href="/templates/website/themes/astero-digital/hire-us"
+                class="btn btn-primary d-block d-lg-none mt-4 w-100"
+              >
+                Hire Us
+              </a>
+            </div>
+          </div>
+          <!-- Hire Us Link (for Desktop) -->
+          <a href="/templates/website/themes/astero-digital/hire-us" class="btn btn-primary d-none d-lg-flex"
+            >Hire Us</a
+          >
+        </div>
+      </nav>
+      <!-- Page Content -->
+      <div class="content-wrapper bg-body">
+        <section class="text-bg-primary py-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-6 d-flex flex-column align-items-center text-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  fill="var(--bs-yellow)"
+                  class="mb-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"
+                  ></path>
+                </svg>
+                <!-- Category -->
+                <a
+                  href="/templates/website/themes/astero-digital/coding"
+                  class="h6 link-light text-uppercase text-decoration-none"
+                  >— Coding</a
+                >
+                <!-- Title -->
+                <h1 class="fw-medium">Bootstrap Language Selector: Implementation Guide</h1>
+                <!-- Author -->
+                <span
+                  >By <a href="/templates/website/themes/astero-digital/author" class="link-light">Azad Shaikh</a></span
+                >
+                <!-- Date and Length -->
+                <div class="d-flex flex-row gap-2">
+                  <span>Updated: Mar 5, 2025</span> <span>•</span> <span>3 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-body py-5">
+          <div class="container">
+            <div class="row gx-5">
+              <!-- Left Section -->
+              <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="sticky-top z-1" style="top: 64px">
+                  <h5 class="fw-medium">Contents</h5>
+                  <nav class="nav nav-pills flex-column" id="table-of-contents">
+                    <a class="nav-link text-muted" href="#implementation-options">Implementation Options</a>
+                    <a class="nav-link text-muted" href="#language-selector-hacks">Language Selector Hacks</a>
+                    <a class="nav-link text-muted" href="#integration-tips">Integration Tips</a>
+                    <a class="nav-link text-muted" href="#advanced-implementation">Advanced Implementation</a>
+                    <a class="nav-link text-muted" href="#conclusion">Conclusion</a>
+                  </nav>
+                </div>
+              </div>
+              <!-- Middle Section -->
+              <div
+                class="col-lg-9 col-xl-6"
+                data-bs-target="#table-of-contents"
+                data-bs-spy="scroll"
+                data-bs-smooth-scroll="true"
+                tabindex="0"
+              >
+                <!-- Key Takeaways -->
+                <div class="bg-primary-subtle rounded p-3 mb-3">
+                  <h3 class="h5 text-uppercase">Key takeaways</h3>
+                  <ul class="text-muted mb-0">
+                    <li class="mb-1">Offer language options for global accessibility.</li>
+                    <li class="mb-1">Place the selector in the navbar, standalone section, or footer.</li>
+                    <li class="mb-1">Use flag-icon-css; pick neutral icons for shared languages.</li>
+                    <li class="mb-1">Keep placement consistent and optimize performance.</li>
+                    <li class="mb-1">Add server-side handling, translations, and URL structure.</li>
+                    <li>A good selector improves UX and shows global readiness.</li>
+                  </ul>
+                </div>
+                <!-- Main Content -->
+                <p>
+                  When launching a global product or website, providing language options is crucial for user
+                  accessibility. A well-designed language selector enhances user experience and demonstrates your
+                  commitment to international users. In this guide, we'll show you how to implement a professional
+                  language selector using Bootstrap 5.
+                </p>
+                <h4 id="implementation-options">Bootstrap Language Selector Implementation Options</h4>
+                <p>Our code demonstrates three different ways to implement a language selector:</p>
+                <ol type="1">
+                  <li>In the Navigation Bar: Perfect for immediate visibility and access</li>
+                  <li>As a Standalone Component: Great for dedicated language preference sections</li>
+                  <li>In the Footer: A subtle option that doesn't distract from main content</li>
+                </ol>
+                <h4 id="language-selector-hacks">Language Selector Hacks and Best Practices</h4>
+                <p><strong>1. Use Flag Icons Correctly</strong></p>
+                <p>
+                  We're using the flag-icon-css library to display country flags. This is a lightweight solution that
+                  works well with Bootstrap.
+                </p>
+                <p>
+                  Hack: For languages spoken in multiple countries (like Spanish or English), consider using the most
+                  recognizable flag or a neutral icon instead.
+                </p>
+                <p><strong>2. Persistent Language Selection</strong></p>
+                <p>Our JavaScript implementation stores the user's language preference in localStorage:</p>
+                <p>localStorage.setItem('selectedLanguage', language);</p>
+                <p>
+                  Hack: This ensures that when users return to your site, their language preference is remembered,
+                  creating a more personalized experience.
+                </p>
+                <h4 id="integration-tips">Integration Tips</h4>
+                <p>Here's how to get the most out of this component:</p>
+                <ol type="1">
+                  <li>
+                    <strong>Consistent Placement:</strong> Choose one implementation style and use it consistently
+                    across all pages
+                  </li>
+                  <li>
+                    <strong>Theme Compatibility:</strong> The selector adapts to both light and dark modes automatically
+                  </li>
+                  <li>
+                    <strong>Configuration Options:</strong> Extend the language list based on your target audience
+                  </li>
+                  <li>
+                    <strong>Performance Optimization:</strong> The flag icons library can be subset to include only the
+                    flags you need
+                  </li>
+                </ol>
+                <h4 id="advanced-implementation">Beyond the Basics: Advanced Implementation</h4>
+                <p>For a production environment, you'll want to:</p>
+                <ol type="1">
+                  <li>
+                    <strong>Implement Server-Side Handling:</strong> Process the language parameter to serve localized
+                    content
+                  </li>
+                  <li><strong>Add Translation Files:</strong> Use a system like i18next to manage translations</li>
+                  <li>
+                    <strong>Consider URL Structure:</strong> Either use query parameters (?lang=es) or path prefixes
+                    (/es/dashboard)
+                  </li>
+                  <li>
+                    <strong>Add Language Auto-Detection:</strong> Detect the user's browser language for first-time
+                    visitors
+                  </li>
+                </ol>
+                <h4 id="conclusion">Conclusion</h4>
+                <p>
+                  A well-implemented language selector is more than just a dropdown - it's a statement about your
+                  product's global accessibility. By following these implementation tips, your projects will be ready
+                  for international users from day one.
+                </p>
+                <p>
+                  For the complete implementation, including JavaScript for handling language switching, download the
+                  full code from our GitHub repository.
+                </p>
+                <p>
+                  Looking for a complete admin dashboard solution with built-in language selection and other essential
+                  features? Check out Astero Admin - launching soon with everything you need for your next web project.
+                </p>
+                <!-- Author Section Post -->
+                <div class="card bg-secondary border-0">
+                  <div class="card-body d-flex flex-column flex-sm-row gap-3">
+                    <figure class="mb-0">
+                      <img
+                        src="/assets/images/astero-digital/azad-shaikh-img.jpeg"
+                        alt="Author"
+                        style="height: 80px; width: 80px"
+                        class="rounded-circle"
+                      />
+                    </figure>
+                    <div>
+                      <p class="small lh-1 mb-1">Article written by:</p>
+                      <a
+                        href="/templates/website/themes/astero-digital/author"
+                        class="fs-4 text-body fw-medium text-decoration-none"
+                        >Azad Shaikh</a
+                      >
+                      <p class="text-muted fs-6 mb-0">
+                        Founder & CEO @ AsteroDigital (Lorem ipsum dolor sit amet consectetur, adipisicing elit.)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Right Section -->
+              <div class="col-lg-9 offset-lg-3 col-xl-3 offset-xl-0 mt-4 mt-xl-0">
+                <!-- Author Section Right -->
+                <div class="d-none d-xl-block mb-4">
+                  <figure class="mb-2">
+                    <img
+                      src="/assets/images/astero-digital/azad-shaikh-img.jpeg"
+                      alt="Author"
+                      style="height: 72px; width: 72px"
+                      class="rounded-circle"
+                    />
+                  </figure>
+                  <a
+                    href="/templates/website/themes/astero-digital/author"
+                    class="fs-5 text-body fw-medium text-decoration-none"
+                    >Azad Shaikh</a
+                  >
+                  <p class="text-muted fs-6">
+                    Founder & CEO @ AsteroDigital (Lorem ipsum dolor sit amet consectetur, adipisicing elit.)
+                  </p>
+                </div>
+                <!-- Article Performance Card -->
+                <div class="card bg-secondary border-0 p-0 mb-4">
+                  <div class="card-body p-3">
+                    <div class="d-flex align-items-center mb-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="var(--bs-primary)"
+                        class="me-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.6 3.6 0 0 0-.108-.563 2 2 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2 2 0 0 0-.16-.045 4 4 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.55 2.55 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361s.437 1.732-.36 2.531Z"
+                        ></path>
+                        <path
+                          d="M5.205 10.787a7.6 7.6 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925"
+                        ></path>
+                      </svg>
+                      <h5 class="fw-medium mb-0">Article Performance</h5>
+                    </div>
+                    <p class="text-muted mb-3">
+                      How our article is performing across search engines and referring domains:
+                    </p>
+                    <div class="row text-center">
+                      <div class="col-6">
+                        <p class="text-uppercase text-muted fw-medium small mb-2">Organic Traffic</p>
+                        <p class="fw-semibold fs-2 lh-1 text-body mb-2">1.5K</p>
+                        <span class="text-success small">+8% this week</span>
+                      </div>
+                      <div class="col-6">
+                        <p class="text-uppercase text-muted fw-medium small mb-2">Linking Websites</p>
+                        <p class="fw-semibold fs-2 lh-1 text-body mb-2">120</p>
+                        <span class="text-danger small">-2% this month</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Newsletter Section -->
+                <h6 class="h5 fw-medium mb-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="var(--bs-primary)"
+                    class="me-2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+                    ></path></svg
+                  >Subscribe to our newsletter
+                </h6>
+                <p class="text-muted fs-6 mb-3">
+                  Get the latest updates and insights delivered straight to your inbox.
+                </p>
+                <form class="d-flex flex-column gap-2">
+                  <input type="email" class="form-control" placeholder="Enter your email address" required />
+                  <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <small class="d-block text-muted mt-2"> We respect your privacy — unsubscribe anytime. </small>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-body py-5">
+          <div class="container">
+            <h3 class="fw-medium mb-3">Read More</h3>
+            <!-- <div class="row gy-4 gx-5">
+        <div class="col-md-4 border-md-end">
+          <a href="/templates/website/themes/astero-digital/post" class="h4 fw-medium text-decoration-none"
+            >The Ultimate Bootstrap 5 Cheatsheet: Developer's Quick Reference Guide</a
+          >
+          <p class="text-muted mt-2 mb-0">
+            Bootstrap 5 Components Cheatsheet A comprehensive guide to Bootstrap's most useful components Table of
+            Contents Layout Components Content Components Form Components Navigation Components Feedback Components
+            Layout Components...
+          </p>
+        </div>
+        <div class="col-md-4 border-md-end">
+          <a href="/templates/website/themes/astero-digital/post" class="h4 fw-medium text-decoration-none"
+            >Bootstrap Language Selector: Implementation Guide</a
+          >
+          <p class="text-muted mt-2 mb-0">
+            When launching a global product or website, providing language options is crucial for user accessibility. A
+            well-designed language selector enhances user experience and demonstrates your commitment to international
+            users...
+          </p>
+        </div>
+        <div class="col-md-4">
+          <a href="/templates/website/themes/astero-digital/post" class="h4 fw-medium text-decoration-none"
+            >Top 5 sites like etsy to sell digital products</a
+          >
+          <p class="text-muted mt-2 mb-0">
+            Selling digital products requires a platform that aligns with your business goals, provides adequate
+            control, and offers favorable commission structures. While Etsy has been a popular choice, many creators are
+            exploring alternatives...
+          </p>
+        </div>
+      </div> -->
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="card bg-secondary border-0 h-100">
+                  <div class="card-body d-flex flex-column">
+                    <a href="/templates/website/themes/astero-digital/post" class="h4 fw-medium text-decoration-none"
+                      >The Ultimate Bootstrap 5 Cheatsheet</a
+                    >
+                    <p class="text-muted mt-2">
+                      Bootstrap 5 Components Cheatsheet A comprehensive guide to Bootstrap's most useful components
+                      Table of Contents Layout Components Content Components Form Components Navigation Components
+                      Feedback...
+                    </p>
+                    <div class="mt-auto">
+                      <a
+                        href="/templates/website/themes/astero-digital/post"
+                        class="d-flex flex-row align-items-center text-decoration-none gap-2"
+                      >
+                        <span class="btn btn-sm btn-primary">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="var(--bs-light)"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="link-primary">Read more</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card bg-secondary border-0 h-100">
+                  <div class="card-body d-flex flex-column">
+                    <a href="/templates/website/themes/astero-digital/post" class="h4 fw-medium text-decoration-none"
+                      >Bootstrap Language Selector: Implementation Guide</a
+                    >
+                    <p class="text-muted mt-2">
+                      When launching a global product or website, providing language options is crucial for user
+                      accessibility. A well-designed language selector enhances user experience and demonstrates your
+                      commitment to international users...
+                    </p>
+                    <div class="mt-auto">
+                      <a
+                        href="/templates/website/themes/astero-digital/post"
+                        class="d-flex flex-row align-items-center text-decoration-none gap-2"
+                      >
+                        <span class="btn btn-sm btn-primary">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="var(--bs-light)"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="link-primary">Read more</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card bg-secondary border-0 h-100">
+                  <div class="card-body d-flex flex-column">
+                    <a href="/templates/website/themes/astero-digital/post" class="h4 fw-medium text-decoration-none"
+                      >Top 5 sites like etsy to sell digital products</a
+                    >
+                    <p class="text-muted mt-2">
+                      Selling digital products requires a platform that aligns with your business goals, provides
+                      adequate control, and offers favorable commission structures. While Etsy has been a popular
+                      choice, many creators are exploring alternatives...
+                    </p>
+                    <div class="mt-auto">
+                      <a
+                        href="/templates/website/themes/astero-digital/post"
+                        class="d-flex flex-row align-items-center text-decoration-none gap-2"
+                      >
+                        <span class="btn btn-sm btn-primary">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="var(--bs-light)"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                            ></path>
+                          </svg>
+                        </span>
+                        <span class="link-primary">Read more</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Round Fixed Button --><button
+          class="btn btn-icon-xl btn-primary rounded-circle shadow-xl"
+          style="position: fixed; right: 1rem; top: 90%; transform: translateY(-50%); z-index: 1000"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#quickLinksOffcanvas"
+          aria-controls="quickLinksOffcanvas"
+        >
+          <i class="ri-settings-3-line fs-3"></i>
+        </button>
+        <!-- Offcanvas -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="quickLinksOffcanvas"
+          aria-labelledby="quickLinksOffcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title fs-5 fw-semibold" id="quickLinksOffcanvasLabel">
+              <i class="ri-links-line text-muted me-1"></i>Quick Links
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-2">
+            <div class="d-flex gap-2 mb-3">
+              <a href="/" class="btn btn-primary w-100"><i class="ri-home-4-line me-1"></i>Home</a>
+              <a href="/docs" class="btn btn-secondary w-100"><i class="ri-folder-line me-1"></i>Docs</a>
+            </div>
+            <div>
+              <h6 class="text-muted text-uppercase">Admin</h6>
+              <div>
+                <a class="text-decoration-none" href="/templates/admin/dashboard"
+                  ><i class="ri-dashboard-line me-2"></i>Admin Dashboard Example<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Themes</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/classic/home"
+                  ><i class="ri-layout-3-line me-2"></i>Website Example (Classic)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/modern/home"
+                  ><i class="ri-layout-4-line me-2"></i>Website Example (Modern)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-1/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 1 (Beagle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-2/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 2 (Golden Retriever)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-3/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 3 (French Bulldog)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-4/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 4 (Poodle)<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-5/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 5 (German Shepherd)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-6/home"
+                  ><i class="ri-brush-4-line me-2"></i>Dog Breeder 6 (Yorkshire Terrier)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-1/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 1 (Persian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-2/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 2 (Siamese)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-3/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 3 (Bengal)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-4/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 4 (Abyssinian)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-5/home"
+                  ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 5 (Himalayan)<i
+                    class="ri-arrow-right-line ms-2"
+                  ></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-1/home"
+                  ><i class="ri-community-line me-2"></i>HOA 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-2/home"
+                  ><i class="ri-community-line me-2"></i>HOA 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/hoa-3/home"
+                  ><i class="ri-community-line me-2"></i>HOA 3<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-1/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 1<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/real-estate-2/home"
+                  ><i class="ri-building-line me-2"></i>Real Estate 2<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <hr />
+              <h6 class="text-muted text-uppercase">Other</h6>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-builder/home"
+                  ><i class="ri-hammer-line me-2"></i>AsteroBuilder<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/astero-digital/home"
+                  ><i class="ri-macbook-line me-2"></i>AsteroDigital<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/paanstation/home"
+                  ><i class="ri-store-line me-2"></i>Paanstation<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/jazzup-salon/home"
+                  ><i class="ri-scissors-line me-2"></i>Jazzup Salon<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/homestyle-furnitech/home"
+                  ><i class="ri-sofa-line me-2"></i>HomeStyle Furnitech<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/mak-holding-group/home"
+                  ><i class="ri-building-line me-2"></i>MAK Holding Group<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/takshila-institute/home"
+                  ><i class="ri-school-line me-2"></i>Takshila Institute<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+              <div class="mb-1">
+                <a class="text-decoration-none" href="/templates/website/themes/clinic-demo/home"
+                  ><i class="ri-stethoscope-line me-2"></i>Clinic Demo<i class="ri-arrow-right-line ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="bg-body border-top">
+        <div class="container">
+          <div class="row pt-5 pb-4">
+            <div class="col-md-4 col-lg-6 mb-5 mb-md-0">
+              <a
+                href="/"
+                class="d-inline-flex align-items-center text-decoration-none mb-3"
+                aria-label="Your Company Logo"
+              >
+                <img
+                  src="/assets/images/astero-digital/logo.svg"
+                  alt="Astero Digital"
+                  class="me-2"
+                  style="height: 32px"
+                />
+              </a>
+              <p class="text-body-secondary mb-2">71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</p>
+              <div class="mb-2">
+                <a href="tel:+447728022218" class="text-decoration-none text-body-secondary">+44 7728022218</a>
+              </div>
+              <div>
+                <a href="mailto:contact@asterodigital.com" class="text-decoration-none text-body-secondary"
+                  >contact@asterodigital.com</a
+                >
+              </div>
+            </div>
+            <!-- Quick Links -->
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4 mb-sm-0">
+              <nav aria-label="Quick Links">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-digital/about" class="nav-link p-0 text-body-secondary"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-digital/blog" class="nav-link p-0 text-body-secondary"
+                      >Our Blog</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-digital/services" class="nav-link p-0 text-body-secondary"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-digital/hire-us" class="nav-link p-0 text-body-secondary"
+                      >Hire Us</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Other Links -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <nav aria-label="Other Links">
+                <h5 class="mb-3">Other Links</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="/templates/website/themes/astero-digital/contact" class="nav-link p-0 text-body-secondary"
+                      >Contact Us</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a
+                      href="/templates/website/themes/astero-digital/privacy-policy"
+                      class="nav-link p-0 text-body-secondary"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a
+                      href="/templates/website/themes/astero-digital/terms-and-conditions"
+                      class="nav-link p-0 text-body-secondary"
+                      >Terms & Conditions</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="text-body-secondary border-top pt-3 pb-4">
+            <p class="mb-3 mb-md-0">© 2025 : Astero Digital Ltd. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- All Scripts -->
+    <!-- Astero UI JS / Bootstrap Js included in Astero UI -->
+    <script src="/scripts/asteroui-lite.min.js"></script>
+    <!-- Page Script --><!-- Enable hover-based dropdowns and disable click toggle behavior in the navbar (only for lg+ screens) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const dropdowns = document.querySelectorAll('.front-theme .nav-item.dropdown');
+
+        function enableHoverDropdowns() {
+          dropdowns.forEach((dropdown) => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            const menu = dropdown.querySelector('.dropdown-menu');
+
+            // Prevent Bootstrap click toggle
+            toggle.addEventListener('click', function (e) {
+              // Only prevent default if screen is lg or larger
+              if (window.innerWidth >= 992) {
+                e.preventDefault();
+              }
+            });
+
+            // Show dropdown on hover (only lg and up)
+            dropdown.addEventListener('mouseenter', function () {
+              if (window.innerWidth >= 992) {
+                toggle.classList.add('show');
+                menu.classList.add('show');
+                toggle.setAttribute('aria-expanded', 'true');
+              }
+            });
+
+            // Hide dropdown on mouse leave (only lg and up)
+            dropdown.addEventListener('mouseleave', function () {
+              if (window.innerWidth >= 992) {
+                toggle.classList.remove('show');
+                menu.classList.remove('show');
+                toggle.setAttribute('aria-expanded', 'false');
+              }
+            });
+          });
+        }
+
+        enableHoverDropdowns();
+
+        // Recheck if the user resizes the window
+        window.addEventListener('resize', function () {
+          // Close all dropdowns if resizing below or at lg
+          if (window.innerWidth <= 992) {
+            dropdowns.forEach((dropdown) => {
+              const toggle = dropdown.querySelector('.dropdown-toggle');
+              const menu = dropdown.querySelector('.dropdown-menu');
+              toggle.classList.remove('show');
+              menu.classList.remove('show');
+              toggle.setAttribute('aria-expanded', 'false');
+            });
+          }
+        });
+      });
+    </script>
+    <!-- Swiper Js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        // Swiper options
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000, // auto-slide every 3 seconds
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+    <!-- Typer Script -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      // Wait for the DOM to be ready before running the script
+      document.addEventListener('DOMContentLoaded', function () {
+        // Select all elements with the class 'typer'
+        const typers = document.querySelectorAll('.typer');
+
+        typers.forEach(function (typer) {
+          // Get the configuration values from data attributes
+          const typeSpeed = typer.getAttribute('data-type-speed') || 50;
+          const backSpeed = typer.getAttribute('data-back-speed') || 50;
+          const strings = typer.getAttribute('data-strings') ? typer.getAttribute('data-strings').split(',') : [];
+          const loop = typer.getAttribute('data-loop') === 'true';
+
+          // Initialize the Typed.js instance with the custom options
+          // @ts-ignore
+          // eslint-disable-next-line
+          new Typed(typer.querySelector('.text-primary'), {
+            strings: strings,
+            typeSpeed: parseInt(typeSpeed, 10),
+            backSpeed: parseInt(backSpeed, 10),
+            loop: loop,
+            backDelay: 1000, // Add a slight delay before the text starts backspacing
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

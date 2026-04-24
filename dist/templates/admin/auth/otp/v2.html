@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Resource Hints -->
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <title>OTP v2 | Astero UI</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="One-time password (OTP) page" />
+    <meta name="author" content="Astero Digital" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="OTP v2 | Astero UI" />
+    <meta property="og:description" content="One-time password (OTP) page" />
+    <meta property="og:image" content="/src/assets/img/og-image.png" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Astero UI CSS -->
+    <link href="/styles/asteroui.min.css" rel="stylesheet" />
+    <!-- <link href={getSkinCSS()} rel="stylesheet" /> -->
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <script>
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } else if (theme === 'auto' || !theme) {
+        document.documentElement.setAttribute(
+          'data-bs-theme',
+          window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+        );
+      }
+    </script>
+    <!-- Apply sidebar-mini state before DOM renders to prevent flickering -->
+    <script>
+      // Add class to html element to control initial sidebar state
+      if (window.innerWidth > 1200 && localStorage.getItem('sidebar-mini') === 'true') {
+        document.documentElement.classList.add('sidebar-mini-initial');
+      }
+    </script>
+    <!-- Geist font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- AdminLayout CSS-->
+    <!-- Page CSS -->
+    <style>
+      /* You can also set custom colors inline in head */
+      /* :root,
+  [data-bs-theme='light'] {
+    --bs-primary: #7533f9;
+    --bs-primary-rgb: 117, 51, 249;
+    --bs-secondary: #efb907;
+    --bs-secondary-rgb: 239, 185, 7;
+  } */
+    </style>
+    <link rel="stylesheet" href="/_astro/_..CvKexCba.css" />
+  </head>
+  <body>
+    <div class="auth-two">
+      <div class="auth-two-left">
+        <div class="h-100"><img src="/assets/images/theme-images/4.jpg" alt="Feature image" /></div>
+      </div>
+      <div class="auth-two-right">
+        <main class="auth-main">
+          <div class="container w-100">
+            <div class="d-flex align-items-center justify-content-center">
+              <form class="w-100" style="max-width: 400px">
+                <h3 class="text-center fw-bold">Enter verification code</h3>
+                <p class="text-muted text-center">We sent a 6-digit code to your email.</p>
+                <div class="mb-2">
+                  <div class="otp-wrapper justify-content-center">
+                    <div class="otp-group">
+                      <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                      <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                    </div>
+                    <span class="dash mx-2">-</span>
+                    <div class="otp-group">
+                      <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                      <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                    </div>
+                    <span class="dash mx-2">-</span>
+                    <div class="otp-group">
+                      <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                      <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                    </div>
+                  </div>
+                </div>
+                <p class="text-muted text-center">Enter the 6-digit code sent to your email.</p>
+                <button type="submit" class="btn btn-primary w-100">Verify Code</button>
+                <p class="text-center text-muted mt-3 mb-0">
+                  Didn't receive the code? <a href="#" class="text-muted">Resend</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="module">
+      function t() {
+        const e = document.createElement('link');
+        ((e.rel = 'stylesheet'),
+          (e.href = 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..800&display=swap'),
+          document.head.appendChild(e));
+        const o = document.createElement('link');
+        ((o.rel = 'stylesheet'),
+          (o.href = 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap'),
+          document.head.appendChild(o));
+      }
+      window.addEventListener('load', t);
+    </script>
+    <!-- Google Charts Script -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Astero UI JS / Bootstrap Js included in Astero UI -->
+    <script src="/scripts/asteroui.min.js"></script>
+    <!-- Page Script -->
+    <!-- Round Fixed Button --><button
+      class="btn btn-icon-xl btn-primary rounded-circle shadow-xl"
+      style="position: fixed; right: 1rem; top: 90%; transform: translateY(-50%); z-index: 1000"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#quickLinksOffcanvas"
+      aria-controls="quickLinksOffcanvas"
+    >
+      <i class="ri-settings-3-line fs-3"></i>
+    </button>
+    <!-- Offcanvas -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="quickLinksOffcanvas"
+      aria-labelledby="quickLinksOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <div class="offcanvas-title fs-5 fw-semibold" id="quickLinksOffcanvasLabel">
+          <i class="ri-links-line text-muted me-1"></i>Quick Links
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body pt-2">
+        <div class="d-flex gap-2 mb-3">
+          <a href="/" class="btn btn-primary w-100"><i class="ri-home-4-line me-1"></i>Home</a>
+          <a href="/docs" class="btn btn-secondary w-100"><i class="ri-folder-line me-1"></i>Docs</a>
+        </div>
+        <div>
+          <h6 class="text-muted text-uppercase">Admin</h6>
+          <div>
+            <a class="text-decoration-none" href="/templates/admin/dashboard"
+              ><i class="ri-dashboard-line me-2"></i>Admin Dashboard Example<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <hr />
+          <h6 class="text-muted text-uppercase">Themes</h6>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/classic/home"
+              ><i class="ri-layout-3-line me-2"></i>Website Example (Classic)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/modern/home"
+              ><i class="ri-layout-4-line me-2"></i>Website Example (Modern)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-1/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 1 (Beagle)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-2/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 2 (Golden Retriever)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-3/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 3 (French Bulldog)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-4/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 4 (Poodle)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-5/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 5 (German Shepherd)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/dog-breeder-6/home"
+              ><i class="ri-brush-4-line me-2"></i>Dog Breeder 6 (Yorkshire Terrier)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-1/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 1 (Persian)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-2/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 2 (Siamese)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-3/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 3 (Bengal)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-4/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 4 (Abyssinian)<i
+                class="ri-arrow-right-line ms-2"
+              ></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/cat-breeder-5/home"
+              ><i class="ri-paint-brush-line me-2"></i>Cat Breeder 5 (Himalayan)<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/hoa-1/home"
+              ><i class="ri-community-line me-2"></i>HOA 1<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/hoa-2/home"
+              ><i class="ri-community-line me-2"></i>HOA 2<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/hoa-3/home"
+              ><i class="ri-community-line me-2"></i>HOA 3<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/real-estate-1/home"
+              ><i class="ri-building-line me-2"></i>Real Estate 1<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/real-estate-2/home"
+              ><i class="ri-building-line me-2"></i>Real Estate 2<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <hr />
+          <h6 class="text-muted text-uppercase">Other</h6>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/astero-builder/home"
+              ><i class="ri-hammer-line me-2"></i>AsteroBuilder<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/astero-digital/home"
+              ><i class="ri-macbook-line me-2"></i>AsteroDigital<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/paanstation/home"
+              ><i class="ri-store-line me-2"></i>Paanstation<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/jazzup-salon/home"
+              ><i class="ri-scissors-line me-2"></i>Jazzup Salon<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/homestyle-furnitech/home"
+              ><i class="ri-sofa-line me-2"></i>HomeStyle Furnitech<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/mak-holding-group/home"
+              ><i class="ri-building-line me-2"></i>MAK Holding Group<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/takshila-institute/home"
+              ><i class="ri-school-line me-2"></i>Takshila Institute<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+          <div class="mb-1">
+            <a class="text-decoration-none" href="/templates/website/themes/clinic-demo/home"
+              ><i class="ri-stethoscope-line me-2"></i>Clinic Demo<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
