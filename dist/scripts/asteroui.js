@@ -6895,52 +6895,72 @@
   }
 
   /**
-   * Create 20% darker RGB values from existing RGB CSS variables
-   * @param {string} rgbString - RGB values as string (e.g., "117, 51, 249")
-   * @returns {string} - Darker RGB values as string
+   * Parse a computed CSS color string into an RGB triplet string
+   * @param {string} colorString - Computed CSS color value (e.g., 'rgb(23, 23, 23)')
+   * @returns {string} - RGB values as string (e.g., '23, 23, 23')
    */
-  function createDarkerRGB(rgbString) {
-    if (!rgbString || !rgbString.trim()) {
-      return rgbString;
+  function parseComputedColorRGB(colorString) {
+    if (!colorString || !colorString.trim()) {
+      return '';
     }
 
-    try {
-      // Parse the RGB values
-      const rgbValues = rgbString.split(',').map((val) => parseInt(val.trim(), 10));
-
-      if (rgbValues.length !== 3 || rgbValues.some((val) => isNaN(val))) {
-        return rgbString; // Return original if parsing fails
-      }
-
-      // Make each component 20% darker (multiply by 0.8)
-      const darkerValues = rgbValues.map((val) => Math.round(val * 0.8));
-
-      return darkerValues.join(', ');
-    } catch (error) {
-      console.warn('Error creating darker RGB values:', error);
-      return rgbString; // Return original on error
+    const colorMatch = colorString.match(/rgba?\(([^)]+)\)/i);
+    if (!colorMatch) {
+      return '';
     }
+
+    const rgbValues = colorMatch[1]
+      .split(',')
+      .slice(0, 3)
+      .map((value) => Math.round(Number.parseFloat(value.trim())));
+
+    if (rgbValues.length !== 3 || rgbValues.some((value) => Number.isNaN(value))) {
+      return '';
+    }
+
+    return rgbValues.join(', ');
   }
 
   /**
-   * Update skin RGB darker variables
-   * Reads --bs-primary-rgb and --bs-secondary-rgb and creates 20% darker versions
+   * Resolve a CSS color expression to an RGB triplet string
+   * @param {string} colorValue - CSS color expression (e.g., 'var(--bs-link-color)')
+   * @returns {string} - RGB values as string
+   */
+  function resolveColorValueToRGB(colorValue) {
+    if (!colorValue || !colorValue.trim()) {
+      return '';
+    }
+
+    const probeElement = document.createElement('span');
+    probeElement.style.position = 'absolute';
+    probeElement.style.visibility = 'hidden';
+    probeElement.style.pointerEvents = 'none';
+    probeElement.style.color = colorValue;
+
+    document.documentElement.append(probeElement);
+
+    const resolvedRGB = parseComputedColorRGB(window.getComputedStyle(probeElement).color);
+    probeElement.remove();
+
+    return resolvedRGB;
+  }
+
+  /**
+   * Update derived theme RGB variables used by Bootstrap selectors
+   * Some Bootstrap rules still read *-rgb tokens even when the visible color is derived from CSS variables
    */
   function updateSkinRGBDarker() {
     const documentElement = document.documentElement;
-    const computedStyles = window.getComputedStyle(documentElement);
+    const linkColorRGB = resolveColorValueToRGB('var(--bs-link-color)');
+    const linkHoverColorRGB = resolveColorValueToRGB('var(--bs-link-hover-color)');
 
-    // Read the existing RGB values
-    const primaryRGB = computedStyles.getPropertyValue('--bs-primary-rgb').trim();
-    const secondaryRGB = computedStyles.getPropertyValue('--bs-secondary-rgb').trim();
+    if (linkColorRGB) {
+      documentElement.style.setProperty('--bs-link-color-rgb', linkColorRGB);
+    }
 
-    // Create darker versions (20% darker)
-    const primaryRGBDarker = createDarkerRGB(primaryRGB);
-    const secondaryRGBDarker = createDarkerRGB(secondaryRGB);
-
-    // Set the new CSS variables
-    documentElement.style.setProperty('--bs-primary-rgb-darker', primaryRGBDarker);
-    documentElement.style.setProperty('--bs-secondary-rgb-darker', secondaryRGBDarker);
+    if (linkHoverColorRGB) {
+      documentElement.style.setProperty('--bs-link-hover-color-rgb', linkHoverColorRGB);
+    }
   }
 
   /**

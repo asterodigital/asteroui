@@ -1,7 +1,7 @@
 {
   "name": "asteroui",
   "description": "Astero UI : Complete Bootstrap-based front and backend template system.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "AsteroDigital <https://asterodigital.com>",
   "packageManager": "pnpm@10.30.2",

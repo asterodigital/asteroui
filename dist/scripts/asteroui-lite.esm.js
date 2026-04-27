@@ -6292,80 +6292,6 @@ var bootstrap = /*#__PURE__*/Object.freeze({
   Tooltip: Tooltip
 });
 
-// Retrieves user's preferred theme from localStorage or system preferences
-
-const setTheme = (theme) => {
-  if (theme === 'auto') {
-    document.documentElement.setAttribute(
-      'data-bs-theme',
-      window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    );
-    localStorage.setItem('theme', 'auto');
-  } else {
-    document.documentElement.setAttribute('data-bs-theme', theme);
-    localStorage.setItem('theme', theme);
-  }
-  updateThemeIcon(theme);
-  updateDropdownActive(theme);
-};
-
-const updateThemeIcon = (theme) => {
-  const icon = document.querySelector('#theme-toggle i');
-
-  if (!icon) return;
-
-  // Ensure base classes are present
-  icon.classList.add('theme-icon-active');
-
-  // Remove possible variant classes before adding the correct one
-  icon.classList.remove('ri-moon-clear-fill', 'ri-sun-line', 'ri-contrast-line');
-
-  if (theme === 'dark') {
-    icon.classList.add('ri-moon-clear-fill');
-  } else if (theme === 'light') {
-    icon.classList.add('ri-sun-line');
-  } else {
-    icon.classList.add('ri-contrast-line');
-  }
-};
-
-const updateDropdownActive = (theme) => {
-  const items = document.querySelectorAll('[data-bs-theme-value]');
-  items.forEach((item) => {
-    const check = item.querySelector('.ri-check-line');
-    if (
-      item.getAttribute('data-bs-theme-value') === theme ||
-      (theme === 'auto' && item.getAttribute('data-bs-theme-value') === 'auto')
-    ) {
-      item.classList.add('active');
-      if (check) check.classList.remove('d-none');
-    } else {
-      item.classList.remove('active');
-      if (check) check.classList.add('d-none');
-    }
-  });
-};
-
-const darkMode = () => {
-  // Apply user's preferred theme on load
-  setTheme(localStorage.getItem('theme') || 'auto');
-
-  // Listen for dropdown selection
-  document.querySelectorAll('[data-bs-theme-value]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const value = btn.getAttribute('data-bs-theme-value');
-      setTheme(value);
-    });
-  });
-
-  // Listen for system theme changes if auto
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if ((localStorage.getItem('theme') || 'auto') === 'auto') {
-      setTheme('auto');
-    }
-  });
-};
-
 const imageModal = () => {
   const imageModal = document.getElementById('imageModal');
   const modalImage = document.getElementById('modalImage');
@@ -6401,52 +6327,72 @@ function generateSkinChevronIconSVG(color) {
 }
 
 /**
- * Create 20% darker RGB values from existing RGB CSS variables
- * @param {string} rgbString - RGB values as string (e.g., "117, 51, 249")
- * @returns {string} - Darker RGB values as string
+ * Parse a computed CSS color string into an RGB triplet string
+ * @param {string} colorString - Computed CSS color value (e.g., 'rgb(23, 23, 23)')
+ * @returns {string} - RGB values as string (e.g., '23, 23, 23')
  */
-function createDarkerRGB(rgbString) {
-  if (!rgbString || !rgbString.trim()) {
-    return rgbString;
+function parseComputedColorRGB(colorString) {
+  if (!colorString || !colorString.trim()) {
+    return '';
   }
 
-  try {
-    // Parse the RGB values
-    const rgbValues = rgbString.split(',').map((val) => parseInt(val.trim(), 10));
-
-    if (rgbValues.length !== 3 || rgbValues.some((val) => isNaN(val))) {
-      return rgbString; // Return original if parsing fails
-    }
-
-    // Make each component 20% darker (multiply by 0.8)
-    const darkerValues = rgbValues.map((val) => Math.round(val * 0.8));
-
-    return darkerValues.join(', ');
-  } catch (error) {
-    console.warn('Error creating darker RGB values:', error);
-    return rgbString; // Return original on error
+  const colorMatch = colorString.match(/rgba?\(([^)]+)\)/i);
+  if (!colorMatch) {
+    return '';
   }
+
+  const rgbValues = colorMatch[1]
+    .split(',')
+    .slice(0, 3)
+    .map((value) => Math.round(Number.parseFloat(value.trim())));
+
+  if (rgbValues.length !== 3 || rgbValues.some((value) => Number.isNaN(value))) {
+    return '';
+  }
+
+  return rgbValues.join(', ');
 }
 
 /**
- * Update skin RGB darker variables
- * Reads --bs-primary-rgb and --bs-secondary-rgb and creates 20% darker versions
+ * Resolve a CSS color expression to an RGB triplet string
+ * @param {string} colorValue - CSS color expression (e.g., 'var(--bs-link-color)')
+ * @returns {string} - RGB values as string
+ */
+function resolveColorValueToRGB(colorValue) {
+  if (!colorValue || !colorValue.trim()) {
+    return '';
+  }
+
+  const probeElement = document.createElement('span');
+  probeElement.style.position = 'absolute';
+  probeElement.style.visibility = 'hidden';
+  probeElement.style.pointerEvents = 'none';
+  probeElement.style.color = colorValue;
+
+  document.documentElement.append(probeElement);
+
+  const resolvedRGB = parseComputedColorRGB(window.getComputedStyle(probeElement).color);
+  probeElement.remove();
+
+  return resolvedRGB;
+}
+
+/**
+ * Update derived theme RGB variables used by Bootstrap selectors
+ * Some Bootstrap rules still read *-rgb tokens even when the visible color is derived from CSS variables
  */
 function updateSkinRGBDarker() {
   const documentElement = document.documentElement;
-  const computedStyles = window.getComputedStyle(documentElement);
+  const linkColorRGB = resolveColorValueToRGB('var(--bs-link-color)');
+  const linkHoverColorRGB = resolveColorValueToRGB('var(--bs-link-hover-color)');
 
-  // Read the existing RGB values
-  const primaryRGB = computedStyles.getPropertyValue('--bs-primary-rgb').trim();
-  const secondaryRGB = computedStyles.getPropertyValue('--bs-secondary-rgb').trim();
+  if (linkColorRGB) {
+    documentElement.style.setProperty('--bs-link-color-rgb', linkColorRGB);
+  }
 
-  // Create darker versions (20% darker)
-  const primaryRGBDarker = createDarkerRGB(primaryRGB);
-  const secondaryRGBDarker = createDarkerRGB(secondaryRGB);
-
-  // Set the new CSS variables
-  documentElement.style.setProperty('--bs-primary-rgb-darker', primaryRGBDarker);
-  documentElement.style.setProperty('--bs-secondary-rgb-darker', secondaryRGBDarker);
+  if (linkHoverColorRGB) {
+    documentElement.style.setProperty('--bs-link-hover-color-rgb', linkHoverColorRGB);
+  }
 }
 
 /**
@@ -6668,7 +6614,7 @@ const AsteroUI = (function () {
     }
 
     try {
-      darkMode();
+      // darkMode();
       imageModal();
       initBootstrap();
       initDropdownSubmenus();
